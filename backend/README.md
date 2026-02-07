@@ -7,30 +7,7 @@ Backend desarrollado en **FastAPI** para integrar modelos de Machine Learning, a
 ![latencyzero](/backend/db/latencyzero.png)
 
 
-## 📁 Estructura del proyecto
-
-```
-backend/
-│
-├── latencyzero_server/       # Paquete principal de la app
-│   ├── api/                  # Endpoints / rutas de la app
-│   │   ├── auth/             # Rutas de autenticación (login, registro)
-│   │   ├── users/            # Rutas de usuarios
-│   │   ├── ml/               # Rutas de Machine Learning
-│   │   └── __init__.py
-│   │
-│   ├── core/                 # Configuración y constantes globales
-│   ├── models/               # Modelos de base de datos (ORM)
-│   ├── schemas/              # Pydantic models / DTOs
-│   ├── services/             # Lógica de negocio / servicios
-│   ├── db/                   # Conexión a la base de datos y migraciones
-│   └── utils/                # Funciones auxiliares y helpers
-│
-├── tests/                    # Tests unitarios e integraciones
-├── venv/
-├── requirements.txt
-└── README.md
-```
+<!-- ## 📁 Estructura del proyecto -->
 
 ## 🧪 Instalación y ejecución
 
