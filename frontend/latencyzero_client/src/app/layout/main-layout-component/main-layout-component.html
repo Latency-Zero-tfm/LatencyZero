@@ -8,14 +8,14 @@
     <div class="hidden md:flex gap-6 text-sm text-slate-500">
       <a href="#" class="hover:text-yellow-600 transition">Dashboard</a>
       <a href="#" class="hover:text-yellow-600 transition">Análisis IA</a>
-      <a href="#" class="hover:text-yellow-600 transition">HardVisionAI</a>
+      <a href="#" class="hover:text-yellow-600 transition" routerLink="hardvisionai">HardVisionAI</a>
     </div>
     <button class="px-5 py-2 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-yellow-500 transition">
       Sign In
     </button>
   </nav>
 
-  <app-home-page></app-home-page>
+  <router-outlet></router-outlet>
 
   <footer class="bg-white border-t border-slate-200 pt-16 pb-8 text-slate-600">
     <div class="max-w-7xl mx-auto px-8">
