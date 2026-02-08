@@ -1,0 +1,972 @@
+[
+    {
+        "app_id":"578080",
+        "game_name":"PUBG: BATTLEGROUNDS",
+        "os":"64-bit Windows 10",
+        "processor":"Intel Core i5-4430 \/ AMD FX-6300",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 960 2GB \/ AMD Radeon R7 370 2GB",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"40 GB available space"
+    },
+    {
+        "app_id":"730",
+        "game_name":"Counter-Strike 2",
+        "os":"Windows® 10",
+        "processor":"4 hardware CPU threads - Intel® Core™ i5 750 or higher",
+        "memory":"8 GB RAM",
+        "graphics":"Video card must be 1 GB or more and should be a",
+        "directx":"11-compatible with support for Shader Model 5.0\nDirectX:\nVersion 11",
+        "storage":"85 GB available space"
+    },
+    {
+        "app_id":"1766060",
+        "game_name":"HumanitZ",
+        "os":"Windows 10",
+        "processor":"Intel Core i5-8600K",
+        "memory":"16 GB RAM",
+        "graphics":"Nvidia GTX 1060",
+        "directx":null,
+        "storage":"20 GB available space"
+    },
+    {
+        "app_id":"252490",
+        "game_name":"Rust",
+        "os":"Windows 11 64bit",
+        "processor":"AMD Ryzen 5 1400 or Intel Core i5-6600",
+        "memory":"12 GB RAM",
+        "graphics":"AMD Radeon RX 470, NVIDIA GeForce GTX 1060, Intel® Arc™ A580",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"45 GB available space"
+    },
+    {
+        "app_id":"1808500",
+        "game_name":"ARC Raiders",
+        "os":"Windows 10 or later 64-bit (latest update)",
+        "processor":"Intel Core i5-6600K or AMD Ryzen R5 1600 processor",
+        "memory":"12 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 580 or Intel Arc A380",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":null
+    },
+    {
+        "app_id":"553850",
+        "game_name":"HELLDIVERS™ 2",
+        "os":"Windows 10",
+        "processor":"Intel Core i7-4790K or AMD Ryzen 5 1500X",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470",
+        "directx":null,
+        "storage":"135 GB available space"
+    },
+    {
+        "app_id":"381210",
+        "game_name":"Dead by Daylight",
+        "os":"Windows 10 64-bit Operating System",
+        "processor":"Intel Core i3-4170 or AMD FX-8120",
+        "memory":"8 GB RAM",
+        "graphics":"DX11 Compatible GeForce GTX 460 1GB or AMD HD 6850 1GB",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"50 GB available space"
+    },
+    {
+        "app_id":"3564740",
+        "game_name":"Where Winds Meet",
+        "os":"Windows 10\/11 64bit",
+        "processor":"Core i7-7700K \/ Ryzen 5 1600",
+        "memory":"16 GB RAM",
+        "graphics":"GTX 1060(6GB) \/ RX 480(8GB)",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"100 GB available space"
+    },
+    {
+        "app_id":"3472040",
+        "game_name":"NBA 2K26",
+        "os":"Windows 10 64-Bit (latest update)",
+        "processor":"Intel® Core™ i3-9100 or AMD Ryzen™ 3 1200",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA® GeForce® GTX 1060 5 GB or AMD Radeon™ RX 5500 XT 4 GB or Intel® Arc™ A580",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"110 GB available space"
+    },
+    {
+        "app_id":"2349820",
+        "game_name":"Hero's Land",
+        "os":"Win10 64-bit",
+        "processor":"Intel i3 5代 or AMD R3",
+        "memory":"2 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 750TI",
+        "directx":null,
+        "storage":"2 GB available space"
+    },
+    {
+        "app_id":"3834090",
+        "game_name":"YAPYAP",
+        "os":"Windows® 10",
+        "processor":"Core i5 6600",
+        "memory":"8 GB RAM",
+        "graphics":"GTX 970",
+        "directx":"Version 10\nNetwork:\nBroadband Internet connection",
+        "storage":"2 GB available space"
+    },
+    {
+        "app_id":"3405690",
+        "game_name":"EA SPORTS FC™ 26",
+        "os":"Windows 10\/11 - 64-Bit (Latest Update).",
+        "processor":"AMD Ryzen 5 1600 or Intel Core i5 6600k",
+        "memory":"8 GB RAM",
+        "graphics":"AMD RX 570 or Nvidia GTX 1050 Ti",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"100 GB available space"
+    },
+    {
+        "app_id":"3017860",
+        "game_name":"DOOM: The Dark Ages",
+        "os":"Windows 10 64-Bit \/ Windows 11 64-Bit",
+        "processor":"AMD Zen 2 or Intel 10th Generation CPU @3.2Ghz with 8 cores \/ 16 threads or better (examples: AMD Ryzen 7 3700X or better, or Intel Core i7 10700K or better)",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA or AMD hardware Raytracing-capable GPU with 8GB dedicated VRAM or better  (examples: NVIDIA RTX 2060 SUPER or better, AMD RX 6600 or better)",
+        "directx":null,
+        "storage":"100 GB available space"
+    },
+    {
+        "app_id":"1086940",
+        "game_name":"Baldur's Gate 3",
+        "os":"Windows 10 64-bit",
+        "processor":"Intel I5 4690 \/ AMD FX 8350 \/ Snapdragon X Elite",
+        "memory":"8 GB RAM",
+        "graphics":"Nvidia GTX 970 \/ RX 480 \/ Intel Arc A380 \/ Qualcomm Adreno X1 (4GB+ of VRAM)",
+        "directx":"Version 11",
+        "storage":"150 GB available space"
+    },
+    {
+        "app_id":"3764200",
+        "game_name":"Resident Evil Requiem",
+        "os":"Windows 11 (64bit required)",
+        "processor":"Intel corei5-8500 \/ AMD Ryzen 5 3500",
+        "memory":"16 GB RAM",
+        "graphics":"GeForce GTX 1660 6GB \/  Radeon RX 5500 XT 8GB",
+        "directx":"Version 12",
+        "storage":null
+    },
+    {
+        "app_id":"1588550",
+        "game_name":"Cairn",
+        "os":"Windows 10",
+        "processor":"Intel Core i7-6700 (4 * 3400), AMD Ryzen 5 1500X (4 * 3500) or equivalent",
+        "memory":"8 GB RAM",
+        "graphics":"GeForce GTX 1050 Ti (4096 MB), Radeon RX 570 (8192 MB)",
+        "directx":null,
+        "storage":"10 GB available space"
+    },
+    {
+        "app_id":"1371980",
+        "game_name":"No Rest for the Wicked",
+        "os":"Windows 10",
+        "processor":"Intel Core i5-8400 \/ AMD Ryzen 5 2600",
+        "memory":"16 GB RAM",
+        "graphics":"Nvidia GeForce GTX 1080 \/ AMD Radeon 5600 XT",
+        "directx":null,
+        "storage":"46 GB available space"
+    },
+    {
+        "app_id":"1222670",
+        "game_name":"The Sims™ 4",
+        "os":"64 Bit Required. Windows 10",
+        "processor":"3.3 GHz Intel Core i3-3220 (2 cores, 4 threads), AMD Ryzen 3 1200 3.1 GHz (4 cores) or better",
+        "memory":"4 GB RAM",
+        "graphics":"128 MB of Video RAM and support for Pixel Shader 3.0. Supported Video Cards: NVIDIA GeForce 6600 or better, ATI Radeon X1300 or better, Intel GMA X4500 or better",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"26 GB available space"
+    },
+    {
+        "app_id":"221100",
+        "game_name":"DayZ",
+        "os":"Windows 10 64-bit",
+        "processor":"Intel Core i5-4430 or AMD Ryzen 5 2600 Six-Core",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 760 or AMD R9 270X",
+        "directx":"Version 11",
+        "storage":"25 GB available space"
+    },
+    {
+        "app_id":"1203220",
+        "game_name":"NARAKA: BLADEPOINT",
+        "os":"*:\nWindows 7 64-bit or newer",
+        "processor":"Intel i5 4th generation or AMD FX 6300 or equivalent",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 750TI, Intel Arc A380, AMD HD 6950 or equivalent",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"55 GB available space"
+    },
+    {
+        "app_id":"3241660",
+        "game_name":"R.E.P.O.",
+        "os":"Windows 10",
+        "processor":"Core i5 6600",
+        "memory":"8 GB RAM",
+        "graphics":"GTX 970",
+        "directx":"Version 10\nNetwork:\nBroadband Internet connection",
+        "storage":"1 GB available space"
+    },
+    {
+        "app_id":"4025700",
+        "game_name":"Heartopia",
+        "os":"Windows 10",
+        "processor":"Intel Core i5 2500 or AMD FX-4350",
+        "memory":"8 GB RAM",
+        "graphics":"Nvidia GTX 660Ti or AMD R9 270",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"10 GB available space"
+    },
+    {
+        "app_id":"2432860",
+        "game_name":"MENACE",
+        "os":"Windows® 10 (64-bit)",
+        "processor":"Intel® Core™ i5-7600 (quad-core) or AMD® Ryzen™ 5 1500X (quad-core)",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA® GeForce® GTX 1050 Ti (4 GB) \/ AMD® Radeon™ RX 570 (4 GB)",
+        "directx":"Version 11",
+        "storage":"12 GB available space"
+    },
+    {
+        "app_id":"2499860",
+        "game_name":"DRAGON QUEST VII Reimagined",
+        "os":"Windows® 11",
+        "processor":"AMD Ryzen™ 3 1200\/Intel® Core™ i3-6100",
+        "memory":"8 GB RAM",
+        "graphics":"AMD Radeon™ RX 460\/Intel® Arc™ A380\/NVIDIA® GeForce® GTX 750",
+        "directx":"Version 12",
+        "storage":"15 GB available space"
+    },
+    {
+        "app_id":"1599340",
+        "game_name":"Lost Ark",
+        "os":"Windows 10 (64-bit only)",
+        "processor":"Intel Core i3 – 10100 AMD Ryzen3 3100",
+        "memory":"16 GB RAM",
+        "graphics":"Nvidia Geforce GTX 1050 Ti \/ AMD Radeon RX 560",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"110 GB available space"
+    },
+    {
+        "app_id":"2397300",
+        "game_name":"Half Sword",
+        "os":"Windows 10 (64Bit)",
+        "processor":"Intel(R) Core(TM) i7-6700HQ, Ryzen 5 3500U",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060 (6GB), AMD Radeon RX 580",
+        "directx":"Version 11",
+        "storage":"15 GB available space"
+    },
+    {
+        "app_id":"2592160",
+        "game_name":"Dispatch",
+        "os":"Windows 10 (64-bit) or later",
+        "processor":"Intel(R) Core(TM) i5-6402p CPU \/ AMD Ryzen 5 1600 or higher",
+        "memory":"2 GB RAM",
+        "graphics":"NVIDIA GeForce GTX960 \/ AMD Radeon RX560",
+        "directx":"Version 11",
+        "storage":"15 GB available space"
+    },
+    {
+        "app_id":"435150",
+        "game_name":"Divinity: Original Sin 2 - Definitive Edition",
+        "os":"*:\nWindows 7 SP1 64-bit or Windows 8.1 64-bit or Windows 10 64-bit",
+        "processor":"Intel Core i5 or equivalent",
+        "memory":"4 GB RAM",
+        "graphics":"NVIDIA® GeForce® GTX 550 or ATI™ Radeon™ HD 6XXX or higher",
+        "directx":"Version 11",
+        "storage":"60 GB available space"
+    },
+    {
+        "app_id":"3681010",
+        "game_name":"Nioh 3",
+        "os":"Windows® 11",
+        "processor":"Intel Core i5-10400, AMD Ryzen 5 2600 6 cores \/ 12 threads or higher",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060 VRAM 6GB, AMD Radeon RX 5600 XT (Rev. 2.0) VRAM 6GB",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"125 GB available space"
+    },
+    {
+        "app_id":"3513350",
+        "game_name":"Wuthering Waves",
+        "os":"Windows10 64-bit",
+        "processor":"Intel Core i5 (9th Gen) \/ Ryzen 2700",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060\/AMD Radeon RX 570\/Intel ARC A380\nNetwork:\nBroadband Internet connection",
+        "directx":null,
+        "storage":"60 GB available space"
+    },
+    {
+        "app_id":"322170",
+        "game_name":"Geometry Dash",
+        "os":"*:\nWindows XP",
+        "processor":"2.0+ GHz",
+        "memory":"512 MB RAM",
+        "graphics":"OpenGL 2.0 support",
+        "directx":null,
+        "storage":"100 MB available space"
+    },
+    {
+        "app_id":"3656800",
+        "game_name":"Train Sim World® 6",
+        "os":"64-bit Windows 10 or Windows 11",
+        "processor":"Intel Core i5-4690 @ 3.5 GHz or AMD Ryzen 5 1500X @ 3.7 GHz",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 750 Ti or AMD Radeon RX 460 with 2 GB VRAM or more",
+        "directx":"Version 10",
+        "storage":"35 GB available space"
+    },
+    {
+        "app_id":"2799860",
+        "game_name":"INAZUMA ELEVEN: Victory Road",
+        "os":"Windows 11 64bit",
+        "processor":"Intel Core i5-8400 \/ AMD Ryzen 3 3100",
+        "memory":"8 GB RAM",
+        "graphics":"GeForce GTX 750(2GB) \/AMD Radeon R7 370(2GB)",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"75 GB available space"
+    },
+    {
+        "app_id":"1812450",
+        "game_name":"Bellwright",
+        "os":"Windows 10 \/ Windows 11",
+        "processor":"Intel Core i5-8600 \/ AMD Ryzen 5 3600",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1070 8GB \/ AMD Radeon RX 580 8GB \/ Intel ARC A580 8GB",
+        "directx":"Version 12",
+        "storage":"24 GB available space"
+    },
+    {
+        "app_id":"227300",
+        "game_name":"Euro Truck Simulator 2",
+        "os":"Windows 10 64-bit",
+        "processor":"Intel Core i5-6400 or AMD Ryzen 3 1200 or similar",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 660 or AMD Radeon RX 460 or Intel HD 630 (2GB VRAM)\nHard Drive:\n25 GB available space (Euro Truck Simulator 2 base game)",
+        "directx":null,
+        "storage":"25 GB available space (Euro Truck Simulator 2 base game)"
+    },
+    {
+        "app_id":"216150",
+        "game_name":"MapleStory",
+        "os":"Windows 10 (64 bit)",
+        "processor":"Intel® Core™ 2 Duo @ 3.0GHz or AMD Athlon™ 64 X2 @ 3.0GHz",
+        "memory":"8 GB RAM",
+        "graphics":"GeForce 9600 GT or ATI Radeon™ HD 5670\nHard Drive:\n50 GB available hard disk space or more",
+        "directx":"®:\nVersion 11.0\nNetwork:\nBroadband (high-speed internet)",
+        "storage":"50 GB available hard disk space or more\nDirectX®:\nVersion 11.0\nNetwork:\nBroadband (high-speed internet)"
+    },
+    {
+        "app_id":"1774580",
+        "game_name":"STAR WARS Jedi: Survivor™",
+        "os":"Windows 10 64-bit",
+        "processor":"4 core \/ 8 threads  | Intel Core i7-7700  | Ryzen 5 1400",
+        "memory":"8 GB RAM",
+        "graphics":"8GB VRAM |  GTX 1070  |  Radeon RX 580",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"155 GB available space"
+    },
+    {
+        "app_id":"632360",
+        "game_name":"Risk of Rain 2",
+        "os":"*:\nWindows 7 or newer, 64-bit",
+        "processor":"Intel Core i3-6100 \/ AMD FX-8350",
+        "memory":"4 GB RAM",
+        "graphics":"GTX 580 \/ AMD HD 7870",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"4 GB available space"
+    },
+    {
+        "app_id":"2001120",
+        "game_name":"Split Fiction",
+        "os":"64 bit Windows 10\/11",
+        "processor":"Intel Core i5-6600K or AMD Ryzen 5 2600X",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 970 - 4GB or Radeon RX 470 - 4GB",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"85 GB available space"
+    },
+    {
+        "app_id":"3527290",
+        "game_name":"PEAK",
+        "os":"Win 10",
+        "processor":"Intel Core i5 @ 2.5 GHz or equivalent",
+        "memory":"8 GB RAM",
+        "graphics":"GTX 1060 or RX 6600 XT",
+        "directx":"Version 12",
+        "storage":"4 GB available space"
+    },
+    {
+        "app_id":"3240220",
+        "game_name":"Grand Theft Auto V Enhanced",
+        "os":"Windows 10 (latest service pack)",
+        "processor":"Intel® Core™ i7-4770 | AMD FX™-9590",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce® GTX 1630 (4GB VRAM) | AMD Radeon™ RX 6400 (4GB VRAM)",
+        "directx":"10 Compatible\nAdditional Notes:\nSSD Required  |  Over time downloadable content and programming changes will change the system requirements for this game. Please refer to your hardware manufacturer and  for current compatibility information. Some system components such as mobile chipsets, integrated, and AGP",
+        "storage":"105 GB available space"
+    },
+    {
+        "app_id":"230410",
+        "game_name":"Warframe",
+        "os":"*:\nWindows 7 64-Bit (32-bit not supported)",
+        "processor":"Intel Core i7 860, Intel Core i5 750, or AMD FX-4100 (SSE 4.2 support required)\nVideo:",
+        "memory":"4 GB RAM",
+        "graphics":"Card",
+        "directx":"11+ capable",
+        "storage":"50 GB available HD space\nInternet:\nBroadband Internet Connection Required\nNote: There is no Mac or Linux client currently available.\n\nDirectX 12 support requires at least Windows 10 20H2 (released in 2020) or Windows 11"
+    },
+    {
+        "app_id":"1144200",
+        "game_name":"Ready or Not",
+        "os":"Windows 10, Windows 11",
+        "processor":"Intel Core i5-4430 \/ AMD FX-6300",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 960 2GB \/ AMD Radeon R7 370 2GB",
+        "directx":"Version 11",
+        "storage":"60 GB available space"
+    },
+    {
+        "app_id":"2852190",
+        "game_name":"Monster Hunter Stories 3: Twisted Reflection",
+        "os":"Windows®11 (64-bit Required)",
+        "processor":"Intel® Core™ i3-9100 or AMD Ryzen™ 3 3200G",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1660(VRAM 6GB) or AMD Radeon RX 5500 XT(VRAM 8GB)",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"50 GB available space"
+    },
+    {
+        "app_id":"3008130",
+        "game_name":"Dying Light: The Beast",
+        "os":"Windows 10 or newer",
+        "processor":"Intel i5-9600K \/ AMD Ryzen 5 3600",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce 1060 \/ AMD Radeon 5500 XT \/ Intel ARC A750",
+        "directx":null,
+        "storage":"70 GB available space"
+    },
+    {
+        "app_id":"990080",
+        "game_name":"Hogwarts Legacy",
+        "os":"64-bit Windows 10",
+        "processor":"Intel Core i5-6600 (3.3Ghz) or AMD Ryzen 5 1400 (3.2Ghz)",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 960 4GB or AMD Radeon RX 470 4GB",
+        "directx":"Version 12",
+        "storage":"85 GB available space"
+    },
+    {
+        "app_id":"413150",
+        "game_name":"Stardew Valley",
+        "os":"*:\nWindows Vista or greater",
+        "processor":"2 Ghz",
+        "memory":"2 GB RAM",
+        "graphics":"256 mb video",
+        "directx":"Version 10",
+        "storage":"500 MB available space"
+    },
+    {
+        "app_id":"815370",
+        "game_name":"Green Hell",
+        "os":"*:\nWindows 7\/8\/10 64-bit",
+        "processor":"3.2 GHz Dual Core Processor",
+        "memory":"4 GB RAM",
+        "graphics":"GeForce GTX 660, Radeon RX 460 or equivalent with 2 GB of video RAM",
+        "directx":"Version 11",
+        "storage":"8 GB available space"
+    },
+    {
+        "app_id":"2483190",
+        "game_name":"Forza Horizon 6",
+        "os":"Windows 10 22H2 (version 19045) or higher",
+        "processor":"Intel i5-8400 OR AMD Ryzen 5 1600",
+        "memory":"16 GB RAM",
+        "graphics":"Nvidia GTX 1650 OR AMD RX 6500 XT OR Intel Arc A380 \/ Arc B390",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection\nAdditional Notes:\nSSD Required",
+        "storage":null
+    },
+    {
+        "app_id":"3321460",
+        "game_name":"Crimson Desert",
+        "os":"Windows 10 64-bit",
+        "processor":"Ryzen 5 2600X \/ i5-8500",
+        "memory":"16 GB RAM",
+        "graphics":"RX 6500 XT \/ GTX 1060",
+        "directx":"Version 12",
+        "storage":"135 GB available space"
+    },
+    {
+        "app_id":"813780",
+        "game_name":"Age of Empires II: Definitive Edition",
+        "os":"Windows 10 64bit",
+        "processor":"Intel Core 2 Duo or AMD Athlon 64x2 5600+",
+        "memory":"4 GB RAM",
+        "graphics":"NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB VRAM",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"15 GB available space"
+    },
+    {
+        "app_id":"3164500",
+        "game_name":"Schedule I",
+        "os":"Windows 10 (64-bit)",
+        "processor":"3GHz 4-Core or similar",
+        "memory":"8 GB RAM",
+        "graphics":"GeForce GTX 1060 or Radeon RX 580",
+        "directx":null,
+        "storage":"8 GB available space"
+    },
+    {
+        "app_id":"268500",
+        "game_name":"XCOM® 2",
+        "os":"*:\nWindows® 7, 64-bit",
+        "processor":"Intel Core 2 Duo E4700 2.6 GHz or AMD Phenom 9950 Quad Core 2.6 GHz",
+        "memory":"4 GB RAM",
+        "graphics":"1GB ATI Radeon HD 5770, 1GB NVIDIA GeForce GTX 460 or better",
+        "directx":"Version 11",
+        "storage":"45 GB available space"
+    },
+    {
+        "app_id":"582660",
+        "game_name":"Black Desert",
+        "os":"Windows 10 (64-bit)",
+        "processor":"Intel Core i3 (4th Generation)",
+        "memory":"8 GB RAM",
+        "graphics":"GeForce GTX 970, Radeon RX 480\nNetwork:\nBroadband Internet connection",
+        "directx":null,
+        "storage":"80 GB available space"
+    },
+    {
+        "app_id":"2399830",
+        "game_name":"ARK: Survival Ascended",
+        "os":"Windows 10\/11 with updates",
+        "processor":"AMD Ryzen 5 2600X, Intel Core i7-6800K",
+        "memory":"16 GB RAM",
+        "graphics":"AMD Radeon RX 5600 XT, NVIDIA GeForce 1080",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"180 GB available space"
+    },
+    {
+        "app_id":"648800",
+        "game_name":"Raft",
+        "os":"*:\nWindows 7 or later",
+        "processor":"Intel Core i5 2.6GHz or similar",
+        "memory":"6 GB RAM",
+        "graphics":"GeForce GTX 700 series or similar",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"10 GB available space"
+    },
+    {
+        "app_id":"1151340",
+        "game_name":"Fallout 76",
+        "os":"*:\nWindows 8.1\/10 (64-bit versions)",
+        "processor":"Intel Core i5-6600k 3.5 GHz \/AMD Ryzen 3 1300X 3.5 GHz or equivalent",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GTX 780 3GB \/AMD Radeon R9 285 2GB or equivalent\nNetwork:\nBroadband Internet connection",
+        "directx":null,
+        "storage":"96 GB available space"
+    },
+    {
+        "app_id":"236390",
+        "game_name":"War Thunder",
+        "os":"Windows 10 (64bit)",
+        "processor":"Dual-Core 2.2 GHz",
+        "memory":"4 GB RAM",
+        "graphics":"",
+        "directx":"11 level video card: AMD Radeon 77XX \/ NVIDIA GeForce GTX 660. The minimum supported resolution for the game is 720p.\nDirectX:\nVersion 11\nNetwork:\nBroadband Internet connection",
+        "storage":"70 GB available space\nVR Support:\nSteamVR. Keyboard or gamepad required"
+    },
+    {
+        "app_id":"1295660",
+        "game_name":"Sid Meier's Civilization VII",
+        "os":"Win 10 64 Bit",
+        "processor":"Intel i5-4690 \/ Intel i3-10100 \/ AMD Ryzen 3 1200",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GTX 1050 \/ AMD RX 460 \/ Intel Arc A380",
+        "directx":"Version 12",
+        "storage":"20 GB available space"
+    },
+    {
+        "app_id":"739630",
+        "game_name":"Phasmophobia",
+        "os":"Windows 10 64Bit",
+        "processor":"Intel Core i5-4590 \/ AMD Ryzen 5 2600",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GTX 970 \/ AMD Radeon R9 390",
+        "directx":"Version 11",
+        "storage":"21 GB available space\nVR Support:\nOpenXR"
+    },
+    {
+        "app_id":"1938090",
+        "game_name":"Call of Duty®",
+        "os":"Windows® 10 64 Bit (latest update)",
+        "processor":"AMD Ryzen™ 5 1400 or Intel® Core™ i5-6600",
+        "memory":"8 GB RAM",
+        "graphics":"AMD Radeon™ RX 470, NVIDIA® GeForce® GTX 970 \/ 1060 or Intel® Arc™ A580",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection\nAdditional Notes:\nSSD with 161 GB available space at launch",
+        "storage":null
+    },
+    {
+        "app_id":"2767030",
+        "game_name":"Marvel Rivals",
+        "os":"Windows 10 64-bit (1909 or newer)",
+        "processor":"Intel Core i5-6600K or AMD Ryzen 5 1600X",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060 \/ AMD RX 580 \/ Intel Arc A380",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"70 GB available space"
+    },
+    {
+        "app_id":"2141910",
+        "game_name":"Magic: The Gathering Arena",
+        "os":"*:\nWindows 7",
+        "processor":"AMD Athlon 64 X2 Dual Core 5600+ or Equivalent",
+        "memory":"2 GB RAM",
+        "graphics":"GeForce GTX 8800 or Equivalent\nNetwork:\nBroadband Internet connection",
+        "directx":null,
+        "storage":null
+    },
+    {
+        "app_id":"1172470",
+        "game_name":"Apex Legends™",
+        "os":"64-bit Windows 10",
+        "processor":"AMD FX 4350 or Equivalent, Intel Core i3 6300 or Equivalent",
+        "memory":"6 GB RAM",
+        "graphics":"AMD Radeon™ HD 7790 (2 GB), NVIDIA GeForce® GTX 950",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"75 GB available space"
+    },
+    {
+        "app_id":"1903340",
+        "game_name":"Clair Obscur: Expedition 33",
+        "os":"Windows 10",
+        "processor":"Intel Core i7-8700K \/ AMD Ryzen 5 1600X",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060 6 GB \/ AMD Radeon RX 5600 XT 6 GB \/ Intel Arc A380 6 GB",
+        "directx":"Version 12",
+        "storage":"55 GB available space"
+    },
+    {
+        "app_id":"3606480",
+        "game_name":"Call of Duty®: Black Ops 7",
+        "os":"Windows®  10 64 Bit (latest update)",
+        "processor":"AMD Ryzen™ 5 1400 or Intel® Core™ i5-6600",
+        "memory":"8 GB RAM",
+        "graphics":"AMD Radeon™ RX 470, NVIDIA® GeForce® GTX 970 \/ 1060 or Intel® Arc™ A580",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection\nAdditional Notes:\nSSD with 161 GB available space at launch",
+        "storage":null
+    },
+    {
+        "app_id":"3370870",
+        "game_name":"Berry Bury Berry",
+        "os":"Windows 10 64-bit",
+        "processor":"Intel i5 or Higher",
+        "memory":"8 MB RAM",
+        "graphics":"DX9 (shader model 3.0) or DX11 with feature level 9.3 capabilities",
+        "directx":null,
+        "storage":"600 MB available space"
+    },
+    {
+        "app_id":"1551360",
+        "game_name":"Forza Horizon 5",
+        "os":"Windows 10 version 18362.0 or higher",
+        "processor":"Intel i5-4460 or AMD Ryzen 3 1200",
+        "memory":"8 GB RAM",
+        "graphics":"NVidia GTX 970, AMD RX 470, OR Intel Arc A380",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"110 GB available space"
+    },
+    {
+        "app_id":"2840770",
+        "game_name":"Avatar: Frontiers of Pandora™",
+        "os":"Windows 10\/11 (64-bit versions)",
+        "processor":"AMD Ryzen 5 3600 @ 3.6 GHz, Intel Core i7-8700K @ 3.70 GHz, or better",
+        "memory":"16 GB RAM",
+        "graphics":"AMD RX 5700 (8 GB), Intel Arc A750 (8 GB, with ReBAR on), NVIDIA GeForce GTX 1070 (8 GB), or better",
+        "directx":"Version 12",
+        "storage":"90 GB available space"
+    },
+    {
+        "app_id":"1142710",
+        "game_name":"Total War: WARHAMMER III",
+        "os":"*:\nWindows 7 64-bit",
+        "processor":"Intel i3\/Ryzen 3 series",
+        "memory":"6 GB RAM",
+        "graphics":"Nvidia GTX 900\/AMD RX 400 series | Intel Iris Xe Graphics",
+        "directx":"Version 11",
+        "storage":"120 GB available space"
+    },
+    {
+        "app_id":"1934680",
+        "game_name":"Age of Mythology: Retold",
+        "os":"Windows 10 64bit",
+        "processor":"Intel® i3-4130 or AMD FX 4350 at 2.4GHZ+ with 2 cores \/ 4 threads and AVX support",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA® GeForce® GTX 645 or AMD Radeon™ Vega 8 or Intel® Iris Graphics 550 or better",
+        "directx":"Version 12",
+        "storage":"25 GB available space"
+    },
+    {
+        "app_id":"3551340",
+        "game_name":"Football Manager 26",
+        "os":"Windows 10 (with updates 22H2), Windows 11 (with updates 23H2)",
+        "processor":"Desktop: Intel Core i3-530 or AMD FX-4100  Laptop: Intel Core i3-330M or AMD A6-5200  Requires SSE4.2 & SSSE3",
+        "memory":"4 GB RAM",
+        "graphics":"Desktop: NVIDIA GeForce GTX 960 or AMD Radeon R9 380 or Intel HD 530  Laptop: NVIDIA GeForce GTX 960M or AMD Radeon R9 M375 or Intel HD 530  512MiB VRAM",
+        "directx":"Version 11",
+        "storage":"20 GB available space"
+    },
+    {
+        "app_id":"356190",
+        "game_name":"Middle-earth™: Shadow of War™",
+        "os":"*:\nWindows 7 SP1 with Platform Update",
+        "processor":"AMD FX-4350, 4.2 GHz \/ Intel Core i5-2300, 2.80 GHz",
+        "memory":"6 GB RAM",
+        "graphics":"AMD HD 7870, 2 GB \/ NVIDIA GTX 660, 2 GB",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"70 GB available space"
+    },
+    {
+        "app_id":"3949040",
+        "game_name":"RV There Yet?",
+        "os":"Windows 10",
+        "processor":"Core i7-3820 or equivalent",
+        "memory":"8 GB RAM",
+        "graphics":"NVidia 970 or equivalent",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"3200 MB available space"
+    },
+    {
+        "app_id":"8870",
+        "game_name":"BioShock Infinite",
+        "os":"*:\nWindows Vista Service Pack 2 32-bit",
+        "processor":"Intel Core 2 DUO 2.4 GHz \/ AMD Athlon X2 2.7 GHz",
+        "memory":"2GB\nHard Disk Space:\n20 GB free\nVideo Card:",
+        "graphics":"",
+        "directx":"10 Compatible ATI Radeon HD 3870 \/ NVIDIA 8800 GT \/ Intel HD 3000 Integrated",
+        "storage":null
+    },
+    {
+        "app_id":"1203620",
+        "game_name":"Enshrouded",
+        "os":"Windows 10",
+        "processor":"Intel Core i5-6400 (2.7 GHz 4 Core) \/ AMD Ryzen 5 1500X (3.5 GHz 4 Core) or equivalent",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060 (req. 6GB VRAM) \/ AMD Radeon RX 580 (req. 6GB VRAM) \/ Intel ARC A380\nNetwork:\nBroadband Internet connection",
+        "directx":null,
+        "storage":"60 GB available space"
+    },
+    {
+        "app_id":"2537590",
+        "game_name":"Microsoft Flight Simulator 2024",
+        "os":"Windows 10",
+        "processor":"AMD Ryzen 5 2600X or Intel Core i7-6800K",
+        "memory":"16 GB RAM",
+        "graphics":"Radeon RX 5700 or GeForce GTX 970",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"50 GB available space"
+    },
+    {
+        "app_id":"289070",
+        "game_name":"Sid Meier’s Civilization® VI",
+        "os":"*:\nWindows 7x64 \/ Windows 8.1x64 \/ Windows 10x64",
+        "processor":"Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memory":"4 GB RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "directx":"Version 11",
+        "storage":"17 GB available space"
+    },
+    {
+        "app_id":"105600",
+        "game_name":"Terraria",
+        "os":"Windows Xp, Vista, 7, 8\/8.1, 10",
+        "processor":"2.0 Ghz",
+        "memory":"2.5GB\nHard Disk Space: 200MB\nVideo Card: 128mb Video Memory, capable of Shader Model 2.0+",
+        "graphics":"128mb Video",
+        "directx":"®: 9.0c or Greater",
+        "storage":null
+    },
+    {
+        "app_id":"2807960",
+        "game_name":"Battlefield™ 6",
+        "os":"Windows 10",
+        "processor":"Intel Core i5-8400, AMD Ryzen 5 2600",
+        "memory":"16 GB RAM",
+        "graphics":"Nvidia RTX 2060, AMD Radeon RX 5600 XT 6GB, Intel Arc A380",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"55 GB available space"
+    },
+    {
+        "app_id":"3265230",
+        "game_name":"Cursed Companions",
+        "os":"Windows 10",
+        "processor":"Intel Core i3-9100",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060\nNetwork:\nBroadband Internet connection",
+        "directx":null,
+        "storage":"3 GB available space"
+    },
+    {
+        "app_id":"1285190",
+        "game_name":"Borderlands 4",
+        "os":"Windows 10 \/ Windows 11",
+        "processor":"Intel Core i7-9700 \/ AMD Ryzen 7 2700X",
+        "memory":"16 GB RAM",
+        "graphics":"NVIDIA GeForce RTX 2070 \/ AMD Radeon RX 5700 XT \/ Intel Arc A580",
+        "directx":null,
+        "storage":"100 GB available space"
+    },
+    {
+        "app_id":"284160",
+        "game_name":"BeamNG.drive",
+        "os":"Windows 10 64 Bit",
+        "processor":"AMD Ryzen 5 1600 \/ Intel Core i5 8400",
+        "memory":"16 GB RAM",
+        "graphics":"Minimum 6GB VRAM (AMD Radeon RX 570 \/ Nvidia GeForce GTX 1060)",
+        "directx":"Version 11",
+        "storage":"60 GB available space"
+    },
+    {
+        "app_id":"427520",
+        "game_name":"Factorio",
+        "os":"Windows 11, 10",
+        "processor":"Quad core 3Ghz+",
+        "memory":"8 GB RAM",
+        "graphics":"",
+        "directx":"11 capable GPU with 1GB VRAM - GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD",
+        "storage":"5 GB available space"
+    },
+    {
+        "app_id":"1158310",
+        "game_name":"Crusader Kings III",
+        "os":"Windows® 10 Home 64 bit",
+        "processor":"Intel Core i5-750 | AMD FX 4300",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 660 | AMD Radeon HD 7870 | Intel Arc A310 | Intel Iris Plus G7 | AMD Radeon Vega 11",
+        "directx":null,
+        "storage":"20 GB available space"
+    },
+    {
+        "app_id":"518790",
+        "game_name":"theHunter: Call of the Wild™",
+        "os":"*:\n64bit OS - Windows 7",
+        "processor":"Intel i3-4170",
+        "memory":"4 GB RAM",
+        "graphics":"NVIDIA GTX 660 \/ ATI HD7870 - 1GB VRAM",
+        "directx":null,
+        "storage":"60 GB available space"
+    },
+    {
+        "app_id":"3059520",
+        "game_name":"F1® 25",
+        "os":"Windows 10 64-bit Version 21H1 or newer",
+        "processor":"Intel Core i5-6400 | Core i5-9600k (VR) or AMD Ryzen 3 1200 | Ryzen 5 2600X (VR)",
+        "memory":"8 GB RAM",
+        "graphics":"NVIDIA GTX 1060 (6GB) | GTX 1660Ti (VR) | RTX 2060 (RT) \/\/ AMD RX 570 (8GB) | RX 590 (VR) | 6700XT (RT) \/\/ Intel Arc A380 (VR\/RT)",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"100 GB available space"
+    },
+    {
+        "app_id":"359550",
+        "game_name":"Tom Clancy's Rainbow Six® Siege X",
+        "os":"Windows 10, Windows 11 (64-bit versions)",
+        "processor":"AMD Ryzen 3 3100 \/ Intel i3-8100",
+        "memory":"8 GB RAM",
+        "graphics":"Nvidia GTX 1650 4GB \/ AMD RX 5500XT 4GB \/ Intel ARC A380 6GB",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"65 GB available space"
+    },
+    {
+        "app_id":"2129530",
+        "game_name":"REANIMAL",
+        "os":"Windows 10\/11",
+        "processor":"Ryzen 5 2400G \/ Core i5-9400F",
+        "memory":"8 GB RAM",
+        "graphics":"GeForce GTX 1060 \/ Radeon RX 480",
+        "directx":"Version 12\nNetwork:\nBroadband Internet connection",
+        "storage":"18 GB available space"
+    },
+    {
+        "app_id":"3450310",
+        "game_name":"Europa Universalis V",
+        "os":"Windows® 10 Home 64 Bit",
+        "processor":"Intel® Core™ i7-8700K | AMD® Ryzen™ 5 3600",
+        "memory":"16 GB RAM",
+        "graphics":"Nvidia® GeForce™ GTX 1060 (6GB) | AMD® Radeon™ RX 580 (8GB) | Intel® Arc™ A380 (6GB) | Intel® Arc™ 140V",
+        "directx":null,
+        "storage":"20 GB available space"
+    },
+    {
+        "app_id":"250900",
+        "game_name":"The Binding of Isaac: Rebirth",
+        "os":"XP",
+        "processor":"Core 2 Duo",
+        "memory":"2 GB RAM",
+        "graphics":"Discreet video card",
+        "directx":null,
+        "storage":"449 MB available space"
+    },
+    {
+        "app_id":"1030840",
+        "game_name":"Mafia: Definitive Edition",
+        "os":"Windows 10 64-bit",
+        "processor":"Intel Core-i5 2550K 3.4GHz \/ AMD FX 8120 3.1 GHz",
+        "memory":"6 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 660 \/ AMD Radeon HD 7870",
+        "directx":"Version 11",
+        "storage":"50 GB available space"
+    },
+    {
+        "app_id":"1326470",
+        "game_name":"Sons Of The Forest",
+        "os":"64-bit Windows 10",
+        "processor":"INTEL CORE I5-8400 or AMD RYZEN 3 3300X",
+        "memory":"12 GB RAM",
+        "graphics":"NVIDIA GeForce GTX 1060 3GB or AMD Radeon RX 570 4GB",
+        "directx":"Version 11",
+        "storage":"20 GB available space"
+    },
+    {
+        "app_id":"1941540",
+        "game_name":"Mafia: The Old Country",
+        "os":"Windows 10 \/ 11",
+        "processor":"AMD Ryzen 7 2700X \/ Intel Core i7-9700K",
+        "memory":"16 GB RAM",
+        "graphics":"AMD Radeon RX 5700 XT \/ NVIDIA RTX 2070",
+        "directx":"Version 12",
+        "storage":"55 GB available space"
+    },
+    {
+        "app_id":"239140",
+        "game_name":"Dying Light",
+        "os":"*:\nWindows® 7 64-bit \/ Windows® 8 64-bit \/ Windows® 8.1 64-bit",
+        "processor":"Intel® Core™ i5-2500 @3.3 GHz \/ AMD FX-8320 @3.5 GHz",
+        "memory":"4 GB RAM DDR3\nHard Drive:\n40 GB free space",
+        "graphics":"NVIDIA® GeForce® GTX 560 \/ AMD Radeon™ HD 6870 (1GB VRAM)",
+        "directx":"®:\nVersion 11\nSound:\nDirectX® compatible\nAdditional Notes:\nLaptop versions of",
+        "storage":"40 GB free space\nGraphics:\nNVIDIA® GeForce® GTX 560 \/ AMD Radeon™ HD 6870 (1GB VRAM)\nDirectX®:\nVersion 11\nSound:\nDirectX® compatible"
+    },
+    {
+        "app_id":"2139460",
+        "game_name":"Once Human",
+        "os":"Windows 10 64-bit Operating System",
+        "processor":"Intel Core i5-4460",
+        "memory":"8 GB RAM",
+        "graphics":"Nvidia GTX 750ti 4G \/ AMD Radeon RX550",
+        "directx":"Version 11\nNetwork:\nBroadband Internet connection",
+        "storage":"90 GB available space"
+    },
+    {
+        "app_id":"3932890",
+        "game_name":"Escape from Tarkov",
+        "os":"Windows 10",
+        "processor":"AMD Ryzen 5 3600 or similar",
+        "memory":"16 GB RAM",
+        "graphics":"GTX 1660 or similar",
+        "directx":"Version 11",
+        "storage":"80 GB available space"
+    }
+]
