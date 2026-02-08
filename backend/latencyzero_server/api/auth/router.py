@@ -19,5 +19,6 @@ def register(user_in: UserCreate, db: Session = Depends(get_db)):
 
 @router.post("/login", response_model=UserDTO)
 def login(form: Login, db: Session = Depends(get_db)):
-  """Login user. Devuelve el `UserDTO` con token."""
+  """Login user by username or email. Devuelve el `UserDTO` con token."""
   return login_user(db, form.username, form.password)
+

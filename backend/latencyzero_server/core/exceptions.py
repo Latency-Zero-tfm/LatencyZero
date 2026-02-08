@@ -29,7 +29,7 @@ class UserNotFoundException(LatencyZeroException):
     super().__init__(
       message="User not found",
       status_code=404
-    ) 
+    )
 
 class InvalidPasswordException(LatencyZeroException):
   """Raised when password doesn't meet requirements."""
@@ -45,4 +45,12 @@ class TokenException(LatencyZeroException):
     super().__init__(
       message=message,
       status_code=401
+    )
+
+class WeakPasswordException(LatencyZeroException):
+  """Raised when password is too weak."""
+  def __init__(self, reason: str = "La contraseña no cumple los requisitos de seguridad"):
+    super().__init__(
+      message=reason,
+      status_code=400
     )
