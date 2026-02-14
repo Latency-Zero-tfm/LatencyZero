@@ -25,6 +25,8 @@ Todo lo que se utilice en este proyecto se almacenará también en este reposito
 * [Alvaro López Guerrero](https://github.com/Alvalogue72)
 * [Andrei Munteanu Popa](https://github.com/andu8705)
 
+<!-- https://github.com/CPIFPAlanTuring/iabd-tfm-2526 -->
+
 Máster de FP en Inteligencia Artifical y Big Data - CPIFP Alan Turing
 
  `Curso 2025/2026`
