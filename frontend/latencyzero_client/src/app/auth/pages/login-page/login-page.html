@@ -18,9 +18,15 @@
         </svg>
       </div>
       <input type="text" id="username" placeholder="Nombre de usuario"
-        class="w-full pl-11 pr-4 py-3 bg-slate-900/50 border border-slate-600 rounded-xl text-slate-50 placeholder-slate-600 outline-none focus:border-yellow-400 transition-colors"
+        [class]="formUtils.isValidField(loginForm, 'username') ? 'border-red-600' : 'border-slate-600'"
+        class="w-full pl-11 pr-4 py-3 bg-slate-900/50 border rounded-xl text-slate-50 placeholder-slate-600 outline-none focus:border-yellow-400 transition-colors"
         formControlName="username">
     </div>
+    @if (formUtils.isValidField(loginForm, 'username')) {
+    <span class="text-red-600 text-sm m-1">
+      {{ formUtils.getFieldError(loginForm, "username") }}
+    </span>
+    }
   </div>
 
   <div>
@@ -40,19 +46,27 @@
           <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
         </svg>
       </div>
-      <input type="password" id="password" placeholder="••••••••"
-        class="w-full pl-11 pr-12 py-3 bg-slate-900/50 border border-slate-600 rounded-xl text-slate-50 placeholder-slate-600 outline-none focus:border-yellow-400 transition-colors"
+      <input type="password" id="password" placeholder=" "
+        [type]="showPassword ? 'text' : 'password'"
+        [class]="formUtils.isValidField(loginForm, 'password') ? 'border-red-600' : 'border-slate-600'"
+        class="w-full pl-11 pr-12 py-3 bg-slate-900/50 border rounded-xl text-slate-50 placeholder-slate-600 outline-none focus:border-yellow-400 transition-colors"
         formControlName="password">
-      <button type="button"
-        class="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-500 hover:text-slate-300 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 cursor-pointer" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button type="button" (click)="togglePasswordVisibility()"
+        [class]="showPassword ? 'text-slate-300' : 'text-slate-500'"
+        class="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-slate-300 transition-colors cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
           <circle cx="12" cy="12" r="3"></circle>
         </svg>
       </button>
-    </div>
-  </div>
+      </div>
+      @if (formUtils.isValidField(loginForm, 'password')) {
+      <span class="text-red-600 text-sm m-1">
+        {{ formUtils.getFieldError(loginForm, "password") }}
+      </span>
+      }
+      </div>
 
   <button type="submit"
     class="w-full flex justify-center items-center gap-2 py-3.5 px-4 bg-yellow-500 hover:bg-yellow-400 hover:shadow-2xl font-semibold text-slate-950 font-serif rounded-xl transition-all cursor-pointer">
