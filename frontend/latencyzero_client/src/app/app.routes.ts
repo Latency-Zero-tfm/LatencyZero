@@ -1,12 +1,11 @@
 import { Routes } from '@angular/router';
 import { MainLayoutComponent } from './layout/main-layout-component/main-layout-component';
 import { HardVisionPage } from './features/hardvision/pages/hard-vision-page/hard-vision-page';
-import { HomePage } from './layout/home-page/home-page';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    component: MainLayoutComponent,
     children: [
       {
         path: 'hardvisionai',
