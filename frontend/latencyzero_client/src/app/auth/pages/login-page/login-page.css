@@ -1,0 +1,14 @@
+.group__input:focus {
+  border: 1px solid var(--primary-blue);
+}
+
+.group__input:focus + .group__label {
+  color: var(--primary-blue);
+}
+
+.group__input:focus + .group__label, .group__input:not(:placeholder-shown) + .group__label {
+  padding: 1px 15px;
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+}

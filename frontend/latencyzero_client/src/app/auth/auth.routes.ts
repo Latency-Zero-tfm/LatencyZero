@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 import { MainLayoutComponent } from "../layout/main-layout-component/main-layout-component";
 import { AuthLayout } from "./layout/auth-layout/auth-layout";
+import { LoginPage } from "./pages/login-page/login-page";
 
 export const authRoutes: Routes = [
   {
@@ -9,7 +10,7 @@ export const authRoutes: Routes = [
     children: [
       {
         path: 'login',
-        component: MainLayoutComponent,
+        component: LoginPage,
       },
       {
         path: 'register',

@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
   /* Configurar fuentes personalizadas */
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Syne", ui-serif, Georgia, serif;
   --font-mono: "Geist Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
 }
