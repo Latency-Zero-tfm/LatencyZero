@@ -1,75 +1,102 @@
-<div class="min-h-screen bg-slate-50 text-slate-800">
+<div class="min-h-screen flex flex-col bg-slate-950 w-full text-slate-50 relative overflow-hidden">
 
-  <nav class="flex items-center justify-between px-8 py-5 bg-white border-b border-slate-200">
-    <div class="flex items-center gap-2">
-      <div class="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center font-bold text-white">LZ</div>
-      <span class="text-xl font-bold text-slate-900">LatencyZero</span>
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="absolute inset-0 bg-linear-to-br from-slate-900/90 via-slate-950 to-slate-950"></div>
+    <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-yellow-500/10 blur-[100px] rounded-full"></div>
+  </div>
+
+  <nav class="relative z-10 w-full border-b border-slate-800 bg-slate-900/50 backdrop-blur-md px-6 py-4 flex justify-between items-center">
+
+    <div class="font-serif inline-flex items-center gap-2">
+      <div class="w-10 h-10 bg-slate-200 rounded-lg flex items-center justify-center">
+        <img src="assets/img/logo2.png" alt="LatencyZero Logo" class="w-6 h-6 object-contain">
+      </div>
+      <span class="text-xl font-bold tracking-tight text-white hidden sm:block">
+        LATENCY<span class="text-yellow-500">ZERO</span>
+      </span>
     </div>
-    <div class="hidden md:flex gap-6 text-sm text-slate-500">
-      <a href="#" class="hover:text-yellow-600 transition">Dashboard</a>
-      <a href="#" class="hover:text-yellow-600 transition">Análisis IA</a>
-      <a href="#" class="hover:text-yellow-600 transition" routerLink="hardvisionai">HardVisionAI</a>
+
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+      <a href="#" class="hover:text-white transition-colors">Inicio</a>
+      <a href="#" class="hover:text-white transition-colors">Características</a>
+      <a href="#" class="hover:text-white transition-colors">Precios</a>
     </div>
-    <button class="px-5 py-2 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-yellow-500 transition">
-      Sign In
-    </button>
+
+    <div class="flex items-center gap-4">
+      <button
+        routerLink="/auth/login"
+        class="flex items-center justify-center px-5 py-2 text-sm font-semibold text-slate-950 bg-yellow-500 hover:bg-yellow-400 rounded-lg transition-all shadow-lg shadow-yellow-500/20 hover:shadow-yellow-500/40">
+        Iniciar Sesión
+      </button>
+    </div>
   </nav>
 
-  <router-outlet></router-outlet>
+  <main class="relative z-10 flex-1 container mx-auto px-6 py-8 sm:py-12 flex flex-col gap-10">
 
-  <footer class="bg-white border-t border-slate-200 pt-16 pb-8 text-slate-600">
-    <div class="max-w-7xl mx-auto px-8">
+    <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">
+          Control total con <span class="text-yellow-500">LatencyZero</span>
+        </h1>
+        <p class="text-slate-400 text-sm sm:text-base max-w-xl">
+          Monitoriza tu infraestructura, reduce la latencia al mínimo y mantén tus servidores operando al máximo rendimiento.
+        </p>
+      </div>
+    </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="md:col-span-5 flex flex-col gap-6">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center font-bold text-white">LZ</div>
-            <span class="text-xl font-bold text-slate-900">LatencyZero</span>
-          </div>
-          <p class="text-slate-500 max-w-sm">
-            Plataforma de ayuda con IA, intuitiva y eficiente. Mejorando tu bienestar cada día con la tecnología más
-            avanzada.
-          </p>
+      <div class="bg-slate-900 rounded-2xl border border-slate-700 bg-linear-to-br from-yellow-500/10 via-slate-800/40 to-slate-900/80 p-6 hover:border-yellow-500/50 transition-all group">
+        <div class="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center mb-4 text-yellow-500 group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008z" /></svg>
         </div>
-
-        <div class="md:col-span-3">
-          <h4 class="text-slate-900 font-bold mb-6">Navigation</h4>
-          <ul class="space-y-4 text-sm">
-            <a href="#" class="hover:text-yellow-600 transition inline-flex items-center gap-1 group">
-              HardVisionAI
-              <span
-                class="opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all text-yellow-500">&rarr;</span>
-            </a>
-          </ul>
-        </div>
-
-        <div class="md:col-span-4 flex flex-col gap-6">
-          <h4 class="text-slate-900 font-bold">Contact</h4>
-
-          <div class="flex items-center gap-3 text-sm text-slate-500 hover:text-yellow-600 transition">
-            <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                </path>
-              </svg>
-            </div>
-            <a href="mailto:nomeacuerdo@gmail.com">nomeacuerdo@gmail.com</a>
-          </div>
-
-          <a href="/auth/login"
-            class="inline-block px-6 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-yellow-500 transition">
-            Sign In
-          </a>
-        </div>
-
+        <h3 class="text-lg font-semibold text-white mb-2">Despliegue Rápido</h3>
+        <p class="text-sm text-slate-400">Configura y lanza nuevos nodos en cuestión de segundos con nuestra infraestructura optimizada.</p>
       </div>
 
-      <div class="pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-        &copy; 2026 LatencyZero. All rights reserved.
+      <div class="bg-slate-900 rounded-2xl border border-slate-700 bg-linear-to-br from-yellow-500/10 via-slate-800/40 to-slate-900/80 p-6 hover:border-yellow-500/50 transition-all group">
+        <div class="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center mb-4 text-yellow-500 group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-white mb-2">Monitorización 24/7</h3>
+        <p class="text-sm text-slate-400">Analíticas en tiempo real para garantizar que tu red opera sin interrupciones ni latencias ocultas.</p>
+      </div>
+
+      <div class="bg-slate-900 rounded-2xl border border-slate-700 bg-linear-to-br from-yellow-500/10 via-slate-800/40 to-slate-900/80 p-6 hover:border-yellow-500/50 transition-all group lg:col-span-1 md:col-span-2">
+        <div class="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center mb-4 text-yellow-500 group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-white mb-2">Máxima Seguridad</h3>
+        <p class="text-sm text-slate-400">Tus datos protegidos por encriptación de grado militar y protocolos de cero confianza (Zero Trust).</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="relative z-10 border-t border-slate-800 bg-slate-900/80 mt-auto">
+    <div class="container mx-auto px-6 py-8">
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
+
+        <div class="font-serif inline-flex items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+          <div class="w-8 h-8 bg-slate-200 rounded md flex items-center justify-center">
+            <img src="assets/img/logo2.png" alt="LatencyZero Logo" class="w-5 h-5 object-contain">
+          </div>
+          <span class="text-lg font-bold tracking-tight text-white">LATENCY<span class="text-yellow-500">ZERO</span></span>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-medium text-slate-400">
+          <a href="#" class="hover:text-yellow-500 transition-colors">Soporte</a>
+          <a href="#" class="hover:text-yellow-500 transition-colors">Términos de Servicio</a>
+          <a href="#" class="hover:text-yellow-500 transition-colors">Política de Privacidad</a>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800/50 text-center text-xs text-slate-500">
+        &copy; 2026 LatencyZero. Todos los derechos reservados.
       </div>
 
     </div>
   </footer>
+
 </div>
