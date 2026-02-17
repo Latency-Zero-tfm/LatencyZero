@@ -1,0 +1,1872 @@
+[
+    {
+        "category":"OS Version",
+        "component":"Windows",
+        "usage_percentage":"94.62%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Windows 11 64 bit",
+        "usage_percentage":"66.71%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Windows 10 64 bit",
+        "usage_percentage":"27.79%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Windows 7 64 bit",
+        "usage_percentage":"0.08%"
+    },
+    {
+        "category":"OS Version",
+        "component":"OSX",
+        "usage_percentage":"2.01%"
+    },
+    {
+        "category":"OS Version",
+        "component":"MacOS 26.2.0 64 bit",
+        "usage_percentage":"0.56%"
+    },
+    {
+        "category":"OS Version",
+        "component":"MacOS 26.1.0 64 bit",
+        "usage_percentage":"0.28%"
+    },
+    {
+        "category":"OS Version",
+        "component":"MacOS 15.6.1 64 bit",
+        "usage_percentage":"0.23%"
+    },
+    {
+        "category":"OS Version",
+        "component":"MacOS 15.7.3 64 bit",
+        "usage_percentage":"0.14%"
+    },
+    {
+        "category":"OS Version",
+        "component":"MacOS 15.5.0 64 bit",
+        "usage_percentage":"0.10%"
+    },
+    {
+        "category":"OS Version",
+        "component":"MacOS 15.6.0 64 bit",
+        "usage_percentage":"0.07%"
+    },
+    {
+        "category":"OS Version",
+        "component":"MacOS 26.0.1 64 bit",
+        "usage_percentage":"0.05%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Linux",
+        "usage_percentage":"3.38%"
+    },
+    {
+        "category":"OS Version",
+        "component":"\"Arch Linux\" 64 bit",
+        "usage_percentage":"0.31%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Linux Mint 22.2 64 bit",
+        "usage_percentage":"0.22%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Ubuntu Core 24 64 bit",
+        "usage_percentage":"0.13%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Ubuntu 24.04.3 LTS 64 bit",
+        "usage_percentage":"0.13%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Linux Mint 22.3 64 bit",
+        "usage_percentage":"0.08%"
+    },
+    {
+        "category":"OS Version",
+        "component":"\"Fedora Linux 43 (KDE Plasma Desktop Edition)\" 64 bit",
+        "usage_percentage":"0.07%"
+    },
+    {
+        "category":"OS Version",
+        "component":"\"EndeavourOS Linux\" 64 bit",
+        "usage_percentage":"0.06%"
+    },
+    {
+        "category":"OS Version",
+        "component":"\"Nobara Linux 43 (KDE Plasma Desktop Edition)\" 64 bit",
+        "usage_percentage":"0.06%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Debian GNU\/Linux 13 (trixie) 64 bit",
+        "usage_percentage":"0.06%"
+    },
+    {
+        "category":"OS Version",
+        "component":"\"Manjaro Linux\" 64 bit",
+        "usage_percentage":"0.06%"
+    },
+    {
+        "category":"OS Version",
+        "component":"Ubuntu 25.10 64 bit",
+        "usage_percentage":"0.05%"
+    },
+    {
+        "category":"System RAM",
+        "component":"Less than 4 GB",
+        "usage_percentage":"0.02%"
+    },
+    {
+        "category":"System RAM",
+        "component":"4 GB",
+        "usage_percentage":"1.52%"
+    },
+    {
+        "category":"System RAM",
+        "component":"8 GB",
+        "usage_percentage":"7.78%"
+    },
+    {
+        "category":"System RAM",
+        "component":"12 GB",
+        "usage_percentage":"2.46%"
+    },
+    {
+        "category":"System RAM",
+        "component":"16 GB",
+        "usage_percentage":"40.24%"
+    },
+    {
+        "category":"System RAM",
+        "component":"24 GB",
+        "usage_percentage":"1.83%"
+    },
+    {
+        "category":"System RAM",
+        "component":"28 GB",
+        "usage_percentage":"0.52%"
+    },
+    {
+        "category":"System RAM",
+        "component":"32 GB",
+        "usage_percentage":"38.02%"
+    },
+    {
+        "category":"System RAM",
+        "component":"48 GB",
+        "usage_percentage":"1.19%"
+    },
+    {
+        "category":"System RAM",
+        "component":"60 GB",
+        "usage_percentage":"0.92%"
+    },
+    {
+        "category":"System RAM",
+        "component":"64 GB",
+        "usage_percentage":"4.26%"
+    },
+    {
+        "category":"System RAM",
+        "component":"More than 64 GB",
+        "usage_percentage":"0.61%"
+    },
+    {
+        "category":"System RAM",
+        "component":"Other",
+        "usage_percentage":"0.63%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"Unspecified",
+        "usage_percentage":"0.01%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"Below 1.4 Ghz",
+        "usage_percentage":"0.74%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"1.4 Ghz to 1.49 Ghz",
+        "usage_percentage":"0.15%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"1.5 Ghz to 1.69 Ghz",
+        "usage_percentage":"0.19%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"1.7 Ghz to 1.99 Ghz",
+        "usage_percentage":"1.04%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"2.0 Ghz to 2.29 Ghz",
+        "usage_percentage":"3.19%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"2.3 Ghz to 2.69 Ghz",
+        "usage_percentage":"20.89%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"2.7 Ghz to 2.99 Ghz",
+        "usage_percentage":"8.68%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"3.0 Ghz to 3.29 Ghz",
+        "usage_percentage":"4.97%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"3.3 Ghz to 3.69 Ghz",
+        "usage_percentage":"12.56%"
+    },
+    {
+        "category":"Intel CPU Speeds",
+        "component":"3.7 Ghz and above",
+        "usage_percentage":"2.59%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"1 cpu",
+        "usage_percentage":"0.02%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"2 cpus",
+        "usage_percentage":"3.16%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"3 cpus",
+        "usage_percentage":"0.11%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"4 cpus",
+        "usage_percentage":"13.43%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"5 cpus",
+        "usage_percentage":"0.14%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"6 cpus",
+        "usage_percentage":"28.45%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"7 cpus",
+        "usage_percentage":"0.01%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"8 cpus",
+        "usage_percentage":"26.67%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"9 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"10 cpus",
+        "usage_percentage":"7.63%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"11 cpus",
+        "usage_percentage":"0.04%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"12 cpus",
+        "usage_percentage":"5.25%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"13 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"14 cpus",
+        "usage_percentage":"4.91%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"15 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"16 cpus",
+        "usage_percentage":"5.43%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"17 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"18 cpus",
+        "usage_percentage":"0.05%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"19 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"20 cpus",
+        "usage_percentage":"2.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"21 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"22 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"23 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"24 cpus",
+        "usage_percentage":"2.67%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"26 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"27 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"28 cpus",
+        "usage_percentage":"0.01%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"30 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"32 cpus",
+        "usage_percentage":"0.01%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"36 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"40 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"44 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"48 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"52 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"56 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"64 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"72 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"80 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"96 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"112 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"120 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"128 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Physical CPUs",
+        "component":"192 cpus",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1650 SUPER",
+        "usage_percentage":"0.29%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2050",
+        "usage_percentage":"0.45%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5090",
+        "usage_percentage":"0.37%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+        "usage_percentage":"0.24%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon 780M Graphics",
+        "usage_percentage":"0.32%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel UHD Graphics 620",
+        "usage_percentage":"0.45%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 960",
+        "usage_percentage":"0.19%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3060 Ti",
+        "usage_percentage":"2.38%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4060 Ti",
+        "usage_percentage":"2.61%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4070",
+        "usage_percentage":"2.02%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4060 Laptop GPU",
+        "usage_percentage":"3.79%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5060",
+        "usage_percentage":"2.37%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5070",
+        "usage_percentage":"2.72%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1050",
+        "usage_percentage":"0.61%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4070 SUPER",
+        "usage_percentage":"1.61%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel(R) Arc(TM) Graphics",
+        "usage_percentage":"0.26%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3050",
+        "usage_percentage":"2.88%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel(R) UHD Graphics",
+        "usage_percentage":"1.74%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5060 Ti",
+        "usage_percentage":"1.50%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6800",
+        "usage_percentage":"0.20%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1660 SUPER",
+        "usage_percentage":"1.44%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel HD Graphics 4600",
+        "usage_percentage":"0.17%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5070 Ti",
+        "usage_percentage":"1.43%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3060",
+        "usage_percentage":"4.11%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3060 Laptop GPU",
+        "usage_percentage":"1.95%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1650 Ti",
+        "usage_percentage":"0.40%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3070",
+        "usage_percentage":"2.19%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "usage_percentage":"0.53%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5080",
+        "usage_percentage":"1.19%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6600 XT",
+        "usage_percentage":"0.33%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 7800 XT",
+        "usage_percentage":"1.05%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6750 XT",
+        "usage_percentage":"0.32%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1050 Ti",
+        "usage_percentage":"1.27%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 7700 XT",
+        "usage_percentage":"0.24%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4070 Ti",
+        "usage_percentage":"0.98%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1070 Ti",
+        "usage_percentage":"0.22%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3070 Ti",
+        "usage_percentage":"1.02%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel HD Graphics 520",
+        "usage_percentage":"0.22%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2060",
+        "usage_percentage":"1.84%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 550",
+        "usage_percentage":"0.21%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5060 Laptop GPU",
+        "usage_percentage":"0.85%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon Vega 8 Graphics",
+        "usage_percentage":"0.35%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1060",
+        "usage_percentage":"1.68%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4080 Laptop GPU",
+        "usage_percentage":"0.19%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6600",
+        "usage_percentage":"0.84%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel UHD Graphics 630",
+        "usage_percentage":"0.28%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4050 Laptop GPU",
+        "usage_percentage":"1.47%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon Vega 3 Graphics",
+        "usage_percentage":"0.19%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2060 SUPER",
+        "usage_percentage":"0.79%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3090",
+        "usage_percentage":"0.41%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1650",
+        "usage_percentage":"2.63%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 570",
+        "usage_percentage":"0.38%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4090",
+        "usage_percentage":"0.76%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon Graphics",
+        "usage_percentage":"1.85%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2070 SUPER",
+        "usage_percentage":"0.77%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1080 Ti",
+        "usage_percentage":"0.35%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3080",
+        "usage_percentage":"1.50%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6700 XT",
+        "usage_percentage":"0.57%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4080 SUPER",
+        "usage_percentage":"0.68%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3070 Laptop GPU",
+        "usage_percentage":"0.47%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4070 Ti SUPER",
+        "usage_percentage":"0.78%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2070",
+        "usage_percentage":"0.50%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+        "usage_percentage":"0.66%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6650 XT",
+        "usage_percentage":"0.27%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel Iris Xe Graphics",
+        "usage_percentage":"1.71%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2080 SUPER",
+        "usage_percentage":"0.29%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1070",
+        "usage_percentage":"0.69%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6800 XT",
+        "usage_percentage":"0.24%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4070 Laptop GPU",
+        "usage_percentage":"0.99%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GT 1030",
+        "usage_percentage":"0.23%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3080 Ti",
+        "usage_percentage":"0.58%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 3050 Laptop GPU",
+        "usage_percentage":"0.38%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 580",
+        "usage_percentage":"0.58%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 970",
+        "usage_percentage":"0.22%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4080",
+        "usage_percentage":"0.67%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2080 Ti",
+        "usage_percentage":"0.25%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 580 2048SP",
+        "usage_percentage":"0.57%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6500 XT",
+        "usage_percentage":"0.19%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon(TM) Graphics",
+        "usage_percentage":"2.15%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 750 Ti",
+        "usage_percentage":"0.19%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1660 Ti",
+        "usage_percentage":"0.95%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel HD Graphics 620",
+        "usage_percentage":"0.21%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA Graphics Device",
+        "usage_percentage":"1.21%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 2080",
+        "usage_percentage":"0.25%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1660",
+        "usage_percentage":"0.50%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Raphael",
+        "usage_percentage":"0.16%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 7600 XT",
+        "usage_percentage":"0.59%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+        "usage_percentage":"0.27%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 7900 XTX",
+        "usage_percentage":"0.48%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 6900 XT",
+        "usage_percentage":"0.17%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GTX 1080",
+        "usage_percentage":"0.45%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon (TM) Graphics",
+        "usage_percentage":"0.38%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD AMD Custom GPU 0405",
+        "usage_percentage":"0.41%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce GT 730",
+        "usage_percentage":"0.16%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon RX 5700 XT",
+        "usage_percentage":"0.57%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Intel(R) Graphics",
+        "usage_percentage":"0.28%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"AMD Radeon Graphics (RADV VANGOGH)",
+        "usage_percentage":"0.40%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"NVIDIA GeForce RTX 4060",
+        "usage_percentage":"4.16%"
+    },
+    {
+        "category":"Video Card Description",
+        "component":"Other",
+        "usage_percentage":"9.33%"
+    },
+    {
+        "category":"VRAM",
+        "component":"512 MB",
+        "usage_percentage":"4.27%"
+    },
+    {
+        "category":"VRAM",
+        "component":"1 GB",
+        "usage_percentage":"3.46%"
+    },
+    {
+        "category":"VRAM",
+        "component":"2 GB",
+        "usage_percentage":"5.37%"
+    },
+    {
+        "category":"VRAM",
+        "component":"3 GB",
+        "usage_percentage":"1.34%"
+    },
+    {
+        "category":"VRAM",
+        "component":"4 GB",
+        "usage_percentage":"6.71%"
+    },
+    {
+        "category":"VRAM",
+        "component":"6 GB",
+        "usage_percentage":"9.26%"
+    },
+    {
+        "category":"VRAM",
+        "component":"8 GB",
+        "usage_percentage":"29.57%"
+    },
+    {
+        "category":"VRAM",
+        "component":"10 GB",
+        "usage_percentage":"2.11%"
+    },
+    {
+        "category":"VRAM",
+        "component":"11 GB",
+        "usage_percentage":"1.20%"
+    },
+    {
+        "category":"VRAM",
+        "component":"12 GB",
+        "usage_percentage":"15.07%"
+    },
+    {
+        "category":"VRAM",
+        "component":"16 GB",
+        "usage_percentage":"14.55%"
+    },
+    {
+        "category":"VRAM",
+        "component":"20 GB",
+        "usage_percentage":"0.64%"
+    },
+    {
+        "category":"VRAM",
+        "component":"24 GB",
+        "usage_percentage":"3.85%"
+    },
+    {
+        "category":"VRAM",
+        "component":"32 GB",
+        "usage_percentage":"0.87%"
+    },
+    {
+        "category":"VRAM",
+        "component":"Other",
+        "usage_percentage":"1.72%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"800 x 1280",
+        "usage_percentage":"0.51%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1280 x 720",
+        "usage_percentage":"0.21%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1280 x 1024",
+        "usage_percentage":"0.22%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1280 x 800",
+        "usage_percentage":"0.36%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1360 x 768",
+        "usage_percentage":"0.44%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1366 x 768",
+        "usage_percentage":"2.37%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1440 x 900",
+        "usage_percentage":"0.79%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1470 x 956",
+        "usage_percentage":"0.39%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1512 x 982",
+        "usage_percentage":"0.28%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1600 x 900",
+        "usage_percentage":"0.70%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1680 x 1050",
+        "usage_percentage":"0.44%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1920 x 1200",
+        "usage_percentage":"2.18%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"1920 x 1080",
+        "usage_percentage":"52.59%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"2560 x 1440",
+        "usage_percentage":"21.32%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"2560 x 1600",
+        "usage_percentage":"4.81%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"2560 x 1080",
+        "usage_percentage":"0.75%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"2880 x 1800",
+        "usage_percentage":"0.45%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"3440 x 1440",
+        "usage_percentage":"3.10%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"3840 x 2160",
+        "usage_percentage":"4.95%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"5120 x 1440",
+        "usage_percentage":"0.40%"
+    },
+    {
+        "category":"Primary Display Resolution",
+        "component":"Other",
+        "usage_percentage":"2.72%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"1920 x 2160",
+        "usage_percentage":"1.58%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"2560 x 2520",
+        "usage_percentage":"1.08%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3000 x 1920",
+        "usage_percentage":"5.46%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3200 x 1080",
+        "usage_percentage":"1.68%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3280 x 1080",
+        "usage_percentage":"1.02%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3286 x 1080",
+        "usage_percentage":"2.12%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3360 x 1080",
+        "usage_percentage":"1.08%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3440 x 2520",
+        "usage_percentage":"0.64%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3440 x 2880",
+        "usage_percentage":"0.42%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3520 x 1080",
+        "usage_percentage":"1.42%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3600 x 1080",
+        "usage_percentage":"0.94%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3640 x 1920",
+        "usage_percentage":"4.38%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1080",
+        "usage_percentage":"50.14%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1081",
+        "usage_percentage":"1.08%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1082",
+        "usage_percentage":"0.62%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1083",
+        "usage_percentage":"0.92%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1084",
+        "usage_percentage":"0.72%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1085",
+        "usage_percentage":"0.60%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1086",
+        "usage_percentage":"0.56%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 1200",
+        "usage_percentage":"1.74%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"3840 x 2160",
+        "usage_percentage":"0.98%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4000 x 2560",
+        "usage_percentage":"1.66%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4480 x 1080",
+        "usage_percentage":"1.30%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4480 x 1440",
+        "usage_percentage":"27.14%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4480 x 1445",
+        "usage_percentage":"0.46%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4480 x 1600",
+        "usage_percentage":"1.18%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4520 x 1920",
+        "usage_percentage":"0.92%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4880 x 2560",
+        "usage_percentage":"0.50%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4920 x 1920",
+        "usage_percentage":"0.80%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"4920 x 2160",
+        "usage_percentage":"0.60%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5120 x 1440",
+        "usage_percentage":"10.28%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5120 x 1600",
+        "usage_percentage":"0.84%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5120 x 2880",
+        "usage_percentage":"0.58%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5280 x 2560",
+        "usage_percentage":"0.52%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5360 x 1440",
+        "usage_percentage":"3.42%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5560 x 1920",
+        "usage_percentage":"0.60%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5760 x 1080",
+        "usage_percentage":"2.58%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"5760 x 2160",
+        "usage_percentage":"5.02%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"6000 x 1440",
+        "usage_percentage":"1.54%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"6400 x 1440",
+        "usage_percentage":"1.74%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"6400 x 2160",
+        "usage_percentage":"3.46%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"7040 x 1440",
+        "usage_percentage":"0.62%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"7280 x 2160",
+        "usage_percentage":"0.48%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"7680 x 1440",
+        "usage_percentage":"0.80%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"7680 x 2160",
+        "usage_percentage":"2.72%"
+    },
+    {
+        "category":"Multi-Monitor Desktop Resolution",
+        "component":"Other",
+        "usage_percentage":"51.06%"
+    },
+    {
+        "category":"Language",
+        "component":"Simplified Chinese",
+        "usage_percentage":"23.86%"
+    },
+    {
+        "category":"Language",
+        "component":"Norwegian",
+        "usage_percentage":"0.12%"
+    },
+    {
+        "category":"Language",
+        "component":"Bulgarian",
+        "usage_percentage":"0.05%"
+    },
+    {
+        "category":"Language",
+        "component":"Vietnamese",
+        "usage_percentage":"0.20%"
+    },
+    {
+        "category":"Language",
+        "component":"Romanian",
+        "usage_percentage":"0.14%"
+    },
+    {
+        "category":"Language",
+        "component":"Portuguese - Portugal",
+        "usage_percentage":"0.36%"
+    },
+    {
+        "category":"Language",
+        "component":"Dutch",
+        "usage_percentage":"0.26%"
+    },
+    {
+        "category":"Language",
+        "component":"French",
+        "usage_percentage":"2.42%"
+    },
+    {
+        "category":"Language",
+        "component":"Korean",
+        "usage_percentage":"2.40%"
+    },
+    {
+        "category":"Language",
+        "component":"German",
+        "usage_percentage":"2.99%"
+    },
+    {
+        "category":"Language",
+        "component":"Japanese",
+        "usage_percentage":"2.86%"
+    },
+    {
+        "category":"Language",
+        "component":"Portuguese-Brazil",
+        "usage_percentage":"3.92%"
+    },
+    {
+        "category":"Language",
+        "component":"Spanish - Spain",
+        "usage_percentage":"4.22%"
+    },
+    {
+        "category":"Language",
+        "component":"Russian",
+        "usage_percentage":"10.12%"
+    },
+    {
+        "category":"Language",
+        "component":"Czech",
+        "usage_percentage":"0.58%"
+    },
+    {
+        "category":"Language",
+        "component":"Polish",
+        "usage_percentage":"1.68%"
+    },
+    {
+        "category":"Language",
+        "component":"Hungarian",
+        "usage_percentage":"0.39%"
+    },
+    {
+        "category":"Language",
+        "component":"Traditional Chinese",
+        "usage_percentage":"1.33%"
+    },
+    {
+        "category":"Language",
+        "component":"Swedish",
+        "usage_percentage":"0.26%"
+    },
+    {
+        "category":"Language",
+        "component":"Turkish",
+        "usage_percentage":"1.29%"
+    },
+    {
+        "category":"Language",
+        "component":"Danish",
+        "usage_percentage":"0.22%"
+    },
+    {
+        "category":"Language",
+        "component":"Thai",
+        "usage_percentage":"0.91%"
+    },
+    {
+        "category":"Language",
+        "component":"Finnish",
+        "usage_percentage":"0.16%"
+    },
+    {
+        "category":"Language",
+        "component":"Ukrainian",
+        "usage_percentage":"0.71%"
+    },
+    {
+        "category":"Language",
+        "component":"Indonesian",
+        "usage_percentage":"0.14%"
+    },
+    {
+        "category":"Language",
+        "component":"Spanish - Latin America",
+        "usage_percentage":"0.68%"
+    },
+    {
+        "category":"Language",
+        "component":"Greek",
+        "usage_percentage":"0.06%"
+    },
+    {
+        "category":"Language",
+        "component":"Italian",
+        "usage_percentage":"0.64%"
+    },
+    {
+        "category":"Language",
+        "component":"Arabic",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Language",
+        "component":"English",
+        "usage_percentage":"37.01%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"Unspecified",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"Less than 10 GB",
+        "usage_percentage":"0.84%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"10 GB to  99 GB",
+        "usage_percentage":"15.07%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"100 GB to 249 GB",
+        "usage_percentage":"22.59%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"250 GB to 499 GB",
+        "usage_percentage":"22.46%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"500 GB to 749 GB",
+        "usage_percentage":"11.26%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"750 GB to 999 GB",
+        "usage_percentage":"9.24%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"1 TB to 2 TB",
+        "usage_percentage":"10.24%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"2 TB to 3 TB",
+        "usage_percentage":"2.53%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"3 TB to 4 TB",
+        "usage_percentage":"1.92%"
+    },
+    {
+        "category":"Free Hard Drive Space",
+        "component":"Above 4 TB",
+        "usage_percentage":"3.84%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"Unspecified",
+        "usage_percentage":"0.05%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"Less than 10 GB",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"10 GB to  99 GB",
+        "usage_percentage":"0.20%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"100 GB to 249 GB",
+        "usage_percentage":"5.40%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"250 GB to 499 GB",
+        "usage_percentage":"16.90%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"500 GB to 749 GB",
+        "usage_percentage":"2.42%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"750 GB to 999 GB",
+        "usage_percentage":"22.70%"
+    },
+    {
+        "category":"Total Hard Drive Space",
+        "component":"Above 1 TB",
+        "usage_percentage":"52.33%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Meta Quest 3",
+        "usage_percentage":"28.17%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Oculus Quest 2",
+        "usage_percentage":"23.77%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Meta Quest 3S",
+        "usage_percentage":"12.29%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Valve Index HMD",
+        "usage_percentage":"11.49%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Oculus Rift S",
+        "usage_percentage":"4.16%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Pico 4",
+        "usage_percentage":"4.04%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"HTC Vive",
+        "usage_percentage":"2.51%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Sony PS VR2",
+        "usage_percentage":"2.21%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Windows Mixed Reality",
+        "usage_percentage":"2.14%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Oculus Rift",
+        "usage_percentage":"1.99%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Meta Quest Pro",
+        "usage_percentage":"1.24%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Bigscreen Beyond",
+        "usage_percentage":"0.89%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"HTC Vive Pro",
+        "usage_percentage":"0.71%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"HTC Vive Pro 2",
+        "usage_percentage":"0.64%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Pimax HMD",
+        "usage_percentage":"0.59%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Oculus Quest",
+        "usage_percentage":"0.56%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Pico Neo 3",
+        "usage_percentage":"0.55%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"iVRy",
+        "usage_percentage":"0.34%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"HTC VIVE XR Elite",
+        "usage_percentage":"0.25%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"HTC Vive Focus Vision",
+        "usage_percentage":"0.22%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Riftcat Vridge",
+        "usage_percentage":"0.14%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"HTC Vive Cosmos",
+        "usage_percentage":"0.13%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Varjo Aero",
+        "usage_percentage":"0.06%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Sony PlayStation VR",
+        "usage_percentage":"0.04%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Pico Neo 2",
+        "usage_percentage":"0.02%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Oculus Rift DK2",
+        "usage_percentage":"0.01%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Other",
+        "usage_percentage":"0.81%"
+    },
+    {
+        "category":"VR Headsets",
+        "component":"Steam users with VR Headsets",
+        "usage_percentage":"1.77%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AVX512VNNI",
+        "usage_percentage":"21.67%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"SHA",
+        "usage_percentage":"77.42%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"FMA",
+        "usage_percentage":"95.29%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"SSE2",
+        "usage_percentage":"98.49%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"NTFS",
+        "usage_percentage":"94.52%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"BMI2",
+        "usage_percentage":"95.00%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AVX",
+        "usage_percentage":"97.22%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"LAHF \/ SAHF",
+        "usage_percentage":"98.49%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"SSE4.2",
+        "usage_percentage":"98.33%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"SSE4a",
+        "usage_percentage":"43.19%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"SSE4.1",
+        "usage_percentage":"98.38%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"SSSE3",
+        "usage_percentage":"98.41%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"SSE3",
+        "usage_percentage":"98.49%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AES",
+        "usage_percentage":"97.55%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AVX2",
+        "usage_percentage":"95.11%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"CMPXCHG16B",
+        "usage_percentage":"98.49%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AVX512F",
+        "usage_percentage":"21.64%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"PrefetchW",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AVX512PF",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"BMI1",
+        "usage_percentage":"95.33%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AVX512ER",
+        "usage_percentage":"0.00%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"F16C",
+        "usage_percentage":"96.45%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"AVX512CD",
+        "usage_percentage":"21.64%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"HyperThreading",
+        "usage_percentage":"88.61%"
+    },
+    {
+        "category":"Other Settings",
+        "component":"FCMOV",
+        "usage_percentage":"9.38%"
+    }
+]

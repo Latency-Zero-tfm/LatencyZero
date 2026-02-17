@@ -1,2 +1,16 @@
 fastapi
-uvicorn[standard]
+uvicorn
+pydantic
+python-jose[cryptography]
+passlib[argon2]
+argon2-cffi
+sqlalchemy                  
+pymysql                    
+python-dotenv 
+pydantic-settings             
+email-validator
+fastapi-mail
+google-auth 
+google-auth-oauthlib 
+google-auth-httplib2 
+google-api-python-client

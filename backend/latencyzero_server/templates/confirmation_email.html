@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8;
+        padding: 20px;
+        margin: 0;
+        color: #333;
+      }
+
+      .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 600px;
+        margin: auto;
+        color: #333;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #1e3a8a; 
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: 1.05em;
+        color: #4f46e5; 
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .content {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+
+      .button-container {
+        text-align: center;
+      }
+
+      a.btn-confirm {
+        display: inline-block;
+        background-color: #3b82f6;
+        color: white !important;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+
+      a.btn-confirm:hover {
+        background-color: #2563eb;
+      }
+
+      .footer {
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #999;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bienvenido/a, {UserName}</h2>
+      <div class="subtitle">Confirma tu dirección de correo electrónico</div>
+
+      <div class="content">
+        Gracias por registrarte en <strong>LatencyZero</strong>. Para
+        activar tu cuenta y comenzar a usar nuestros servicios, confirma tu
+        dirección de correo electrónico haciendo clic en el siguiente botón.
+      </div>
+
+      <div class="button-container">
+        <a href="{ConfirmationLink}" class="btn-confirm">Confirmar mi correo electrónico</a>
+      </div>
+
+      <div class="footer">
+        &copy; 2026 LatencyZero · Todos los derechos reservados.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,3 +1,10 @@
+latencyzero.db
+
+# Token google
+credentials.json
+token.pickle
+token.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

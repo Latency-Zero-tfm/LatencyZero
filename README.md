@@ -1,6 +1,21 @@
 # LatencyZero
 
-TFM del Máster de FP en Inteligencia Artificial y Big Data - CPIFP Alan Turing 
+LatencyZero es una plataforma web diseñada para facilitar el acceso al conocimiento tecnológico relacionado con el montaje, configuración y compatibilidad de componentes informáticos. Su objetivo principal es permitir que cualquier usuario, independientemente de su nivel de experiencia, pueda aprender, tomar decisiones informadas y construir o mejorar su equipo de manera sencilla y segura.
+
+La plataforma integra un agente inteligente junto con diversas herramientas interactivas que guían al usuario paso a paso en el proceso de selección, comparación y compatibilidad de componentes.
+
+**TFM del Máster de FP en Inteligencia Artificial y Big Data - CPIFP Alan Turing**
+
+## Justificación del proyecto
+
+En la actualidad, un ordenador de sobremesa es una herramienta imprescindible para muchas personas, tanto en el ámbito profesional y académico como en el entretenimiento. Sin embargo, aunque muchas personas necesitan un equipo adaptado a sus necesidades, no todas cuentan con los conocimientos técnicos necesarios para elegir los componentes adecuados, verificar su compatibilidad o realizar modificaciones con seguridad.
+
+Por ello, disponer de una herramienta que asesore al usuario, le acompañe durante el proceso, resuelva sus dudas y ofrezca utilidades prácticas relacionadas con la selección y configuración de componentes resulta fundamental. Una plataforma de este tipo no solo facilita la toma de decisiones, sino que también reduce errores y evita gastos innecesarios.
+
+Además, no está pensada únicamente para principiantes. Incluso quienes ya poseen conocimientos en el área pueden beneficiarse de una herramienta que centralice información, agilice consultas y ofrezca apoyo técnico de forma rápida y accesible.
+
+En este contexto, una solución como LatencyZero aporta valor al democratizar el acceso al conocimiento tecnológico y simplificar un proceso que, de otro modo, puede resultar complejo e intimidante.
+
 
 ## 🖥️ HardVisionAI
 
@@ -24,6 +39,8 @@ Todo lo que se utilice en este proyecto se almacenará también en este reposito
 * [Alejandro Barrionuevo Rosado](https://github.com/Alejandro-BR)
 * [Alvaro López Guerrero](https://github.com/Alvalogue72)
 * [Andrei Munteanu Popa](https://github.com/andu8705)
+
+🎓 Repositorio del centro: [iabd-tfm-2526](https://github.com/CPIFPAlanTuring/iabd-tfm-2526) 
 
 Máster de FP en Inteligencia Artifical y Big Data - CPIFP Alan Turing
 
