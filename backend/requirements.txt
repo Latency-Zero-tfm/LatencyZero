@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 pydantic
+numpy
 python-jose[cryptography]
 passlib[argon2]
 argon2-cffi
@@ -14,3 +15,10 @@ google-auth
 google-auth-oauthlib 
 google-auth-httplib2 
 google-api-python-client
+easyocr
+tensorflow 
+torch
+transformers
+Pillow
+opencv-python
+python-multipart
