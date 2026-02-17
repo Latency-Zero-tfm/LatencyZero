@@ -13,5 +13,8 @@ selenium
 webdriver-manager
 requests
 easyocr
-Pillow
+pillow
 wordcloud
+torch
+transformers
+ipywidgets
