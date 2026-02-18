@@ -2,6 +2,8 @@
 
 Backend desarrollado en **FastAPI** para integrar modelos de Machine Learning, agentes con LLM y otras funcionalidades.
 
+![Python Version](https://img.shields.io/badge/python-3.12-blue?logo=python\&logoColor=white)
+
 ## 📌 Diagrama Entidad-Relación
 
 ![latencyzero](/backend/db/latencyzero.png)
@@ -13,6 +15,16 @@ Backend desarrollado en **FastAPI** para integrar modelos de Machine Learning, a
 
 Sigue estos pasos para levantar el servidor en entorno local:
 
+> [!IMPORTANT]
+> Es necesario tener instalado Python 3.12 para ejecutar el backend correctamente.
+
+Puedes comprobar tu versión instalada con:
+
+```bash
+python --version
+```
+
+Si no tienes la versión correcta, asegúrate de instalar **Python 3.12** antes de continuar.
 
 ### 1️⃣ Entrar al proyecto
 
