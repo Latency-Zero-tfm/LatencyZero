@@ -1,3 +1,4 @@
+![](/img/LatencyZero.png)
 # LatencyZero
 
 LatencyZero es una plataforma web diseñada para facilitar el acceso al conocimiento tecnológico relacionado con el montaje, configuración y compatibilidad de componentes informáticos. Su objetivo principal es permitir que cualquier usuario, independientemente de su nivel de experiencia, pueda aprender, tomar decisiones informadas y construir o mejorar su equipo de manera sencilla y segura.
