@@ -6,10 +6,12 @@ Este repositorio contiene todos los cuadernos de Jupyter utilizados a lo largo d
 
 ## 📚 Notebooks principales
 
-| Nombre del Cuaderno | Descripción |
-|---------------------|-------------|
+| Nombre del Cuaderno                  | Descripción |
+|------------------------------------|-------------|
 | `model_training_components_pc.ipynb` | Entrenamiento de la red neuronal para la clasificación de componentes de PC. |
-| `model_ocr.ipynb` | Aplica OCR a las imágenes del dataset para extraer texto, marcas, modelos y especificaciones.|
+| `model_ocr.ipynb`                   | Aplicación de OCR a las imágenes del dataset para extraer texto, marcas, modelos y especificaciones. |
+| `model_openai.ipynb`                | Pruebas con el modelo `openai/clip-vit-base-patch32` para clasificar si una imagen contiene un componente o no. |
+
 
 ## 🖥️ HardvisionAI `/hardvision_ai`
 
@@ -30,6 +32,8 @@ Estos notebooks realizan la extracción de datos desde distintas fuentes web de 
 | `scraping_pccomponentes.ipynb` | Realiza scraping de datos de componentes de PC desde PCComponentes. |
 | `scraping_processors.ipynb` | Realiza scraping de datos específicos de procesadores. |
 | `scraping_pcpartpicker.ipynb`| Realiza scraping de datos de componentes desde PCPartPicker. |
+| `scraping_steam.ipynb`| Este cuaderno Jupyter contiene el codigo fuente encargado de la extraccion automatica de datos desde la plataforma **Steam**. |
+
 
 ## 🐍 Versión de Python
 
