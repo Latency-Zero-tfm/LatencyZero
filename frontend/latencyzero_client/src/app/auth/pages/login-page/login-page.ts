@@ -3,6 +3,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { FormUtils } from '../../../../utils/form-utils';
+import { JwtService } from '../../../core/services/jwt.service';
 
 @Component({
   selector: 'app-login-page',
@@ -15,6 +16,7 @@ export class LoginPage {
   private fb = inject(FormBuilder);
   private router = inject(Router);
   private authService = inject(AuthService);
+  private jwtService = inject(JwtService);
   formUtils = FormUtils;
 
   showPassword: boolean = false;
@@ -36,7 +38,12 @@ export class LoginPage {
 
       this.authService.login(username!, password!).subscribe((isAuthenticated) => {
         if (isAuthenticated) {
-          this.router.navigateByUrl('/home');
+          const role = this.jwtService.getRole();
+          if (role === 'ROLE_ADMIN') {
+            window.location.replace(`/admin/`);
+          } else {
+            this.router.navigateByUrl('/home');
+          }
         }
       });
     }

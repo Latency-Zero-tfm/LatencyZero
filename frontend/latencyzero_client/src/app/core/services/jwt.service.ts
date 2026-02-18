@@ -9,6 +9,7 @@ export class JwtService {
   private tokenSubject = new BehaviorSubject<string | null>(null);
   public token$ = this.tokenSubject.asObservable();
 
+  private role: string | null = null;
   private name: string | null = null;
   private id: number | null = null;
 
@@ -39,6 +40,7 @@ export class JwtService {
   private decodeToken(token: string) {
     try {
       const decoded: any = jwtDecode<JwtPayload>(token);
+      this.role = decoded.role || null;
       this.name = decoded.name || null;
       this.id = decoded.id || null;
     } catch (e) {
@@ -50,17 +52,26 @@ public setToken(token: string): void {
     let decoded: any;
     try {
       decoded = jwtDecode<JwtPayload>(token);
+      this.role = decoded.role || null;
       this.name = decoded.name || null;
       this.id = decoded.id || null;
     } catch {
       this.clear();
       return;
     }
+
+    if (this.role === 'ROLE_ADMIN') {
+      this.tokenSubject.next(token);
+    } else {
+      sessionStorage.setItem(this.TOKEN_KEY, token);
+      this.tokenSubject.next(token);
+    }
   }
 
   public clear(): void {
     sessionStorage.removeItem(this.TOKEN_KEY);
     this.tokenSubject.next(null);
+    this.role = this.name = null;
     this.id = null;
   }
 
@@ -73,8 +84,11 @@ public setToken(token: string): void {
     return token ? this.validateToken(token) : false;
   }
 
+  public getRole(): string | null { return this.role; }
   public getName(): string | null { return this.name; }
   public getId(): number | null { return this.id; }
 
-
+  public hasRole(role: string): boolean {
+    return this.role === role;
+  }
 }
