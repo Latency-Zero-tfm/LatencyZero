@@ -1,6 +1,6 @@
 # 🌐 LatencyZero Server
 
-Backend desarrollado en **FastAPI** para integrar modelos de Machine Learning, agentes con LLM y otras funcionalidades.
+Backend desarrollado en **FastAPI** para exponer servicios de Machine Learning, agentes basados en LLM y otras funcionalidades del ecosistema LatencyZero.
 
 ![Python Version](https://img.shields.io/badge/python-3.12-blue?logo=python\&logoColor=white)
 

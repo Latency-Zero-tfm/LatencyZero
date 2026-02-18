@@ -1,4 +1,6 @@
-# 🖥️ Frontend del proyecto
+# 🖥️ LatencyZero Client
+
+Frontend desarrollado en **Angular** para consumir y presentar servicios de Machine Learning, agentes basados en LLM y otras funcionalidades del ecosistema LatencyZero.
 
 Este proyecto fue generado con Angular CLI 20.3.15.
 
