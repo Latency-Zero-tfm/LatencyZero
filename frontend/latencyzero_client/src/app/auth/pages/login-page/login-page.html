@@ -17,7 +17,7 @@
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
         </svg>
       </div>
-      <input type="text" id="username" placeholder="Nombre de usuario"
+      <input type="text" id="username" placeholder="Usuario o correo"
         [class]="formUtils.isValidField(loginForm, 'username') ? 'border-red-600' : 'border-slate-600'"
         class="w-full pl-11 pr-4 py-3 bg-slate-900/50 border rounded-xl text-slate-50 placeholder-slate-600 outline-none focus:border-yellow-400 transition-colors"
         formControlName="username">
@@ -46,7 +46,7 @@
           <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
         </svg>
       </div>
-      <input type="password" id="password" placeholder=" "
+      <input type="password" id="password" placeholder="Contraseña"
         [type]="showPassword ? 'text' : 'password'"
         [class]="formUtils.isValidField(loginForm, 'password') ? 'border-red-600' : 'border-slate-600'"
         class="w-full pl-11 pr-12 py-3 bg-slate-900/50 border rounded-xl text-slate-50 placeholder-slate-600 outline-none focus:border-yellow-400 transition-colors"
