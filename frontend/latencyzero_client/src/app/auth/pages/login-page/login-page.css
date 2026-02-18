@@ -1,14 +1,23 @@
+/* Color del borde al hacer focus (usando el amarillo de tu tema) */
 .group__input:focus {
-  border: 1px solid var(--primary-blue);
+  border-color: #eab308; /* Equivalente a text-yellow-500 en Tailwind */
 }
 
-.group__input:focus + .group__label {
-  color: var(--primary-blue);
+/* Efecto de elevación del label */
+.group__input:focus + .group__label,
+.group__input:not(:placeholder-shown) + .group__label {
+  top: -0.6rem;           /* Sube el label justo sobre el borde */
+  left: 0.8rem;           /* Lo mueve de vuelta hacia la izquierda */
+  font-size: 0.75rem;     /* 12px */
+  padding: 0 0.4rem;      /* Da un poco de espacio alrededor del texto */
+
+  /* Usa el color de fondo de tu contenedor para ocultar el borde detrás del texto */
+  background-color: #0f172a; /* Equivalente a bg-slate-900 */
+  color: #eab308;         /* Texto en amarillo al hacer focus */
 }
 
-.group__input:focus + .group__label, .group__input:not(:placeholder-shown) + .group__label {
-  padding: 1px 15px;
-  top: -10px;
-  left: 10px;
-  font-size: 12px;
+/* Opcional: Si quieres que cuando haya texto (pero no tenga el foco)
+   el label flote pero se quede gris en lugar de amarillo */
+.group__input:not(:focus):not(:placeholder-shown) + .group__label {
+  color: #94a3b8; /* text-slate-400 */
 }
