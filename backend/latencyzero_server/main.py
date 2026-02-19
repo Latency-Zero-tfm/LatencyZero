@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from .core.config import settings 
 from .db.session import engine, Base, SessionLocal
@@ -9,6 +10,15 @@ from .api.components.router import router as components_router
 from .core.exception_handlers import setup_exception_handlers
 
 app = FastAPI(title="LatencyZero Server")
+
+# Configurar CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.CORS_ORIGINS if settings.CORS_ORIGINS else ["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 setup_exception_handlers(app)
 
