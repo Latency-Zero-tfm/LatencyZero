@@ -5,14 +5,11 @@ import { HardVisionPage } from './features/hardvision/pages/hard-vision-page/har
 export const routes: Routes = [
   {
     path: '',
-    component: MainLayoutComponent,
-    children: [
-      {
-        path: 'hardvisionai',
-        component: HardVisionPage
-      },
-
-    ]
+    component: MainLayoutComponent
+  },
+  {
+    path: 'hardvisionai',
+    component: HardVisionPage
   },
   {
     path: 'auth',

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ImageInputComponent } from "../../components/image-input-component/image-input-component";
+import { HardVisionService } from '../../services/hard-vision.service';
 
 @Component({
   imports: [ImageInputComponent],
@@ -8,9 +9,29 @@ import { ImageInputComponent } from "../../components/image-input-component/imag
 })
 export class HardVisionPage {
 
+  private hardVisionService = inject(HardVisionService);
+
+  isLoading = signal(false);
+  analysisResult = signal<any>(null);
+
   handleAnalysis(file: File) {
     console.log('Iniciando análisis para:', file.name);
-    // TODO: Implementar lógica de análisis, posiblemente llamando a un servicio que se comunique con el backend
+
+    this.isLoading.set(true);
+    this.analysisResult.set(null);
+
+    this.hardVisionService.analyzeImage(file).subscribe({
+      next: (response) => {
+        console.log('Análisis completado:', response);
+        this.analysisResult.set(response);
+        this.isLoading.set(false);
+      },
+      error: (error) => {
+        console.error('Error en el análisis:', error);
+        this.analysisResult.set(null);
+        this.isLoading.set(false);
+      }
+    });
   }
 
 }
