@@ -42,7 +42,7 @@ export class LoginPage {
           if (role === 'ROLE_ADMIN') {
             window.location.replace(`/admin/`);
           } else {
-            this.router.navigateByUrl('/home');
+            this.router.navigateByUrl('/');
           }
         }
       });

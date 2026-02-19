@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
-import { LOGIN_ENDPOINT } from '../../config';
+import { LOGIN_ENDPOINT, REGISTER_ENDPOINT } from '../../config';
 import { JwtService } from '../../core/services/jwt.service';
+import { RegisterDTO } from '../interfaces/register-dto.interface';
 
 type AuthStatus = 'checking' | 'authenticated' | 'not-authenticated';
 
@@ -34,5 +35,20 @@ export class AuthService {
       })
     );
   }
+
+  register(registerDTO: RegisterDTO): Observable<boolean> {
+    return this.http.post<{ created: boolean }>(REGISTER_ENDPOINT, registerDTO).pipe(
+      map((response) => {
+        if (response.created) {
+          return true;
+        }
+        return false;
+      }),
+      catchError((error) => {
+        return of(false);
+      })
+    );
+  }
+
 
 }
