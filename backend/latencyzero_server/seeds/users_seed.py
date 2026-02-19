@@ -18,7 +18,6 @@ class UsersSeed(BaseSeed):
       "email": "latencyzero.tfm@gmail.com",
       "password": "Admin@123456",
       "role": "admin",
-      "email_confirm": True,
       "image": ""
     },
     {
@@ -26,7 +25,6 @@ class UsersSeed(BaseSeed):
       "email": "user@latencyzero.dev",
       "password": "User@123456",
       "role": "user",
-      "email_confirm": True,
       "image": ""
     },
     {
@@ -34,7 +32,6 @@ class UsersSeed(BaseSeed):
       "email": "demo@latencyzero.dev",
       "password": "Demo@123456",
       "role": "user",
-      "email_confirm": False,
       "image": ""
     }
   ]
@@ -64,7 +61,6 @@ class UsersSeed(BaseSeed):
             email=user_data["email"],
             password=hashed_password,
             role=user_data["role"],
-            email_confirm=user_data["email_confirm"],
             image=user_data.get("image")
           )
 

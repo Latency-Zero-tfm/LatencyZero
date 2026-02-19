@@ -17,7 +17,3 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -
   expire = datetime.utcnow() + (expires_delta or timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES))
   to_encode.update({"exp": expire})
   return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
-
-def create_email_confirmation_token(email: str, expires_delta: timedelta = timedelta(hours=24)):
-  to_encode = {"sub": email, "exp": datetime.utcnow() + expires_delta}
-  return jwt.encode(to_encode, settings.SECRET_KEY, algorithm="HS256")

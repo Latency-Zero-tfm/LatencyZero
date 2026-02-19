@@ -54,9 +54,3 @@ class WeakPasswordException(LatencyZeroException):
       message=reason,
       status_code=400
     )
-
-
-class InvalidConfirmEmailException(LatencyZeroException):
-    def __init__(self, message="Email no confirmado"):
-        self.message = message
-        super().__init__(self.message)
