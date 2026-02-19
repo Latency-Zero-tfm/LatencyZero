@@ -37,12 +37,7 @@ Estos notebooks realizan la extracción de datos desde distintas fuentes web de 
 
 ## 🐍 Versión de Python
 
-El proyecto HardVisionAI utiliza Python 3.12 para todo el código, incluyendo:
-
-* Web scraping
-* Procesamiento de datasets
-* Modelos OCR
-* Entrenamiento de redes neuronales
+El proyecto utiliza Python 3.12 para todo el código.
 
 > [!NOTE]
 > Asegúrate de instalar Python 3.12 antes de crear el entorno virtual para que todos los notebooks y la demo funcionen correctamente.
