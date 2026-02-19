@@ -1,0 +1,18 @@
+.group__input:focus {
+  border-color: #eab308;
+}
+
+/* Efecto de elevación del label */
+.group__input:focus + .group__label,
+.group__input:not(:placeholder-shown) + .group__label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.75rem;
+  padding: 0 0.4rem;
+  background-color: #0f172a;
+  color: #eab308;
+}
+
+.group__input:not(:focus):not(:placeholder-shown) + .group__label {
+  color: #94a3b8;
+}
