@@ -10,6 +10,7 @@ import { NgToastComponent } from 'ng-angular-popup';
   imports: [ImageInputComponent, AnalysisResultComponent, CommonModule, NgToastComponent],
   templateUrl: './hard-vision-page.html',
   styleUrl: './hard-vision-page.css',
+  selector: 'hard-vision-page',
 })
 export class HardVisionPage {
 

@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { MainLayoutComponent } from './layout/main-layout-component/main-layout-component';
-import { HardVisionPage } from './features/hardvision/pages/hard-vision-page/hard-vision-page';
+import { HardVisionPage } from './features/hardvision/pages/hard-vision-page/hard-vision-page.component';
+import { HardvisionLayoutComponent } from './features/hardvision/layout/hardvision-layout.component/hardvision-layout.component';
 
 export const routes: Routes = [
   {
@@ -9,7 +10,7 @@ export const routes: Routes = [
   },
   {
     path: 'hardvisionai',
-    component: HardVisionPage
+    component: HardvisionLayoutComponent
   },
   {
     path: 'auth',
