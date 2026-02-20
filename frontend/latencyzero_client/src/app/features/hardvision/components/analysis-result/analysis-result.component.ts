@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ComponentDTO } from '../../interfaces/component-dto.interface';
 import { BaseChartDirective } from 'ng2-charts';
 import { Chart, ChartConfiguration, registerables } from 'chart.js';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'analysis-result',
@@ -15,7 +16,7 @@ export class AnalysisResultComponent {
   isLoading = input<boolean>(false);
   analysisResult = input<ComponentDTO | null>(null);
 
-  constructor() {
+  constructor(private toast: NgToastService) {
     Chart.register(...registerables);
 
     effect(() => {
@@ -113,30 +114,33 @@ export class AnalysisResultComponent {
     },
   };
 
-  copyToClipboard() {
-    const result = this.analysisResult();
-    if (result) {
-      navigator.clipboard
-        .writeText(JSON.stringify(result, null, 2))
-        .then(() => console.log('JSON copiado'))
-        .catch((err) => console.error('Error al copiar:', err));
-    }
+copyToClipboard() {
+  const result = this.analysisResult?.();
+  if (result) {
+    navigator.clipboard.writeText(JSON.stringify(result, null, 2))
+      .then(() => {
+        this.toast.success('JSON copiado');
+      })
+      .catch(() => {
+        this.toast.danger('Error al copiar JSON');
+      });
   }
+}
 
-  downloadJSON() {
-    const result = this.analysisResult();
-    if (result) {
-      const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
-      const url = window.URL.createObjectURL(blob);
+downloadJSON() {
+  const result = this.analysisResult?.();
+  if (result) {
+    const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `analysis-${Date.now()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
 
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `analysis-${Date.now()}.json`;
-
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
-    }
+    this.toast.info('JSON descargado');
   }
+}
 }

@@ -4,9 +4,10 @@ import { AnalysisResultComponent } from "../../components/analysis-result/analys
 import { HardVisionService } from '../../services/hard-vision.service';
 import { ComponentDTO } from '../../interfaces/component-dto.interface';
 import { CommonModule } from '@angular/common';
+import { NgToastComponent } from 'ng-angular-popup';
 
 @Component({
-  imports: [ImageInputComponent, AnalysisResultComponent, CommonModule],
+  imports: [ImageInputComponent, AnalysisResultComponent, CommonModule, NgToastComponent],
   templateUrl: './hard-vision-page.html',
   styleUrl: './hard-vision-page.css',
 })
