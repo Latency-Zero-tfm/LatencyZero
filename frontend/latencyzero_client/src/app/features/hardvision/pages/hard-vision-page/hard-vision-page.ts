@@ -1,11 +1,12 @@
 import { Component, inject, signal } from '@angular/core';
 import { ImageInputComponent } from "../../components/image-input-component/image-input-component";
+import { AnalysisResultComponent } from "../../components/analysis-result/analysis-result.component";
 import { HardVisionService } from '../../services/hard-vision.service';
 import { ComponentDTO } from '../../interfaces/component-dto.interface';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [ImageInputComponent, CommonModule],
+  imports: [ImageInputComponent, AnalysisResultComponent, CommonModule],
   templateUrl: './hard-vision-page.html',
   styleUrl: './hard-vision-page.css',
 })
@@ -16,6 +17,10 @@ export class HardVisionPage {
   isLoading = signal(false);
   analysisResult = signal<ComponentDTO | null>(null);
 
+  handleImageRemoved() {
+    this.analysisResult.set(null);
+    this.isLoading.set(false);
+  }
 
   handleAnalysis(file: File) {
     console.log('Iniciando análisis para:', file.name);

@@ -2,54 +2,56 @@
   (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
 
   <div
-    class="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl overflow-hidden flex flex-col items-center justify-center bg-slate-50/50 transition-all duration-300 border-2"
+    class="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl overflow-hidden flex flex-col items-center justify-center bg-slate-800/40 backdrop-blur-sm transition-all duration-300 border-2"
     [class.border-dashed]="!previewUrl()"
-    [class.border-slate-300]="!previewUrl() && !isDragging()"
-    [class.border-yellow-500]="isDragging()"
-    [class.bg-yellow-50/10]="isDragging()"
-    [class.border-slate-200]="previewUrl()"
-    [class.shadow-xl]="previewUrl()">
+    [class.border-slate-700]="!previewUrl() && !isDragging()"
+    [class.border-yellow-400]="isDragging()"
+    [class.bg-yellow-500/5]="isDragging()"
+    [class.border-slate-600]="previewUrl()"
+    [class.shadow-2xl]="previewUrl()">
 
     @if (!previewUrl()) {
     <input type="file" accept="image/png, image/jpeg, image/webp"
       class="absolute inset-0 opacity-0 cursor-pointer z-20" (change)="onFileSelected($event)">
 
     <div
-      class="flex flex-col items-center justify-center p-4 sm:p-6 text-center pointer-events-none transition-transform group-hover:scale-105">
+      class="flex flex-col items-center justify-center p-4 sm:p-6 text-center pointer-events-none transition-all duration-300 group-hover:scale-110">
       <div
-        class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 sm:mb-4 group-hover:shadow-md transition-shadow ring-1 ring-slate-100 group-hover:ring-yellow-200">
+        class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center shadow-lg mb-4 sm:mb-6  transition-all duration-300 ring-2 ring-yellow-400/30 group-hover:ring-yellow-400/60">
         <svg xmlns="http://www.w3.org/2000/svg"
-          class="h-7 w-7 sm:h-8 sm:w-8 text-slate-400 group-hover:text-yellow-500 transition-colors" fill="none"
+          class="h-8 w-8 sm:h-10 sm:w-10 text-slate-950 transition-transform duration-300 group-hover:scale-110" fill="none"
           viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       </div>
 
-      <h3 class="text-base sm:text-lg font-bold text-slate-700 mb-2 group-hover:text-slate-900">
-        {{ isDragging() ? 'Suéltala aquí' : 'Sube tu componente' }}
+      <h3 class="text-lg sm:text-xl font-bold text-slate-50 mb-2 group-hover:text-yellow-300 transition-colors">
+        {{ isDragging() ? '✨ Suéltala aquí' : 'Sube tu componente' }}
       </h3>
 
-      <p class="text-xs sm:text-sm text-slate-500 max-w-xs mb-3 sm:mb-4 px-2">
+      <p class="text-sm sm:text-base text-slate-300 max-w-xs mb-4 sm:mb-5 px-2 group-hover:text-slate-100 transition-colors">
         Arrastra y suelta tu imagen aquí, o <span
-          class="text-yellow-600 font-semibold underline decoration-yellow-500/30 group-hover:decoration-yellow-500">haz
+          class="text-yellow-400 font-bold underline decoration-yellow-400/50 group-hover:decoration-yellow-400 cursor-pointer">haz
           clic para explorar</span>
       </p>
 
       <span
-        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-200 text-slate-600 group-hover:bg-yellow-100 group-hover:text-yellow-700 transition-colors">
+        class="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 group-hover:bg-yellow-500/30 group-hover:text-yellow-200 transition-all">
         JPG, PNG, WEBP
       </span>
     </div>
     } @else {
-    <div class="relative w-full h-full bg-slate-900/5 p-2">
-      <img [src]="previewUrl()" class="w-full h-full object-contain rounded-lg" alt="Preview component">
+    <div class="relative w-full h-full bg-gradient-to-br from-slate-900/40 to-slate-800/40 p-3 backdrop-blur-sm flex items-center justify-center">
+      <div class="w-full h-full rounded-lg overflow-hidden border border-slate-700/50 bg-slate-950/50">
+        <img [src]="previewUrl()" class="w-full h-full object-contain" alt="Preview component">
+      </div>
     </div>
 
     <button (click)="removeImage()"
-      class="absolute top-2 right-2 sm:top-3 sm:right-3 z-30 p-1.5 sm:p-2 bg-white/90 hover:bg-red-50 text-slate-500 hover:text-red-500 rounded-full shadow-lg border border-slate-200 transition-all hover:scale-110 backdrop-blur-sm"
+      class="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 p-2 sm:p-2.5 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-lg transition-all hover:scale-125 backdrop-blur-sm hover:shadow-red-500/50"
       title="Cancelar imagen">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
@@ -57,9 +59,12 @@
   </div>
 
   @if (previewUrl()) {
-  <div class="mt-4 sm:mt-6 flex justify-center">
+  <div class="mt-6 sm:mt-8 flex justify-center gap-3">
     <button (click)="onAnalyze()"
-      class="w-full sm:w-auto px-6 py-3 bg-slate-900 hover:bg-yellow-500 text-white font-bold rounded-2xl shadow-xl transition-all">
+      class="px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-slate-950 font-bold rounded-full shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-2 border border-yellow-400/50">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
       <span>Analizar Imagen</span>
     </button>
   </div>

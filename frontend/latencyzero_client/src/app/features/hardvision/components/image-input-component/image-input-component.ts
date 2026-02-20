@@ -11,6 +11,7 @@ export class ImageInputComponent {
   // Outputs para comunicar al padre
   imageSelected = output<File>();
   analyzeTriggered = output<File>();
+  imageRemoved = output<void>();
 
   // Signals para el estado
   previewUrl = signal<string | null>(null);
@@ -64,6 +65,7 @@ export class ImageInputComponent {
   removeImage(): void {
     this.previewUrl.set(null);
     this.selectedFile.set(null);
+    this.imageRemoved.emit();
   }
 
   onAnalyze(): void {

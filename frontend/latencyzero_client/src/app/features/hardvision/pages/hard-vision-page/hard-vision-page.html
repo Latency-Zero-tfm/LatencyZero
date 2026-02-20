@@ -25,100 +25,11 @@
 
       <!-- INPUT -->
       <div class="mb-10">
-        <image-input (analyzeTriggered)="handleAnalysis($event)"></image-input>
-      </div>
-
-      <!-- LOADING -->
-      <div *ngIf="isLoading()"
-          class="flex flex-col items-center justify-center py-12 space-y-6">
-
-        <div class="relative">
-          <div class="w-14 h-14 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
-          <div class="absolute inset-0 bg-yellow-500/20 blur-xl rounded-full"></div>
-        </div>
-
-        <p class="text-slate-400 tracking-wide animate-pulse">
-          Procesando imagen con modelo IA...
-        </p>
+        <image-input (analyzeTriggered)="handleAnalysis($event)" (imageRemoved)="handleImageRemoved()"></image-input>
       </div>
 
       <!-- RESULTADO -->
-      <div *ngIf="analysisResult() as result"
-          class="mt-6 rounded-xl border border-slate-800 bg-slate-900/70 p-8 transition-all duration-500">
-
-        <!-- ERROR -->
-        <div *ngIf="result.error"
-            class="bg-red-900/30 border border-red-700 text-red-400 p-4 rounded-lg">
-          <h3 class="text-lg font-semibold mb-2"> No es un componente válido </h3>
-        </div>
-
-        <!-- CONTENIDO -->
-        <div *ngIf="!result.error" class="space-y-10">
-
-          <!-- RESULTADO PRINCIPAL -->
-          <div class="border-b border-slate-800 pb-6">
-
-            <h2 class="text-2xl md:text-3xl font-bold text-yellow-500 tracking-tight">
-              {{ result.predicted_label_es || result.predicted_label }}
-            </h2>
-
-            <div class="flex flex-wrap items-center gap-6 mt-4 text-sm text-slate-400">
-
-              <div *ngIf="result.brand">
-                <span class="text-slate-500">Marca:</span>
-                <span class="ml-1 text-white font-medium">
-                  {{ result.brand }}
-                </span>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- CONFIDENCIAS -->
-          <div *ngIf="result.confidences">
-            <h3 class="text-lg font-semibold mb-6 text-white tracking-tight">
-              Probabilidad del modelo
-            </h3>
-
-            <div class="space-y-5">
-              <div *ngFor="let item of result.confidences | keyvalue">
-
-                <div class="flex justify-between text-sm mb-2">
-                  <span class="text-slate-400">
-                    {{ item.key }}
-                  </span>
-                  <span class="text-yellow-400 font-semibold">
-                    {{ ((item.value) * 100) | number:'1.0-1' }}%
-                  </span>
-                </div>
-
-                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                  <div class="bg-yellow-500 h-2 rounded-full transition-all duration-700 ease-out shadow-lg shadow-yellow-500/20"
-                       [style.width.%]="(item.value) * 100">
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- OCR -->
-          <div *ngIf="result.ocr?.length">
-            <h3 class="text-lg font-semibold mb-4 text-white tracking-tight">
-              Texto detectado
-            </h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div *ngFor="let text of result.ocr"
-                  class="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-sm text-slate-300 hover:border-yellow-500/40 transition-colors">
-                {{ text }}
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+      <analysis-result [isLoading]="isLoading()" [analysisResult]="analysisResult()"></analysis-result>
 
     </section>
 
