@@ -64,6 +64,20 @@
       </div>
     </div>
 
+    <!-- OCR -->
+    <div *ngIf="result.ocr?.length">
+      <h3 class="text-lg font-semibold mb-4 text-white tracking-tight">
+        Texto detectado
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div *ngFor="let text of result.ocr"
+            class="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-sm text-slate-300 hover:border-yellow-500/40 transition-colors">
+          {{ text }}
+        </div>
+      </div>
+    </div>
+
     <!-- CONFIDENCIAS -->
     <div *ngIf="result.confidences">
       <h3 class="text-lg font-semibold mb-6 text-white tracking-tight">
@@ -92,19 +106,7 @@
       </div>
     </div>
 
-    <!-- OCR -->
-    <div *ngIf="result.ocr?.length">
-      <h3 class="text-lg font-semibold mb-4 text-white tracking-tight">
-        Texto detectado
-      </h3>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div *ngFor="let text of result.ocr"
-            class="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-sm text-slate-300 hover:border-yellow-500/40 transition-colors">
-          {{ text }}
-        </div>
-      </div>
-    </div>
 
   </div>
 
