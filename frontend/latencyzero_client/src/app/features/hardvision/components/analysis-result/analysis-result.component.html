@@ -84,6 +84,16 @@
         Probabilidad del modelo
       </h3>
 
+        <div *ngIf="analysisResult()?.confidences">
+          <canvas
+            baseChart
+            [data]="pieChartData"
+            [options]="pieChartOptions"
+            type="pie">
+          </canvas>
+        </div>
+  </div>
+
       <div class="space-y-5">
         <div *ngFor="let item of result.confidences | keyvalue">
 
@@ -107,7 +117,5 @@
     </div>
 
 
-
-  </div>
 
 </div>
