@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
-import { LOGIN_ENDPOINT, REGISTER_ENDPOINT } from '../../config';
+import { LOGIN_ENDPOINT, LOGOUT_ENDPOINT, REGISTER_ENDPOINT } from '../../config';
 import { JwtService } from '../../core/services/jwt.service';
 import { RegisterDTO } from '../interfaces/register-dto.interface';
+import { Router } from '@angular/router';
 
 type AuthStatus = 'checking' | 'authenticated' | 'not-authenticated';
 
@@ -14,6 +15,7 @@ export class AuthService {
 
   private http = inject(HttpClient);
   private jwt = inject(JwtService);
+  private router = inject(Router);
 
   authStatus = computed<AuthStatus>(() => this._authStatus());
 
@@ -48,6 +50,19 @@ export class AuthService {
         return of(false);
       })
     );
+  }
+
+  logout() {
+    const token = this.jwt.getToken();
+    this.jwt.clear();
+    this._authStatus.set('not-authenticated');
+    this.router.navigateByUrl('/auth/login', { replaceUrl: true });
+    if (token) {
+      this.http.post(LOGOUT_ENDPOINT, {}, {
+        withCredentials: true,
+        headers: { Authorization: `Bearer ${token}` }
+      }).subscribe();
+    }
   }
 
 

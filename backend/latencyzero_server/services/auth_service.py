@@ -4,10 +4,11 @@ from sqlalchemy.orm import Session
 from ..core.config import settings
 from ..core.exceptions import InvalidCredentialsException, UserAlreadyExistsException
 from ..models.user import User
+from ..models.token_blacklist import TokenBlacklist
 from ..repositories.user_repository import UserRepository
 from ..schemas.user import UserDTO, UserRole
 from ..utils.password import validate_password_strength
-from ..utils.security import verify_password, get_password_hash, create_access_token
+from ..utils.security import verify_password, get_password_hash, create_access_token, decode_token
 
 def authenticate_user(db: Session, identifier: str, password: str) -> User:
   repo = UserRepository(db)
@@ -56,3 +57,16 @@ def login_user(db: Session, username: str, password: str) -> UserDTO:
     role=user.role,
     image=user.image
   )
+
+def is_token_blacklisted(db: Session, token: str) -> bool:
+  return db.query(TokenBlacklist).filter(TokenBlacklist.token == token).first() is not None
+
+def logout_user(db: Session, token: str) -> None:
+  try:
+    decode_token(token)
+  except Exception:
+    # Token already invalid or expired — user is already unauthenticated, nothing to blacklist
+    return
+  if not is_token_blacklisted(db, token):
+    db.add(TokenBlacklist(token=token))
+    db.commit()
