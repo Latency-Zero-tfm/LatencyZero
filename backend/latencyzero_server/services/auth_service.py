@@ -14,7 +14,7 @@ def authenticate_user(db: Session, identifier: str, password: str) -> User:
 
   identifier_normalized = identifier.strip().lower()
 
-  user = repo.get_by_username(identifier)
+  user = repo.get_by_username(identifier_normalized, normalized=True)
   if not user:
     user = repo.get_by_email(identifier_normalized)
 

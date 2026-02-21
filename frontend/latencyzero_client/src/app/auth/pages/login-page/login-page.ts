@@ -21,6 +21,11 @@ export class LoginPage {
 
   showPassword: boolean = false;
 
+  get isEmail(): boolean {
+    const value = this.loginForm.get('username')?.value ?? '';
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
   loginForm = this.fb.group({
     username: ['', [Validators.required]],
     password: ['', [Validators.required, Validators.pattern(FormUtils.passwordPattern)]]
