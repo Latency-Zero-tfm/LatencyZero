@@ -87,7 +87,7 @@ export class AnalysisResultComponent {
   // Opciones de la tarta
   pieChartOptions: ChartConfiguration<'pie'>['options'] = {
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'right',
