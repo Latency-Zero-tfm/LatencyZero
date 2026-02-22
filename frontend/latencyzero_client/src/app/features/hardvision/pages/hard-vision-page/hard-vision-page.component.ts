@@ -4,7 +4,8 @@ import { AnalysisResultComponent } from "../../components/analysis-result/analys
 import { HardVisionService } from '../../services/hard-vision.service';
 import { ComponentDTO } from '../../interfaces/component-dto.interface';
 import { CommonModule } from '@angular/common';
-import { NgToastComponent } from 'ng-angular-popup';
+import { NgToastComponent, NgToastService } from 'ng-angular-popup';
+import { finalize } from 'rxjs';
 
 @Component({
   imports: [ImageInputComponent, AnalysisResultComponent, CommonModule, NgToastComponent],
@@ -16,6 +17,8 @@ export class HardVisionPage {
 
   private hardVisionService = inject(HardVisionService);
 
+  private toast = inject(NgToastService);
+
   isLoading = signal(false);
   analysisResult = signal<ComponentDTO | null>(null);
 
@@ -24,24 +27,26 @@ export class HardVisionPage {
     this.isLoading.set(false);
   }
 
-  handleAnalysis(file: File) {
-    console.log('Iniciando análisis para:', file.name);
+handleAnalysis(file: File) {
 
-    this.isLoading.set(true);
-    this.analysisResult.set(null);
+  this.isLoading.set(true);
+  this.analysisResult.set(null);
 
-    this.hardVisionService.analyzeImage(file).subscribe({
+  this.hardVisionService.analyzeImage(file)
+    .pipe(
+      finalize(() => this.isLoading.set(false))
+    )
+    .subscribe({
       next: (response) => {
-        console.log('Análisis completado:', response);
         this.analysisResult.set(response);
-        this.isLoading.set(false);
       },
       error: (error) => {
-        console.error('Error en el análisis:', error);
+
         this.analysisResult.set(null);
-        this.isLoading.set(false);
+
+        this.toast.danger('No se pudo analizar la imagen');
       }
     });
-  }
+}
 
 }

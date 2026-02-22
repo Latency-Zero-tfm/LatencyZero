@@ -4,6 +4,7 @@ import { ComponentDTO } from '../../interfaces/component-dto.interface';
 import { BaseChartDirective } from 'ng2-charts';
 import { Chart, ChartConfiguration, registerables } from 'chart.js';
 import { NgToastService } from 'ng-angular-popup';
+import { COMPONENT_TYPE_LABELS } from '../../utils/component-type.mapper';
 
 @Component({
   selector: 'analysis-result',
@@ -62,7 +63,7 @@ export class AnalysisResultComponent {
         ];
 
         this.pieChartData = {
-          labels: entries.map((e) => e[0]),
+          labels: entries.map((e) => this.getPrettyLabel(e[0])),
           datasets: [
             {
               data: entries.map((e) => e[1] * 100),
@@ -142,5 +143,10 @@ downloadJSON() {
 
     this.toast.info('JSON descargado');
   }
+}
+
+getPrettyLabel(label?: string): string {
+  if (!label) return 'Desconocido';
+  return COMPONENT_TYPE_LABELS[label] ?? label;
 }
 }

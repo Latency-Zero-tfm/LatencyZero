@@ -11,7 +11,7 @@
     [class.shadow-2xl]="previewUrl()">
 
     @if (!previewUrl()) {
-    <input type="file" accept="image/png, image/jpeg, image/webp"
+    <input type="file" accept="image/png, image/jpeg, image/webp, image/jpg"
       class="absolute inset-0 opacity-0 cursor-pointer z-20" (change)="onFileSelected($event)">
 
     <div
@@ -38,7 +38,7 @@
 
       <span
         class="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 group-hover:bg-yellow-500/30 group-hover:text-yellow-200 transition-all">
-        JPG, PNG, WEBP
+        JPG, PNG, WEBP, JPEG
       </span>
     </div>
     } @else {
