@@ -1,0 +1,19 @@
+<div class="relative me-2 select-none">
+  <div class="flex items-center gap-3 px-2" (click)="toggleMenu()">
+    <div class="h-10 w-10 border-2 border-white rounded-full overflow-hidden">
+      <img src="assets/img/default-avatar.jpg" alt="Imagen de Perfil" class="w-full h-full object-cover" />
+    </div>
+    <div class="text-white text-sm font-medium leading-tight hidden md:block">
+      <h2 class="truncate max-w-32">{{ jwtService.getName() }}</h2>
+    </div>
+  </div>
+  @if (menuOpen) {
+  <div class="absolute right-2 top-11 w-48 bg-white border border-gray-200 rounded shadow-lg z-10">
+      <div class="border-t border-t-gray-200 mx-2 my-0.5"></div>
+      <button (click)="logout()"
+        class="flex items-center justify-center px-5 py-2 text-sm font-semibold text-slate-950 bg-red-500 hover:bg-red-400 rounded-lg transition-all shadow-lg shadow-red-500/20 hover:shadow-red-500/40 cursor-pointer">
+        Cerrar Sesión
+      </button>
+  </div>
+  }
+</div>
