@@ -24,7 +24,9 @@ export class AnalysisResultComponent {
       const result = this.analysisResult();
 
       if (result?.confidences) {
-        const entries = Object.entries(result.confidences).sort((a, b) => b[1] - a[1]);
+        const entries = Object.entries(result.confidences)
+          .filter(([, value]) => value > 0.01)
+          .sort((a, b) => b[1] - a[1]);
 
         const colors = [
           '#3B82F6',
@@ -90,7 +92,7 @@ export class AnalysisResultComponent {
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: 'right',
+        position: 'bottom',
         labels: {
           color: '#E2E8F0',
           font: { weight: 'bold', size: 12 },
@@ -115,38 +117,39 @@ export class AnalysisResultComponent {
     },
   };
 
-copyToClipboard() {
-  const result = this.analysisResult?.();
-  if (result) {
-    navigator.clipboard.writeText(JSON.stringify(result, null, 2))
-      .then(() => {
-        this.toast.success('JSON copiado');
-      })
-      .catch(() => {
-        this.toast.danger('Error al copiar JSON');
-      });
+  copyToClipboard() {
+    const result = this.analysisResult?.();
+    if (result) {
+      navigator.clipboard
+        .writeText(JSON.stringify(result, null, 2))
+        .then(() => {
+          this.toast.success('JSON copiado');
+        })
+        .catch(() => {
+          this.toast.danger('Error al copiar JSON');
+        });
+    }
   }
-}
 
-downloadJSON() {
-  const result = this.analysisResult?.();
-  if (result) {
-    const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `analysis-${Date.now()}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+  downloadJSON() {
+    const result = this.analysisResult?.();
+    if (result) {
+      const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `analysis-${Date.now()}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
 
-    this.toast.info('JSON descargado');
+      this.toast.info('JSON descargado');
+    }
   }
-}
 
-getPrettyLabel(label?: string): string {
-  if (!label) return 'Desconocido';
-  return COMPONENT_TYPE_LABELS[label] ?? label;
-}
+  getPrettyLabel(label?: string): string {
+    if (!label) return 'Desconocido';
+    return COMPONENT_TYPE_LABELS[label] ?? label;
+  }
 }
