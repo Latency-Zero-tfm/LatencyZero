@@ -1,29 +1,55 @@
-<footer class="relative z-10 border-t border-slate-800 bg-slate-900/80 mt-auto">
-  <div class="container mx-auto px-6 py-8">
+<footer class="relative z-10 border-t border-slate-800 bg-slate-900/80 backdrop-blur-md">
+  <div class="container mx-auto px-6 py-10 md:py-12">
 
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-10">
 
-      <div class="font-serif inline-flex items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
-        <div class="w-8 h-8 bg-slate-200 rounded-md flex items-center justify-center">
-          <img src="assets/img/logo2.png" alt="LatencyZero Logo" class="w-5 h-5 object-contain">
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <a routerLink="/" class="font-serif inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded">
+          <img src="assets/img/logo2_yellow.png" alt="LatencyZero Logo" class="w-7 h-7 object-contain">
+          <span class="text-lg font-bold tracking-tight text-white">LATENCY<span class="text-yellow-500">ZERO</span></span>
+        </a>
+        <p class="text-slate-500 text-sm text-center md:text-left max-w-xs leading-relaxed">
+          Plataforma inteligente que te ayuda a conocer y montar hardware de forma sencilla.
+        </p>
+        <social-media />
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <h3 class="text-slate-200 text-sm font-semibold uppercase tracking-wider">Navegación</h3>
+        <nav class="flex flex-col items-center md:items-start gap-2">
+          <a routerLink="/" class="text-sm text-slate-400 hover:text-yellow-500 transition-colors">Inicio</a>
+          <a routerLink="/hardvisionai" class="text-sm text-slate-400 hover:text-yellow-500 transition-colors">HardVision AI</a>
+          <a routerLink="/agente" class="text-sm text-slate-400 hover:text-yellow-500 transition-colors">Agente</a>
+          <a routerLink="/docs" class="text-sm text-slate-400 hover:text-yellow-500 transition-colors">Docs</a>
+        </nav>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <h3 class="text-slate-200 text-sm font-semibold uppercase tracking-wider">Contacto</h3>
+        <div class="flex flex-col items-center md:items-start gap-2">
+          <a href="mailto:latencyzero.tfm@gmail.com"
+            class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-yellow-500 transition-colors break-all">
+            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+            </svg>
+            latencyzero.tfm&#64;gmail.com
+          </a>
+          <a routerLink="/docs" class="text-sm text-slate-400 hover:text-yellow-500 transition-colors">Documentación</a>
+          <a href="https://github.com/Latency-Zero-tfm/LatencyZero" target="_blank" rel="noopener noreferrer"
+            class="text-sm text-slate-400 hover:text-yellow-500 transition-colors">
+            Repositorio GitHub
+          </a>
         </div>
-        <span class="text-lg font-bold tracking-tight text-white">LATENCY<span class="text-yellow-500">ZERO</span></span>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-medium text-slate-400">
-        <a href="#hardvision" class="hover:text-yellow-500 transition-colors">HardVisionAI</a>
-        <a href="#repositorio" class="hover:text-yellow-500 transition-colors">Repositorio</a>
-        <a href="#licencia" class="hover:text-yellow-500 transition-colors">Licencia</a>
-        <a href="mailto:latencyzero.tfm@gmail.com" class="hover:text-yellow-500 transition-colors">Contacto</a>
-      </div>
     </div>
 
-    <div class="pt-6 border-t border-slate-800/50 text-center text-xs text-slate-500 space-y-2">
-      <p>
-        Desarrollado por: Alejandro Barrionuevo, Álvaro López y Andrei Munteanu
-      </p>
-      <p class="mt-4">
-        &copy; 2026 LatencyZero. Todos los derechos reservados.
+    <div class="pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
+      <p>&copy; {{ year }} LatencyZero. Todos los derechos reservados.</p>
+      <p class="text-center sm:text-right">
+        Desarrollado por <span class="text-slate-400">Alejandro Barrionuevo, Álvaro López y Andrei Munteanu</span>
       </p>
     </div>
 
