@@ -1,44 +1,26 @@
 <ng-toast top-left="true"></ng-toast>
-<div class="min-h-screen flex flex-col bg-slate-950 w-full text-slate-50 relative overflow-hidden">
-  <!-- Background effects -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <div
-      class="absolute inset-0 bg-linear-to-br from-slate-900/90 via-slate-950 to-slate-950"
-    ></div>
-    <div
-      class="absolute top-[-10%] right-[-5%] w-[28rem] h-[28rem] bg-yellow-500/10 blur-[120px] rounded-full"
-    ></div>
-  </div>
 
-  <!-- MAIN -->
-  <main class="relative z-10 flex-1 container mx-auto px-6 py-12 flex flex-col gap-12">
-    <!-- HEADER -->
-    <header class="text-center max-w-3xl mx-auto">
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
-        Análisis inteligente con <span class="text-yellow-500">HardVision AI</span>
-      </h1>
-      <p class="text-slate-400 text-sm sm:text-base">
-        Reconocimiento automático de hardware mediante visión artificial avanzada.
-      </p>
-    </header>
+<!-- MAIN -->
+<main class="relative z-10 flex-1 container mx-auto px-6 py-12 flex flex-col gap-12">
+  <!-- HEADER -->
+  <header class="text-center max-w-3xl mx-auto">
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
+      Análisis inteligente con <span class="text-yellow-500">HardVision AI</span>
+    </h1>
+    <p class="text-slate-400 text-sm sm:text-base">
+      Reconocimiento automático de hardware mediante visión artificial avanzada.
+    </p>
+  </header>
 
-    <!-- CARD PRINCIPAL -->
-    <section
-      class="w-full max-w-4xl mx-auto bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl p-8 md:p-10 shadow-2xl bg-linear-to-br from-yellow-500/5 via-slate-900/80 to-slate-900"
-    >
-      <!-- INPUT -->
-      <div class="mb-10">
-        <image-input
-          (analyzeTriggered)="handleAnalysis($event)"
-          (imageRemoved)="handleImageRemoved()"
-        ></image-input>
-      </div>
+  <!-- CARD PRINCIPAL -->
+  <section
+    class="w-full max-w-4xl mx-auto bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl p-8 md:p-10 shadow-2xl bg-linear-to-br from-yellow-500/5 via-slate-900/80 to-slate-900">
+    <!-- INPUT -->
+    <div class="mb-10">
+      <image-input (analyzeTriggered)="handleAnalysis($event)" (imageRemoved)="handleImageRemoved()"></image-input>
+    </div>
 
-      <!-- RESULTADO -->
-      <analysis-result
-        [isLoading]="isLoading()"
-        [analysisResult]="analysisResult()"
-      ></analysis-result>
-    </section>
-  </main>
-</div>
+    <!-- RESULTADO -->
+    <analysis-result [isLoading]="isLoading()" [analysisResult]="analysisResult()"></analysis-result>
+  </section>
+</main>
