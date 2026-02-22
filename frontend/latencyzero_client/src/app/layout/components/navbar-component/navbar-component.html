@@ -1,6 +1,5 @@
-
 <nav
-  class="relative z-10 w-full border-b border-slate-800 bg-slate-900/80 backdrop-blur-md px-6 py-4 flex justify-between items-center transition-all">
+  class="relative z-50 w-full border-b border-slate-800 bg-slate-900/80 backdrop-blur-md px-6 py-4 flex justify-between items-center transition-all">
 
   <a routerLink="/"
     class="font-serif inline-flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500">
@@ -13,38 +12,43 @@
   </a>
 
   <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-    <a routerLink="/" routerLinkActive="text-yellow-500" [routerLinkActiveOptions]="{exact: true}" class="hover:text-yellow-500 transition-colors">Inicio</a>
+    <a routerLink="/" routerLinkActive="text-yellow-500" [routerLinkActiveOptions]="{exact: true}"
+      class="hover:text-yellow-500 transition-colors">Inicio</a>
     <a routerLink="/hardvisionai" routerLinkActive="text-yellow-500"
       class="hover:text-yellow-500 transition-colors">HardVision AI</a>
-    <a routerLink="/agente" routerLinkActive="text-yellow-500" class="hover:text-yellow-500 transition-colors">Agente</a>
+    <a routerLink="/agente" routerLinkActive="text-yellow-500"
+      class="hover:text-yellow-500 transition-colors">Agente</a>
     <a routerLink="/docs" routerLinkActive="text-yellow-500" class="hover:text-yellow-500 transition-colors">Docs</a>
   </div>
 
-  <div class="flex items-center gap-4">
+  <div class="flex items-center gap-3">
 
-    @if (!isLoggedIn()) {
-    <button routerLink="/auth/login"
-      class="flex items-center justify-center px-5 py-2 text-sm font-semibold text-slate-950 bg-yellow-500 hover:bg-yellow-400 rounded-lg transition-all cursor-pointer">
-      Iniciar Sesión
-    </button>
-    } @else {
-    <div class="flex items-center gap-3">
-      <div
-        class="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-slate-950 font-bold border-2 border-slate-700 shadow-md hover:ring-2 hover:ring-yellow-500/50 transition-all">
-        {{ userInitial }}
-      </div>
-
-      <button (click)="logout()"
-        class="w-10 h-10 flex items-center justify-center text-slate-400 bg-slate-800 hover:bg-red-500/15 hover:text-red-400 border border-slate-700 hover:border-red-500/40 rounded-lg transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
-        title="Cerrar sesión" aria-label="Cerrar sesión">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 shrink-0" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-        </svg>
+    <div class="hidden md:flex items-center gap-3">
+      @if (!isLoggedIn()) {
+      <button routerLink="/auth/login"
+        class="flex items-center justify-center px-5 py-2 text-sm font-semibold text-slate-950 bg-yellow-500 hover:bg-yellow-400 rounded-lg transition-all cursor-pointer">
+        Iniciar Sesión
       </button>
+      } @else {
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-slate-950 font-bold border-2 border-slate-700 shadow-md hover:ring-2 hover:ring-yellow-500/50 transition-all">
+          {{ userInitial }}
+        </div>
+        <button (click)="logout()"
+          class="w-10 h-10 flex items-center justify-center text-slate-400 bg-slate-800 hover:bg-red-500/15 hover:text-red-400 border border-slate-700 hover:border-red-500/40 rounded-lg transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
+          title="Cerrar sesión" aria-label="Cerrar sesión">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 shrink-0" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+        </button>
+      </div>
+      }
     </div>
-    }
+
+    <navbar-mobile-menu />
 
   </div>
 </nav>
