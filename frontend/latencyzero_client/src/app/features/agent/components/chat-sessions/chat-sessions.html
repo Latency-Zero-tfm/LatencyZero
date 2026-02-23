@@ -58,7 +58,7 @@
       </p>
       @for (session of group.sessions; track session.id) {
       <div
-        class="group relative flex items-center gap-2 px-2 py-2 rounded-lg cursor-pointer transition-all mb-0.5"
+        class="group flex items-center gap-2 px-2 py-2 rounded-lg cursor-pointer transition-all mb-0.5"
         [class]="s.currentChatId() === session.id ? 'bg-yellow-500/8 border border-yellow-500/20' : 'bg-transparent hover:bg-slate-800/50'"
         (click)="s.selectChat(session.id)">
         <div class="flex-1 min-w-0">
