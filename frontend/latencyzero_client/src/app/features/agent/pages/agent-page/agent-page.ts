@@ -2,10 +2,11 @@ import { Component, ViewChild, ElementRef, AfterViewChecked, inject, effect } fr
 import { FormsModule } from '@angular/forms';
 import { ChatSessions } from '../../components/chat-sessions/chat-sessions';
 import { AgentService } from '../../services/agent.service';
+import { ChatHeader } from "../../components/chat-header/chat-header";
 
 @Component({
   selector: 'app-agent-page',
-  imports: [FormsModule, ChatSessions],
+  imports: [FormsModule, ChatSessions, ChatHeader],
   templateUrl: './agent-page.html',
   styleUrl: './agent-page.css',
   host: { class: 'flex flex-1 min-h-0 overflow-hidden' },
