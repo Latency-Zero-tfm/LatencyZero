@@ -5,14 +5,10 @@ import { MOCK_CHAT_SESSIONS } from '../mocks/chat-sessions.mock';
 @Injectable({ providedIn: 'root' })
 export class AgentService {
 
-  // ── State ────────────────────────────────────────────────────────────────
-
   readonly sidebarOpen = signal(true);
   readonly currentChatId = signal<string | null>(null);
   readonly chatSessions = signal<ChatSession[]>(MOCK_CHAT_SESSIONS);
   readonly isTyping = signal(false);
-
-  // ── Derived ──────────────────────────────────────────────────────────────
 
   readonly currentSession = computed(() =>
     this.chatSessions().find((s) => s.id === this.currentChatId()) ?? null
@@ -50,8 +46,6 @@ export class AgentService {
 
     return groups.filter((g) => g.sessions.length > 0);
   });
-
-  // ── Actions ──────────────────────────────────────────────────────────────
 
   toggleSidebar(): void {
     this.sidebarOpen.update((v) => !v);
@@ -105,7 +99,7 @@ export class AgentService {
 
     this.isTyping.set(true);
 
-    // Simulated agent reply — replace with real API call
+    // TODO: Simulación de respuesta del agente, cambiar por llamada real
     setTimeout(() => {
       this.chatSessions.update((sessions) =>
         sessions.map((s) =>
@@ -134,8 +128,6 @@ export class AgentService {
     this.newChat();
     setTimeout(() => this.sendMessage(text), 50);
   }
-
-  // ── Utilities ─────────────────────────────────────────────────────────────
 
   formatTime(date: Date): string {
     return new Intl.DateTimeFormat('es-ES', { hour: '2-digit', minute: '2-digit' }).format(date);

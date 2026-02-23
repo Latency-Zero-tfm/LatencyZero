@@ -151,12 +151,12 @@
 
   <!-- ---- INPUT AREA ---- -->
   @if (s.currentChatId()) {
-  <div class="shrink-0 px-4 sm:px-6 py-4 border-t border-slate-800 bg-slate-950/60 backdrop-blur-sm">
+  <div class="p-4 border-t border-slate-800 bg-slate-950/60">
     <div class="max-w-4xl mx-auto">
       <div
-        class="flex items-end gap-3 bg-slate-900 border border-slate-700 focus-within:border-yellow-500/50 rounded-2xl px-4 py-3 transition-colors">
+        class="flex items-end gap-3 bg-slate-900 border border-slate-700 focus-within:border-yellow-500/50 rounded-2xl p-3 transition-colors">
         <textarea [(ngModel)]="newMessage" (keydown)="onKeydown($event)"
-          placeholder="Pregunta sobre componentes, compatibilidad o builds..." rows="1"
+          placeholder="Pregunta a LatencyZero AI" rows="1"
           class="flex-1 bg-transparent text-slate-100 text-sm placeholder-slate-500 outline-none resize-none max-h-40 overflow-y-auto leading-relaxed scrollbar-thin"
           [disabled]="s.isTyping()"></textarea>
         <button (click)="send()" [disabled]="!newMessage.trim() || s.isTyping()"
