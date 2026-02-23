@@ -1,0 +1,22 @@
+/* ================================================================
+   AGENT SIDEBAR — custom pixel widths (not in Tailwind defaults)
+   ================================================================ */
+.agent-sidebar {
+  width: 260px;
+}
+
+.agent-sidebar.sidebar-closed {
+  width: 52px;
+}
+
+/* Mobile: always full-width, transform handled by Tailwind in template */
+@media (max-width: 767px) {
+  .agent-sidebar.sidebar-open,
+  .agent-sidebar.sidebar-closed {
+    width: 260px;
+  }
+
+  .agent-sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+}

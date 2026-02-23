@@ -1,1 +1,238 @@
-<p>agent-page works!</p>
+<!-- ===================================================================
+     AGENT CHAT PAGE
+     =================================================================== -->
+<div class="flex w-full h-full min-h-0 relative">
+
+  <!-- ---------------------------------------------------------------
+       SIDEBAR
+       --------------------------------------------------------------- -->
+  <chat-sessions></chat-sessions>
+
+  <!-- ---------------------------------------------------------------
+       MAIN CHAT AREA
+       --------------------------------------------------------------- -->
+  <main class="flex flex-col flex-1 min-w-0 min-h-0 relative">
+
+    <!-- ---- CHAT HEADER ---- -->
+    <header class="flex items-center gap-3 px-4 sm:px-6 py-4 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm shrink-0">
+      @if (s.currentSession()) {
+        <div class="flex items-center gap-3 flex-1 min-w-0">
+          <!-- Agent avatar badge -->
+          <div class="w-8 h-8 rounded-lg bg-yellow-500/15 border border-yellow-500/30 flex items-center justify-center shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.699-1.388 2.441l-1.712-.342m-14.4-2.1L3.2 15.3c-1.418.258-2.388-1.44-1.388-2.441L3.2 11.457m0 3.843l1.712-.342M12 12a3 3 0 100-6 3 3 0 000 6z" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <h1 class="text-sm font-semibold text-white truncate">{{ s.currentSession()!.title }}</h1>
+            <p class="text-xs text-slate-500">Agente IA · LatencyZero</p>
+          </div>
+        </div>
+
+        <!-- Header actions -->
+        <div class="flex items-center gap-1 shrink-0">
+          <button
+            class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-300 hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+            title="Nueva conversación"
+            (click)="s.newChat()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <button
+            class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors cursor-pointer"
+            title="Eliminar conversación"
+            (click)="s.deleteChat(s.currentChatId()!)"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22M8 7V4h8v3" />
+            </svg>
+          </button>
+        </div>
+
+      } @else {
+        <!-- No chat selected header -->
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-yellow-500/15 border border-yellow-500/30 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.699-1.388 2.441l-1.712-.342m-14.4-2.1L3.2 15.3c-1.418.258-2.388-1.44-1.388-2.441L3.2 11.457m0 3.843l1.712-.342M12 12a3 3 0 100-6 3 3 0 000 6z" />
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-sm font-semibold text-white">Agente IA</h1>
+            <p class="text-xs text-slate-500">LatencyZero · Asistente de hardware</p>
+          </div>
+        </div>
+      }
+    </header>
+
+    <!-- ---- MESSAGES AREA ---- -->
+    <div class="flex-1 overflow-y-auto overflow-x-hidden min-h-0 scrollbar-thin">
+
+      @if (!s.currentChatId()) {
+        <!-- ---- WELCOME SCREEN ---- -->
+        <div class="flex flex-col items-center justify-center h-full px-6 py-12 text-center">
+          <!-- Glow blob -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+          <div class="relative z-10 flex flex-col items-center gap-6 max-w-lg">
+            <!-- Icon -->
+            <div class="w-16 h-16 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.699-1.388 2.441l-1.712-.342m-14.4-2.1L3.2 15.3c-1.418.258-2.388-1.44-1.388-2.441L3.2 11.457m0 3.843l1.712-.342M12 12a3 3 0 100-6 3 3 0 000 6z" />
+              </svg>
+            </div>
+
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-2">
+                ¿En qué puedo <span class="text-yellow-500">ayudarte</span>?
+              </h2>
+              <p class="text-slate-400 text-sm sm:text-base">
+                Soy el agente IA de LatencyZero. Puedo ayudarte a elegir componentes, resolver dudas de compatibilidad y diseñar el PC perfecto para ti.
+              </p>
+            </div>
+
+            <!-- Suggestion chips -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full mt-2">
+              <button
+                (click)="s.startWithSuggestion('¿Qué CPU elegir para edición de vídeo?')"
+                class="suggestion-chip text-left px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-500/40 hover:bg-yellow-500/5 text-slate-300 text-sm transition-all cursor-pointer group"
+              >
+                <span class="block text-yellow-500 text-xs font-semibold mb-1 group-hover:text-yellow-400">CPU</span>
+                ¿Qué CPU elegir para edición de vídeo?
+              </button>
+              <button
+                (click)="s.startWithSuggestion('¿Mejor GPU relación calidad/precio en 2025?')"
+                class="suggestion-chip text-left px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-500/40 hover:bg-yellow-500/5 text-slate-300 text-sm transition-all cursor-pointer group"
+              >
+                <span class="block text-yellow-500 text-xs font-semibold mb-1 group-hover:text-yellow-400">GPU</span>
+                ¿Mejor GPU relación calidad/precio en 2025?
+              </button>
+              <button
+                (click)="s.startWithSuggestion('¿Cuánta RAM necesito para gaming?')"
+                class="suggestion-chip text-left px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-500/40 hover:bg-yellow-500/5 text-slate-300 text-sm transition-all cursor-pointer group"
+              >
+                <span class="block text-yellow-500 text-xs font-semibold mb-1 group-hover:text-yellow-400">RAM</span>
+                ¿Cuánta RAM necesito para gaming?
+              </button>
+              <button
+                (click)="s.startWithSuggestion('Ayúdame a montar un PC completo de 1000€')"
+                class="suggestion-chip text-left px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-500/40 hover:bg-yellow-500/5 text-slate-300 text-sm transition-all cursor-pointer group"
+              >
+                <span class="block text-yellow-500 text-xs font-semibold mb-1 group-hover:text-yellow-400">Build</span>
+                Ayúdame a montar un PC completo de 1000€
+              </button>
+            </div>
+          </div>
+        </div>
+
+      } @else if (s.currentMessages().length === 0) {
+        <!-- Empty chat state -->
+        <div class="flex flex-col items-center justify-center h-full px-6 py-12 text-center">
+          <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <p class="text-slate-400 text-sm">Escribe tu primera pregunta para comenzar</p>
+        </div>
+
+      } @else {
+        <!-- Messages list -->
+        <div class="px-4 sm:px-6 py-6 flex flex-col gap-6 max-w-4xl mx-auto w-full">
+
+          @for (message of s.currentMessages(); track message.id) {
+
+            @if (message.role === 'user') {
+              <!-- USER MESSAGE -->
+              <div class="flex items-end gap-3 justify-end">
+                <div class="max-w-[75%] sm:max-w-[65%]">
+                  <div class="user-message px-4 py-3 rounded-2xl rounded-br-sm bg-yellow-500/10 border border-yellow-500/20 text-slate-100 text-sm leading-relaxed whitespace-pre-wrap">
+                    {{ message.content }}
+                  </div>
+                  <p class="text-xs text-slate-600 mt-1 text-right">{{ s.formatTime(message.timestamp) }}</p>
+                </div>
+                <!-- User avatar -->
+                <div class="w-7 h-7 rounded-full bg-yellow-500 flex items-center justify-center text-slate-950 font-bold text-xs shrink-0 mb-5">
+                  U
+                </div>
+              </div>
+
+            } @else {
+              <!-- AGENT MESSAGE -->
+              <div class="flex items-end gap-3">
+                <!-- Agent avatar -->
+                <div class="w-7 h-7 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.699-1.388 2.441l-1.712-.342m-14.4-2.1L3.2 15.3c-1.418.258-2.388-1.44-1.388-2.441L3.2 11.457m0 3.843l1.712-.342M12 12a3 3 0 100-6 3 3 0 000 6z" />
+                  </svg>
+                </div>
+                <div class="max-w-[75%] sm:max-w-[70%]">
+                  <div class="agent-message px-4 py-3 rounded-2xl rounded-bl-sm bg-slate-800/80 border border-slate-700/60 text-slate-100 text-sm leading-relaxed whitespace-pre-wrap">
+                    {{ message.content }}
+                  </div>
+                  <p class="text-xs text-slate-600 mt-1">{{ s.formatTime(message.timestamp) }}</p>
+                </div>
+              </div>
+            }
+
+          }
+
+          <!-- Typing indicator -->
+          @if (s.isTyping()) {
+            <div class="flex items-end gap-3">
+              <div class="w-7 h-7 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.699-1.388 2.441l-1.712-.342m-14.4-2.1L3.2 15.3c-1.418.258-2.388-1.44-1.388-2.441L3.2 11.457m0 3.843l1.712-.342M12 12a3 3 0 100-6 3 3 0 000 6z" />
+                </svg>
+              </div>
+              <div class="px-4 py-3 rounded-2xl rounded-bl-sm bg-slate-800/80 border border-slate-700/60">
+                <div class="flex items-center gap-1.5">
+                  <span class="typing-dot w-2 h-2 rounded-full bg-yellow-500/60"></span>
+                  <span class="typing-dot w-2 h-2 rounded-full bg-yellow-500/60" style="animation-delay: 0.2s"></span>
+                  <span class="typing-dot w-2 h-2 rounded-full bg-yellow-500/60" style="animation-delay: 0.4s"></span>
+                </div>
+              </div>
+            </div>
+          }
+
+          <!-- Scroll anchor -->
+          <div #messagesEnd></div>
+        </div>
+      }
+    </div>
+
+    <!-- ---- INPUT AREA ---- -->
+    @if (s.currentChatId()) {
+      <div class="shrink-0 px-4 sm:px-6 py-4 border-t border-slate-800 bg-slate-950/60 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex items-end gap-3 bg-slate-900 border border-slate-700 focus-within:border-yellow-500/50 rounded-2xl px-4 py-3 transition-colors">
+            <textarea
+              [(ngModel)]="newMessage"
+              (keydown)="onKeydown($event)"
+              placeholder="Pregunta sobre componentes, compatibilidad o builds..."
+              rows="1"
+              class="flex-1 bg-transparent text-slate-100 text-sm placeholder-slate-500 outline-none resize-none max-h-40 overflow-y-auto leading-relaxed scrollbar-thin"
+              [disabled]="s.isTyping()"
+            ></textarea>
+            <button
+              (click)="send()"
+              [disabled]="!newMessage.trim() || s.isTyping()"
+              class="w-9 h-9 flex items-center justify-center rounded-xl bg-yellow-500 hover:bg-yellow-400 disabled:opacity-30 disabled:cursor-not-allowed text-slate-950 transition-all shrink-0 cursor-pointer"
+              title="Enviar mensaje"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-slate-600 text-center mt-2">
+            <kbd class="font-mono">Enter</kbd> para enviar · <kbd class="font-mono">Shift+Enter</kbd> para nueva línea
+          </p>
+        </div>
+      </div>
+    }
+
+  </main>
+</div>
