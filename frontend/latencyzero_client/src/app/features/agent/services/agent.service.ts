@@ -5,7 +5,7 @@ import { MOCK_CHAT_SESSIONS } from '../mocks/chat-sessions.mock';
 @Injectable({ providedIn: 'root' })
 export class AgentService {
 
-  readonly sidebarOpen = signal(true);
+  readonly sidebarOpen = signal(typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
   readonly currentChatId = signal<string | null>(null);
   readonly chatSessions = signal<ChatSession[]>(MOCK_CHAT_SESSIONS);
   readonly isTyping = signal(false);
@@ -65,6 +65,9 @@ export class AgentService {
       ...sessions,
     ]);
     this.currentChatId.set(id);
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      this.sidebarOpen.set(false);
+    }
   }
 
   deleteChat(id: string): void {

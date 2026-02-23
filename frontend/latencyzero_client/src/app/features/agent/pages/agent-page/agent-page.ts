@@ -11,7 +11,7 @@ import { MessagesArea } from "../../components/messages-area/messages-area";
   imports: [FormsModule, ChatSessions, ChatHeader, ChatInput, MessagesArea],
   templateUrl: './agent-page.html',
   styleUrl: './agent-page.css',
-  host: { class: 'flex flex-1 min-h-0 overflow-hidden' },
+  host: { class: 'flex flex-1 min-h-0 overflow-hidden relative' },
 })
 export class AgentPage {
 
