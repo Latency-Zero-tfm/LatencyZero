@@ -3,6 +3,7 @@ import { MainLayoutComponent } from './layout/main-layout-component/main-layout-
 import { HardVisionPage } from './features/hardvision/pages/hard-vision-page/hard-vision-page.component';
 import { HomePage } from './features/home/pages/home-page/home-page';
 import { DocsPage } from './features/docs/pages/docs-page.component/docs-page.component';
+import { AgentPage } from './features/agent/pages/agent-page/agent-page';
 
 export const routes: Routes = [
   {
@@ -18,6 +19,11 @@ export const routes: Routes = [
         path: 'hardvisionai',
         component: HardVisionPage,
         title: 'HardVision AI'
+      },
+      {
+        path: 'agente',
+        component: AgentPage,
+        title: 'Agente'
       },
       {
         path: 'docs',
