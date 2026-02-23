@@ -10,14 +10,15 @@ type AuthStatus = 'checking' | 'authenticated' | 'not-authenticated';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-
   private _authStatus = signal<AuthStatus>('checking');
+  private _username = signal<string | null>(null);
 
   private http = inject(HttpClient);
   private jwt = inject(JwtService);
   private router = inject(Router);
 
   authStatus = computed<AuthStatus>(() => this._authStatus());
+  username = computed(() => this._username());
 
   constructor() {
     this.jwt.init();
@@ -25,17 +26,20 @@ export class AuthService {
   }
 
   login(username: string, password: string): Observable<boolean> {
-    return this.http.post(LOGIN_ENDPOINT, { username, password }, { responseType: 'text', withCredentials: true }).pipe(
-      map((token: string) => {
-        this.jwt.setToken(token);
-        this._authStatus.set('authenticated');
-        return true;
-      }),
-      catchError((error) => {
-        this._authStatus.set('not-authenticated');
-        return of(false)
-      })
-    );
+    return this.http
+      .post(LOGIN_ENDPOINT, { username, password }, { responseType: 'text', withCredentials: true })
+      .pipe(
+        map((token: string) => {
+          this.jwt.setToken(token);
+          this._authStatus.set('authenticated');
+          this._username.set(username);
+          return true;
+        }),
+        catchError((error) => {
+          this._authStatus.set('not-authenticated');
+          return of(false);
+        }),
+      );
   }
 
   register(registerDTO: RegisterDTO): Observable<boolean> {
@@ -48,7 +52,7 @@ export class AuthService {
       }),
       catchError((error) => {
         return of(false);
-      })
+      }),
     );
   }
 
@@ -56,14 +60,20 @@ export class AuthService {
     const token = this.jwt.getToken();
     this.jwt.clear();
     this._authStatus.set('not-authenticated');
+    this._username.set(null);
     this.router.navigateByUrl('/auth/login', { replaceUrl: true });
     if (token) {
-      this.http.post(LOGOUT_ENDPOINT, {}, {
-        withCredentials: true,
-        headers: { Authorization: `Bearer ${token}` }
-      }).subscribe();
+      this.http
+        .post(
+          LOGOUT_ENDPOINT,
+          {},
+          {
+            withCredentials: true,
+            headers: { Authorization: `Bearer ${token}` },
+          },
+        )
+        .subscribe();
     }
   }
-
 
 }

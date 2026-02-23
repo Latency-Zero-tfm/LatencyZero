@@ -18,7 +18,8 @@ export class NavbarComponent {
   isLoggedIn = computed(() => this.authService.authStatus() === 'authenticated');
 
   get userInitial(): string {
-    return this.jwtService.getName() ? this.jwtService.getName()!.charAt(0).toUpperCase() : 'U';
+    const username = this.authService.username();
+    return username ? username.charAt(0).toUpperCase() : 'U';
   }
 
   logout() {
