@@ -28,3 +28,51 @@ ng version
 ```
 
 Si no coinciden con las versiones requeridas, se recomienda actualizarlas antes de continuar.
+
+## ⚡ Instalación y ejecución
+
+Sigue estos pasos para instalar dependencias y ejecutar el proyecto localmente.
+
+### 1️⃣ Instalar dependencias
+
+Dentro de la carpeta del proyecto, ejecuta:
+
+```bash
+npm install
+```
+
+Esto instalará automáticamente todas las dependencias definidas en `package.json`, incluyendo Angular, Tailwind y librerías de terceros.
+
+### 2️⃣ Ejecutar en desarrollo
+
+Para iniciar el servidor de desarrollo:
+
+```bash
+npm start
+```
+
+Alternativamente, usando Angular CLI directamente:
+
+```bash
+ng serve
+```
+
+El proyecto estará disponible en tu navegador en:
+
+```text
+http://localhost:4200
+```
+
+### 3️⃣ Build para producción
+
+Para generar la versión optimizada y lista para producción:
+
+```bash
+npm run build
+```
+
+Los archivos compilados se generarán en la carpeta:
+
+```text
+dist/
+```
