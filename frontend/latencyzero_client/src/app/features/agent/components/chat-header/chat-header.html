@@ -1,6 +1,6 @@
 <!-- ---- CHAT HEADER ---- -->
 <header
-  class="flex items-center gap-3 px-4 sm:px-6 py-4 border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm shrink-0">
+  class="flex items-center gap-3 px-4 sm:px-6 py-4 border-b border-slate-800 bg-slate-950/80">
   @if (s.currentSession()) {
   <div class="flex items-center gap-3 flex-1 min-w-0">
     <!-- Agent avatar badge -->
@@ -13,8 +13,8 @@
       </svg>
     </div>
     <div class="min-w-0">
-      <h1 class="text-sm font-semibold text-white truncate">{{ s.currentSession()!.title }}</h1>
-      <p class="text-xs text-slate-500">Agente IA · LatencyZero</p>
+      <h1 class="text-sm font-semibold text-white truncate leading-none">{{ s.currentSession()!.title }}</h1>
+      <p class="text-xs text-slate-500 leading-none mt-1">Agente IA · LatencyZero</p>
     </div>
   </div>
 
@@ -42,8 +42,8 @@
       </svg>
     </div>
     <div>
-      <h1 class="text-sm font-semibold text-white">Agente IA</h1>
-      <p class="text-xs text-slate-500">LatencyZero · Asistente de hardware</p>
+      <h1 class="text-sm font-semibold text-white leading-none">Agente IA</h1>
+      <p class="text-xs text-slate-500 leading-none mt-1">LatencyZero · Asistente de hardware</p>
     </div>
   </div>
   }
