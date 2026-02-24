@@ -45,3 +45,15 @@ CREATE TABLE IF NOT EXISTS chat (
     FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE,
     FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- ===========================
+-- Tabla: opinions
+-- ===========================
+CREATE TABLE IF NOT EXISTS opinions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) DEFAULT NULL,
+    message VARCHAR(1000) NOT NULL,
+    sentiment_label VARCHAR(20) DEFAULT NULL,
+    sentiment_score FLOAT DEFAULT NULL,
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

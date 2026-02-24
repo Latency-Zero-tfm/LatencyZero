@@ -37,6 +37,10 @@ export const routes: Routes = [
     loadChildren: () => import('./auth/auth.routes')
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.routes')
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'

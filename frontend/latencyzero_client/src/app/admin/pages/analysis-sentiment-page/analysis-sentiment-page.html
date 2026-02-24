@@ -1,0 +1,100 @@
+<div class="p-6 flex flex-col gap-6">
+
+  <!-- Header -->
+  <div>
+    <h1 class="text-xl font-bold text-slate-100 tracking-tight">Análisis de Sentimiento</h1>
+    <p class="text-sm text-slate-500 mt-1">Opiniones de usuarios procesadas con IA</p>
+  </div>
+
+  <!-- Loading -->
+  @if (loading) {
+    <div class="flex items-center gap-2 text-slate-500 text-sm">
+      <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+      </svg>
+      Cargando opiniones...
+    </div>
+  }
+
+  <!-- Error -->
+  @if (error) {
+    <p class="text-sm text-red-400">No se pudieron cargar las opiniones.</p>
+  }
+
+  <!-- Stats -->
+  @if (!loading && !error) {
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+
+      <!-- Total -->
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 flex flex-col gap-1">
+        <span class="text-xs text-slate-500 uppercase tracking-widest">Total</span>
+        <span class="text-2xl font-bold text-slate-100">{{ opinions.length }}</span>
+      </div>
+
+      <!-- Positivas -->
+      <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-4 flex flex-col gap-1">
+        <span class="text-xs text-emerald-400/80 uppercase tracking-widest">Positivas</span>
+        <span class="text-2xl font-bold text-emerald-400">{{ positive }}</span>
+        <span class="text-xs text-slate-500">{{ pct(positive) }}%</span>
+      </div>
+
+      <!-- Neutras -->
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 flex flex-col gap-1">
+        <span class="text-xs text-slate-400/80 uppercase tracking-widest">Neutras</span>
+        <span class="text-2xl font-bold text-slate-300">{{ neutral }}</span>
+        <span class="text-xs text-slate-500">{{ pct(neutral) }}%</span>
+      </div>
+
+      <!-- Negativas -->
+      <div class="bg-red-500/5 border border-red-500/20 rounded-xl p-4 flex flex-col gap-1">
+        <span class="text-xs text-red-400/80 uppercase tracking-widest">Negativas</span>
+        <span class="text-2xl font-bold text-red-400">{{ negative }}</span>
+        <span class="text-xs text-slate-500">{{ pct(negative) }}%</span>
+      </div>
+
+    </div>
+
+    <!-- Opinions list -->
+    @if (opinions.length === 0) {
+      <p class="text-sm text-slate-500">Aún no hay opiniones registradas.</p>
+    } @else {
+      <div class="flex flex-col gap-3">
+        @for (op of opinions; track op.id) {
+          <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 flex flex-col gap-2">
+
+            <!-- Top row -->
+            <div class="flex items-center justify-between gap-3 flex-wrap">
+              <span class="text-sm font-semibold text-slate-200">
+                {{ op.name || 'Anónimo' }}
+              </span>
+              <div class="flex items-center gap-2">
+                <!-- Sentiment badge -->
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full border"
+                  [ngClass]="labelColor(op.sentiment_label)">
+                  {{ labelText(op.sentiment_label) }}
+                </span>
+                <!-- Score -->
+                @if (op.sentiment_score !== undefined) {
+                  <span class="text-[11px] text-slate-500">
+                    {{ (op.sentiment_score! * 100).toFixed(0) }}%
+                  </span>
+                }
+                <!-- Date -->
+                <span class="text-[11px] text-slate-600">
+                  {{ op.create_at | date:'dd/MM/yyyy HH:mm' }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <p class="text-sm text-slate-400 leading-relaxed">{{ op.message }}</p>
+
+          </div>
+        }
+      </div>
+    }
+  }
+
+</div>
+
