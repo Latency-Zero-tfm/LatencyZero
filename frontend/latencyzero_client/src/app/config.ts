@@ -9,3 +9,6 @@ export const LOGOUT_ENDPOINT = `${BASE_URL}/auth/logout`;
 
 // Components endpoints
 export const HARD_VISION_ENDPOINT = `${BASE_URL}/components/analyze`;
+
+// Opinions endpoints
+export const OPINIONS_ENDPOINT = `${BASE_URL}/opinions`;

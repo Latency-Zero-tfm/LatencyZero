@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { OpinionService } from '../../services/opinion.service';
 
 @Component({
   selector: 'opinion-users',
@@ -13,7 +14,10 @@ export class OpinionUsers {
   submitted = false;
   sending = false;
 
-  constructor(private fb: FormBuilder) {
+  private fb = inject(FormBuilder);
+  private opinionService = inject(OpinionService);
+
+  constructor() {
     this.opinionForm = this.fb.group({
       name: [''],
       message: ['', [Validators.required, Validators.minLength(10)]]
@@ -23,10 +27,17 @@ export class OpinionUsers {
   onSubmit(): void {
     if (this.opinionForm.invalid) return;
     this.sending = true;
-    setTimeout(() => {
-      this.submitted = true;
-      this.sending = false;
-    }, 600);
+    const { name, message } = this.opinionForm.value;
+    this.opinionService.submit({ name: name || undefined, message }).subscribe({
+      next: () => {
+        this.submitted = true;
+        this.sending = false;
+      },
+      error: () => {
+        this.sending = false;
+      }
+    });
   }
 
 }
+

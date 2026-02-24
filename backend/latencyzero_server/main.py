@@ -7,6 +7,7 @@ from . import models
 import logging
 from .api.auth.router import router as auth_router
 from .api.components.router import router as components_router
+from .api.opinions.router import router as opinions_router
 from .core.exception_handlers import setup_exception_handlers
 
 app = FastAPI(title="LatencyZero Server")
@@ -46,6 +47,7 @@ def run_seeds_on_startup():
 
 app.include_router(auth_router)
 app.include_router(components_router)
+app.include_router(opinions_router)
 
 @app.get("/")
 def root():
