@@ -21,6 +21,9 @@
     <a routerLink="/agente" routerLinkActive="text-yellow-500"
       class="hover:text-yellow-500 transition-colors">Agente</a>
     <a routerLink="/docs" routerLinkActive="text-yellow-500" class="hover:text-yellow-500 transition-colors">Docs</a>
+    @if (isAdmin()) {
+    <a routerLink="/admin" routerLinkActive="text-yellow-500" class="hover:text-yellow-500 transition-colors">Admin</a>
+    }
   </div>
 
   <div class="flex items-center gap-3">
