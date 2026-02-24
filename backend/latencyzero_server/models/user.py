@@ -12,4 +12,3 @@ class User(Base):
   password = Column(String(255), nullable=False)
   role = Column(Enum("user", "admin", name="user_roles"), default="user")
   create_at = Column(TIMESTAMP, server_default=func.now())
-  image = Column(String(255), nullable=True)

@@ -10,4 +10,3 @@ class UserDTO(BaseModel):
   username: str
   token: str
   role: UserRole
-  image: Optional[str] = None

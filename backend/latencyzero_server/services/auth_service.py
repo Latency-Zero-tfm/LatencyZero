@@ -55,7 +55,6 @@ def login_user(db: Session, username: str, password: str) -> UserDTO:
     username=user.username,
     token=access_token,
     role=user.role,
-    image=user.image
   )
 
 def is_token_blacklisted(db: Session, token: str) -> bool:

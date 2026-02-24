@@ -18,21 +18,18 @@ class UsersSeed(BaseSeed):
       "email": "latencyzero.tfm@gmail.com",
       "password": "Admin@123456",
       "role": "admin",
-      "image": ""
     },
     {
       "username": "user",
       "email": "user@latencyzero.dev",
       "password": "User@123456",
       "role": "user",
-      "image": ""
     },
     {
       "username": "demo",
       "email": "demo@latencyzero.dev",
       "password": "Demo@123456",
       "role": "user",
-      "image": ""
     }
   ]
 
@@ -61,7 +58,6 @@ class UsersSeed(BaseSeed):
             email=user_data["email"],
             password=hashed_password,
             role=user_data["role"],
-            image=user_data.get("image")
           )
 
           db.add(new_user)
