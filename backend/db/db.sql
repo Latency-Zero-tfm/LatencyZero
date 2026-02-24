@@ -14,8 +14,7 @@ CREATE TABLE IF NOT EXISTS user (
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     role ENUM('user','admin') DEFAULT 'user',
-    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    image VARCHAR(255) NULL
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ===========================
@@ -39,7 +38,7 @@ CREATE TABLE IF NOT EXISTS chat (
     session_id INT NOT NULL,
     user_message TEXT NOT NULL,
     bot_message TEXT,
-    creat_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     tools_mode ENUM('llm','ml_model','search','other') DEFAULT 'llm',
     bot_files JSON NULL,
     user_files JSON NULL,
