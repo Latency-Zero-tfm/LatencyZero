@@ -26,4 +26,8 @@ export class NavbarComponent {
     this.authService.logout();
   }
 
+  isAdmin(): boolean {
+    return this.jwtService.getRole() === "admin";
+  }
+
 }

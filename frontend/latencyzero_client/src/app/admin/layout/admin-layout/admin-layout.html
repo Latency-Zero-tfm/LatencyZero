@@ -1,11 +1,9 @@
 <div class="min-h-screen flex bg-slate-950 text-slate-50">
 
-  <!-- Ambient glow -->
   <div class="fixed inset-0 z-0 pointer-events-none">
     <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-yellow-500/8 blur-[120px] rounded-full"></div>
   </div>
 
-  <!-- Mobile backdrop -->
   <div
     [class.hidden]="!sidebarOpen"
     class="fixed inset-0 z-40 bg-black/50 lg:hidden"
@@ -17,7 +15,6 @@
     class="fixed top-0 left-0 h-screen z-50 transition-transform duration-300 ease-in-out lg:relative lg:h-auto lg:z-10 lg:transition-none lg:translate-x-0 w-56 shrink-0 flex flex-col bg-slate-900/80 border-r border-slate-800 backdrop-blur-md"
     [ngClass]="sidebarOpen ? [] : ['-translate-x-full', 'lg:hidden']">
 
-    <!-- Brand -->
     <div class="flex items-center gap-2.5 px-5 py-5 border-b border-slate-800">
       <img src="assets/img/logo2_yellow.png" alt="Logo" class="w-7 h-7 object-contain">
       <span class="text-sm font-bold tracking-tight">
@@ -26,7 +23,6 @@
       <span class="ml-auto text-[10px] font-semibold px-1.5 py-0.5 bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 rounded-md">Admin</span>
     </div>
 
-    <!-- Nav -->
     <nav class="flex flex-col gap-1 p-3 flex-1">
       <p class="text-[10px] text-slate-600 uppercase tracking-widest font-semibold px-2 pt-2 pb-1">Análisis</p>
 
@@ -41,7 +37,6 @@
       </a>
     </nav>
 
-    <!-- Bottom -->
     <div class="px-4 py-4 border-t border-slate-800">
       <a routerLink="/" class="flex items-center gap-2 text-xs text-slate-600 hover:text-slate-400 transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
@@ -57,10 +52,8 @@
   <!-- Main -->
   <div class="relative z-10 flex flex-col flex-1 min-h-screen overflow-auto">
 
-    <!-- Topbar -->
     <header class="sticky top-0 z-20 flex items-center gap-3 px-6 py-3.5 bg-slate-900/70 border-b border-slate-800 backdrop-blur-md">
       <div class="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-yellow-500/30 to-transparent"></div>
-      <!-- Toggle button -->
       <button (click)="toggleSidebar()" class="text-slate-400 hover:text-slate-200 transition-colors shrink-0">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -69,7 +62,6 @@
       <span class="text-sm font-semibold text-slate-300">Panel de administración</span>
     </header>
 
-    <!-- Page content -->
     <main class="flex-1 p-6">
       <router-outlet></router-outlet>
     </main>

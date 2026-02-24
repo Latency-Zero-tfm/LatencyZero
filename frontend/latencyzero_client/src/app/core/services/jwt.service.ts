@@ -60,7 +60,7 @@ public setToken(token: string): void {
       return;
     }
 
-    if (this.role === 'ROLE_ADMIN') {
+    if (this.role === 'admin') {
       this.tokenSubject.next(token);
     } else {
       sessionStorage.setItem(this.TOKEN_KEY, token);
