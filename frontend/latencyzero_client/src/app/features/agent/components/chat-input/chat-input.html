@@ -1,0 +1,23 @@
+@if (s.currentChatId()) {
+<div class="p-4 border-t border-slate-800 bg-slate-950/60">
+  <div class="max-w-4xl mx-auto">
+    <div
+      class="flex items-end gap-3 bg-slate-900 border border-slate-700 focus-within:border-yellow-500/50 rounded-2xl p-3 transition-colors">
+      <textarea #ta [(ngModel)]="newMessage" (keydown)="onKeydown($event, ta)" (input)="autoResize(ta)" placeholder="Pregunta a LatencyZero AI" rows="1"
+        class="flex-1 bg-transparent text-slate-100 text-sm placeholder-slate-500 outline-none resize-none max-h-40 overflow-y-auto leading-relaxed scrollbar-thin py-1"
+        [disabled]="s.isTyping()"></textarea>
+      <button (click)="send(ta)" [disabled]="!newMessage.trim() || s.isTyping()"
+        class="w-9 h-9 flex items-center justify-center rounded-xl bg-yellow-500 hover:bg-yellow-400 disabled:opacity-30 disabled:cursor-not-allowed text-slate-950 transition-all shrink-0 cursor-pointer"
+        title="Enviar mensaje">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+        </svg>
+      </button>
+    </div>
+    <p class="text-xs text-slate-600 text-center mt-2">
+      <kbd class="font-mono">Enter</kbd> para enviar · <kbd class="font-mono">Shift+Enter</kbd> para nueva línea
+    </p>
+  </div>
+</div>
+}

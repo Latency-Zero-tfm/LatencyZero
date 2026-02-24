@@ -1,0 +1,25 @@
+.agent-sidebar {
+  width: 260px;
+}
+
+.agent-sidebar.sidebar-closed {
+  width: 60px;
+}
+
+/* ── Mobile: overlay drawer ── */
+@media (max-width: 767px) {
+  .agent-sidebar {
+    width: 280px;
+    transform: translateX(-100%);
+  }
+
+  .agent-sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+
+  /* On mobile the sidebar is either fully visible or off-screen — never icon-only */
+  .agent-sidebar.sidebar-closed {
+    width: 280px;
+    transform: translateX(-100%);
+  }
+}
