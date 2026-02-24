@@ -18,3 +18,6 @@ class SessionRepository(BaseRepository[SessionModel]):
   def create_session_for_user(self, user: User, name: str) -> SessionModel:
     session = SessionModel(session_name=name,user_id=user.id, user=user)
     return self.create(session)
+
+  def get_sessions_for_user(self, user: User):
+    return self.db.query(SessionModel).filter(SessionModel.user_id == user.id).all()
