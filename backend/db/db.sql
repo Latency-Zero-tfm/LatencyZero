@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS user (
 -- ===========================
 CREATE TABLE IF NOT EXISTS sessions (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+    user_id INT,
     session_name VARCHAR(100) DEFAULT 'Nueva Sesión',
     create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     update_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS sessions (
 -- ===========================
 CREATE TABLE IF NOT EXISTS chat (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+    user_id INT,
     session_id INT NOT NULL,
     user_message TEXT NOT NULL,
     bot_message TEXT,

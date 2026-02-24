@@ -9,7 +9,7 @@ class Session(Base):
     __tablename__ = "sessions"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"), nullable=True)
     session_name = Column(String(100), nullable=False, default="Nueva sesión")
     create_at = Column(TIMESTAMP, server_default=func.now())
     update_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
