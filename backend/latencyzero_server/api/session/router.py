@@ -13,10 +13,6 @@ from ...services.session_service import create_session, create_session_for_user,
 router = APIRouter(prefix="/session", tags=["session"])
 _bearer = HTTPBearer(auto_error=False)
 
-@router.get("/status")
-async def get_status():
-    return get_status_service()
-
 @router.post("/create", status_code=200)
 def create(
     credentials: Optional[HTTPAuthorizationCredentials] = Depends(_bearer),
