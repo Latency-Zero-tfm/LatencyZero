@@ -9,7 +9,7 @@ class Chat(Base):
     __tablename__ = "chat"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"), nullable=True)
     session_id = Column(Integer, ForeignKey("sessions.id", ondelete="CASCADE"), nullable=False)
     user_message = Column(String(2000), nullable=False)
     bot_message = Column(String(4000), nullable=True)
