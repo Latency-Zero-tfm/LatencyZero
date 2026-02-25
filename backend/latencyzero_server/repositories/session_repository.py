@@ -20,4 +20,9 @@ class SessionRepository(BaseRepository[SessionModel]):
     return self.create(session)
 
   def get_sessions_for_user(self, user: User):
-    return self.db.query(SessionModel).filter(SessionModel.user_id == user.id).all()
+    return (
+      self.db.query(SessionModel)
+      .filter(SessionModel.user_id == user.id)
+      .order_by(SessionModel.update_at.desc()) 
+      .all()
+    )
