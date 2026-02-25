@@ -18,6 +18,15 @@ Para ejecutar correctamente el frontend, asegúrate de tener instaladas las sigu
 | Angular CLI | **20.3.15**       |
 
 
+```
+https://nodejs.org/en/download
+```
+
+```bash
+npm install -g @angular/cli@20.3.15
+```
+
+
 ## 🔎 Comprobar versiones instaladas
 
 Puedes verificar tus versiones con los siguientes comandos:
