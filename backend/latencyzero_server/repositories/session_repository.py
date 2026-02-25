@@ -32,3 +32,9 @@ class SessionRepository(BaseRepository[SessionModel]):
   
   def get_session_by_id_and_user(self, session_id: int, user_id: int) -> Optional[SessionModel]:
     return self.db.query(SessionModel).filter(SessionModel.id == session_id, SessionModel.user_id == user_id).first()
+  
+  def delete_by_id(self, session_id: int):
+    session = self.get_session_by_id(session_id)
+    if session:
+      self.db.delete(session)
+      self.db.commit()

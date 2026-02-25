@@ -21,3 +21,7 @@ def get_sessions_for_user(db: Session, user) -> list[SessionDto]:
   repo = SessionRepository(db)
   sessions = repo.get_sessions_for_user(user=user)
   return map_session_to_dtos(sessions)
+
+def delete_session(db: Session, session_id: int):
+  repo = SessionRepository(db)
+  repo.delete_by_id(session_id)
