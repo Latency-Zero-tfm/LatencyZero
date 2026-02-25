@@ -1,3 +1,5 @@
+from typing import Optional
+from fastapi import UploadFile
 from sqlalchemy.orm import Session
 from ..repositories.chat_repository import ChatRepository
 from ..repositories.session_repository import SessionRepository
@@ -19,7 +21,7 @@ def create_chat_service(
     session_id: int,
     user_message: str,
     tools_mode: str,
-    user_files: str
+    user_file: Optional[UploadFile] = None
 ):
     """Crea un chat sin usuario (anónimo)."""
     chat_repo = ChatRepository(db)
@@ -29,11 +31,15 @@ def create_chat_service(
     if not session:
         raise ValueError("Session not found")
 
+    user_files_str = None
+    if user_file:
+        user_files_str = "upload_img"
+
     new_chat = chat_repo.create_chat(
         session_id=session_id,
         user_message=user_message,
         tools_mode=tools_mode,
-        user_files=user_files,
+        user_files=user_files_str,
     )
 
     session.session_name = _generate_session_title(user_message)
@@ -48,7 +54,7 @@ def create_chat_for_user_service(
     session_id: int,
     user_message: str,
     tools_mode: str,
-    user_files: str
+    user_file: Optional[UploadFile] = None
 ):
     """Crea un chat asociado a un usuario, validando propiedad de la sesión."""
     chat_repo = ChatRepository(db)
@@ -58,12 +64,16 @@ def create_chat_for_user_service(
     if not session:
         raise ValueError("Session not found for user")
 
+    user_files_str = None
+    if user_file:
+        user_files_str = "upload_img"
+
     new_chat = chat_repo.create_chat_for_user(
         user=user,
         session_id=session_id,
         user_message=user_message,
         tools_mode=tools_mode,
-        user_files=user_files,
+        user_files=user_files_str,
     )
 
     session.session_name = _generate_session_title(user_message)

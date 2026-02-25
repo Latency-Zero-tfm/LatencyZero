@@ -1,6 +1,6 @@
 from typing import Optional, List
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 
@@ -11,9 +11,9 @@ from ...services.chat_service import (
   get_chats_service,
   get_chats_by_user_service,
 )
-from ...schemas.chat import ChatResponse, ChatCreateRequest
+from ...schemas.chat import ChatResponse
 from ...models.user import User
-from ...utils.security import decode_token  # Función para decodificar JWT
+from ...utils.security import decode_token
 
 router = APIRouter(prefix="/chat", tags=["chat"])
 _bearer = HTTPBearer(auto_error=False)
@@ -40,34 +40,39 @@ def get_optional_user(
 
 
 @router.post("/", response_model=ChatResponse, status_code=status.HTTP_201_CREATED)
-def create_chat(
-  request: ChatCreateRequest,
-  db: Session = Depends(get_db),
-  current_user: Optional[User] = Depends(get_optional_user),
+async def create_chat(
+    session_id: int = Form(...),
+    user_message: str = Form(...),
+    tools_mode: str = Form(...),
+    user_file: Optional[UploadFile] = File(None),
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_optional_user),
 ):
-  """
-  Crea un chat. Funciona con usuario logueado o anónimo.
-  """
-  try:
-    if current_user:
-      return create_chat_for_user_service(
-        db=db,
-        user=current_user,
-        session_id=request.session_id,
-        user_message=request.user_message,
-        tools_mode=request.tools_mode,
-        user_files=request.user_files,
-      )
-    else:
-      return create_chat_service(
-        db=db,
-        session_id=request.session_id,
-        user_message=request.user_message,
-        tools_mode=request.tools_mode,
-        user_files=request.user_files,
-      )
-  except ValueError as e:
-    raise HTTPException(status_code=404, detail=str(e))
+    """
+    Crea un chat con soporte para imágenes.
+    Funciona con usuario logueado o anónimo.
+    """
+
+    try:
+        if current_user:
+            return create_chat_for_user_service(
+                db=db,
+                user=current_user,
+                session_id=session_id,
+                user_message=user_message,
+                tools_mode=tools_mode,
+                user_file=user_file,
+            )
+        else:
+            return create_chat_service(
+                db=db,
+                session_id=session_id,
+                user_message=user_message,
+                tools_mode=tools_mode,
+                user_file=user_file,
+            )
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
 
 
 @router.get("/{session_id}", response_model=List[ChatResponse])
