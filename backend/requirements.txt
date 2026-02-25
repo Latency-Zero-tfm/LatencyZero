@@ -17,5 +17,5 @@ transformers
 Pillow
 opencv-python
 python-multipart
-chromadb
-sentence-transformers
+# chromadb
+# sentence-transformers
