@@ -45,37 +45,22 @@ DATABASE_URL=
 
 # JWT
 SECRET_KEY=
+
+# CORS
+CORS_ORIGINS=
 ```
 
 ⚠️ Asegúrate de completar los valores necesarios antes de ejecutar el servidor.
 
-### 3️⃣ Configurar el token de email
 
-Accede a la carpeta:
-
-```bash
-cd latencyzero_server
-```
-
-Añade aquí los archivos:
-
-* `token.json`
-* `token.pickle`
-
-Luego vuelve al directorio principal:
-
-```bash
-cd ..
-```
-
-### 4️⃣ Crear entorno virtual
+### 3️⃣ Crear entorno virtual
 
 ```bash
 python -m venv venv
 ```
 
 
-### 5️⃣ Activar entorno virtual
+### 4️⃣ Activar entorno virtual
 
 #### 🪟 Windows
 
@@ -90,19 +75,19 @@ source venv/bin/activate
 ```
 
 
-### 6️⃣ Instalar dependencias
+### 5️⃣ Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 7️⃣ Ejecutar el servidor
+### 6️⃣ Ejecutar el servidor
 
 ```bash
 uvicorn latencyzero_server.main:app --reload
 ```
 
-### 8️⃣ Acceder a la API
+### 7️⃣ Acceder a la API
 
 Una vez iniciado el servidor, podrás acceder a:
 
