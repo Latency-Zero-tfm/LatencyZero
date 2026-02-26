@@ -15,10 +15,11 @@ class Settings(BaseSettings):
 
   DATABASE_URL: str | None = None 
 
-  SECRET_KEY: str = os.getenv("SECRET_KEY", "TU_SECRET_KEY_SUPER_SEGURA")
+  SECRET_KEY: str = os.getenv("SECRET_KEY", "SECRET_KEY")
   ALGORITHM: str = "HS256"
   ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 1 dia
   CORS_ORIGINS: list = []
+  GROQ_API_KEY: str | None = os.getenv("GROQ_API_KEY", "GROQ_API_KEY")
 
   DEBUG: bool = True
 

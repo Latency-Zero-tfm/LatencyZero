@@ -34,6 +34,7 @@ def create_chat_service(
     user_files_str = None
     if user_file:
         user_files_str = "upload_img"
+        # aqui mandare a procesar a hardvision
 
     new_chat = chat_repo.create_chat(
         session_id=session_id,
@@ -67,6 +68,7 @@ def create_chat_for_user_service(
     user_files_str = None
     if user_file:
         user_files_str = "upload_img"
+        # aqui mandare a procesar a hardvision
 
     new_chat = chat_repo.create_chat_for_user(
         user=user,
