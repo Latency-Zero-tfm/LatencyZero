@@ -24,67 +24,52 @@ def _create_chat_common(
     session_id: int,
     user: Optional[User] = None,
     user_file: Optional[UploadFile] = None,
-) -> "Chat":
-    """
-    Función interna que encapsula la creación de chat y la llamada a la IA.
-    Maneja tanto usuarios como chats anónimos.
-    """
+):
     chat_repo = ChatRepository(db)
     session_repo = SessionRepository(db)
 
     # Obtener la sesión
-    if user:
-        session = session_repo.get_session_by_id_and_user(session_id, user.id)
-    else:
-        session = session_repo.get_session_by_id(session_id)
-    
+    session = session_repo.get_session_by_id_and_user(session_id, user.id) if user else session_repo.get_session_by_id(session_id)
     if not session:
         raise ValueError("Session not found")
 
     # Procesar archivo opcional
-    user_files_str = None
-    if user_file:
-        user_files_str = "upload_img"
-        # Aquí podrías procesar archivos si aplica
+    user_files_str = "upload_img" if user_file else None
 
-    # Guardar el mensaje del usuario
-    if user:
-        new_chat = chat_repo.create_chat_for_user(
-            user=user,
-            session_id=session_id,
-            user_message=user_message,
-            tools_mode=tools_mode,
-            user_files=user_files_str,
-        )
-    else:
-        new_chat = chat_repo.create_chat(
-            session_id=session_id,
-            user_message=user_message,
-            tools_mode=tools_mode,
-            user_files=user_files_str,
-        )
+    # Crear el chat
+    new_chat = chat_repo.create_chat_for_user(
+        user=user,
+        session_id=session_id,
+        user_message=user_message,
+        tools_mode=tools_mode,
+        user_files=user_files_str,
+    ) if user else chat_repo.create_chat(
+        session_id=session_id,
+        user_message=user_message,
+        tools_mode=tools_mode,
+        user_files=user_files_str,
+    )
 
-    # Actualizar el nombre de la sesión
+    # Actualizar nombre de la sesión
     session.session_name = _generate_session_title(user_message)
     session_repo.update(session)
 
-    # Construir prompt para la IA
+    # Preparar prompt para IA
     messages = [
         {"role": "system", "content": "Eres un asistente experto en LatencyZero."},
         {"role": "user", "content": user_message}
     ]
 
-    # Llamar a Groq y obtener la respuesta
+    # Llamar a Groq
     ai_response = ask_groq(messages)
 
-    # Guardar la respuesta de la IA en la base de datos si es anónimo
-    if not user:
-        chat_repo.update_chat_ai_response(new_chat.id, ai_response)
+    # Guardar la respuesta del bot
+    chat_repo.update_chat_ai_response(new_chat.id, ai_response)
 
-    new_chat.bot_message = ai_response or "No se pudo generar respuesta"
+    # Agregar la respuesta al objeto para devolver
+    new_chat.bot_message = ai_response
 
     return new_chat
-
 
 def create_chat_service(
     db: Session,
