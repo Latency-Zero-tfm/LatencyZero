@@ -55,7 +55,7 @@ async def create_chat(
 
     try:
         if current_user:
-            return create_chat_for_user_service(
+            return  await create_chat_for_user_service(
                 db=db,
                 user=current_user,
                 session_id=session_id,
@@ -64,7 +64,7 @@ async def create_chat(
                 user_file=user_file,
             )
         else:
-            return create_chat_service(
+            return await create_chat_service(
                 db=db,
                 session_id=session_id,
                 user_message=user_message,

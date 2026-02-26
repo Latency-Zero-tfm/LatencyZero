@@ -1,4 +1,6 @@
 from typing import Optional
+
+from .components_service import predict_from_bytes
 from .agent_service import ask_groq
 from fastapi import UploadFile
 from sqlalchemy.orm import Session
@@ -17,7 +19,7 @@ def _generate_session_title(user_message: str) -> str:
     return clean_message
 
 
-def _create_chat_common(
+async def _create_chat_common(
     db: Session,
     user_message: str,
     tools_mode: str,
@@ -28,50 +30,86 @@ def _create_chat_common(
     chat_repo = ChatRepository(db)
     session_repo = SessionRepository(db)
 
-    # Obtener la sesión
-    session = session_repo.get_session_by_id_and_user(session_id, user.id) if user else session_repo.get_session_by_id(session_id)
+    # Obtener sesión
+    session = (
+        session_repo.get_session_by_id_and_user(session_id, user.id)
+        if user else
+        session_repo.get_session_by_id(session_id)
+    )
+
     if not session:
         raise ValueError("Session not found")
 
-    # Procesar archivo opcional
     user_files_str = "upload_img" if user_file else None
 
-    # Crear el chat
-    new_chat = chat_repo.create_chat_for_user(
-        user=user,
-        session_id=session_id,
-        user_message=user_message,
-        tools_mode=tools_mode,
-        user_files=user_files_str,
-    ) if user else chat_repo.create_chat(
-        session_id=session_id,
-        user_message=user_message,
-        tools_mode=tools_mode,
-        user_files=user_files_str,
+    # Crear chat primero
+    new_chat = (
+        chat_repo.create_chat_for_user(
+            user=user,
+            session_id=session_id,
+            user_message=user_message,
+            tools_mode=tools_mode,
+            user_files=user_files_str,
+        )
+        if user else
+        chat_repo.create_chat(
+            session_id=session_id,
+            user_message=user_message,
+            tools_mode=tools_mode,
+            user_files=user_files_str,
+        )
     )
 
-    # Actualizar nombre de la sesión
+    # Actualizar nombre sesión
     session.session_name = _generate_session_title(user_message)
     session_repo.update(session)
 
-    # Preparar prompt para IA
+    model_result_text = None
+
+    # Si es modo ML y hay imagen → procesar
+    if tools_mode == "ml_model" and user_file:
+        image_bytes = await user_file.read()
+        result = predict_from_bytes(image_bytes)
+
+        if result.error:
+            model_result_text = f"ERROR: {result.message}"
+        else:
+            model_result_text = (
+                f"El modelo detectó que el componente es: "
+                f"{result.predicted_label_es}. "
+                f"Marca detectada: {result.brand if result.brand else 'No detectada'}."
+            )
+
+    # Construir mensajes para el agente
     messages = [
-        {"role": "system", "content": "Eres un asistente experto en LatencyZero."},
-        {"role": "user", "content": user_message}
+        {"role": "system", "content": "Eres un asistente experto en hardware y componentes de PC."}
     ]
 
-    # Llamar a Groq
+    if model_result_text:
+        messages.append({
+            "role": "system",
+            "content": (
+                "El usuario ha enviado una imagen.\n"
+                f"Resultado del modelo de visión: {model_result_text}\n"
+                "Explica el componente, da información útil y responde a la pregunta del usuario."
+            )
+        })
+
+    messages.append({
+        "role": "user",
+        "content": user_message
+    })
+
+    # Llamar al agente
     ai_response = ask_groq(messages)
 
-    # Guardar la respuesta del bot
+    # Guardar respuesta en BD
     chat_repo.update_chat_ai_response(new_chat.id, ai_response)
-
-    # Agregar la respuesta al objeto para devolver
     new_chat.bot_message = ai_response
 
     return new_chat
 
-def create_chat_service(
+async def create_chat_service(
     db: Session,
     session_id: int,
     user_message: str,
@@ -79,7 +117,7 @@ def create_chat_service(
     user_file: Optional[UploadFile] = None
 ) -> "Chat":
     """Crea un chat anónimo y llama a la IA."""
-    return _create_chat_common(
+    return await _create_chat_common(
         db=db,
         user_message=user_message,
         tools_mode=tools_mode,
@@ -88,7 +126,7 @@ def create_chat_service(
     )
 
 
-def create_chat_for_user_service(
+async def create_chat_for_user_service(
     db: Session,
     user: User,
     session_id: int,
@@ -97,7 +135,7 @@ def create_chat_for_user_service(
     user_file: Optional[UploadFile] = None
 ) -> "Chat":
     """Crea un chat para un usuario autenticado y llama a la IA."""
-    return _create_chat_common(
+    return await _create_chat_common(
         db=db,
         user=user,
         session_id=session_id,
