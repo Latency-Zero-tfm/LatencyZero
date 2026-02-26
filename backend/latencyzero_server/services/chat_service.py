@@ -1,4 +1,5 @@
 from typing import Optional
+from .agent_service import ask_groq
 from fastapi import UploadFile
 from sqlalchemy.orm import Session
 from ..repositories.chat_repository import ChatRepository
@@ -15,7 +16,6 @@ def _generate_session_title(user_message: str) -> str:
         return truncated + "..."
     return clean_message
 
-
 def create_chat_service(
     db: Session,
     session_id: int,
@@ -23,19 +23,22 @@ def create_chat_service(
     tools_mode: str,
     user_file: Optional[UploadFile] = None
 ):
-    """Crea un chat sin usuario (anónimo)."""
+    """Crea un chat sin usuario (anónimo) y llama a Groq para la respuesta."""
     chat_repo = ChatRepository(db)
     session_repo = SessionRepository(db)
 
+    # 1️⃣ Obtener la sesión
     session = session_repo.get_session_by_id(session_id)
     if not session:
         raise ValueError("Session not found")
 
+    # 2️⃣ Procesar archivo opcional
     user_files_str = None
     if user_file:
         user_files_str = "upload_img"
-        # aqui mandare a procesar a hardvision
+        # aquí mandarías a procesar a hardvision si aplica
 
+    # 3️⃣ Guardar el mensaje del usuario
     new_chat = chat_repo.create_chat(
         session_id=session_id,
         user_message=user_message,
@@ -43,8 +46,24 @@ def create_chat_service(
         user_files=user_files_str,
     )
 
+    # 4️⃣ Actualizar el nombre de la sesión
     session.session_name = _generate_session_title(user_message)
     session_repo.update(session)
+
+    # 5️⃣ Construir prompt para la IA
+    messages = [
+        {"role": "system", "content": "Eres un asistente experto en LatencyZero."},
+        {"role": "user", "content": user_message}
+    ]
+
+    # 6️⃣ Llamar a Groq y obtener la respuesta
+    ai_response = ask_groq(messages)
+
+    # 7️⃣ Guardar la respuesta de la IA en el chat
+    chat_repo.update_chat_ai_response(new_chat.id, ai_response)
+
+    # 8️⃣ Agregar la respuesta al objeto para devolver
+    new_chat.ai_response = ai_response
 
     return new_chat
 
