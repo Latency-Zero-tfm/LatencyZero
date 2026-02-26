@@ -63,7 +63,7 @@ def create_chat_service(
     chat_repo.update_chat_ai_response(new_chat.id, ai_response)
 
     # 8️⃣ Agregar la respuesta al objeto para devolver
-    new_chat.ai_response = ai_response
+    new_chat.chatbot_message = ai_response
 
     return new_chat
 
