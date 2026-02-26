@@ -64,9 +64,13 @@ async def _create_chat_common(
     session.session_name = _generate_session_title(user_message)
     session_repo.update(session)
 
+    previous_chats = chat_repo.get_chats_for_session(session_id)
+    previous_chats = [c for c in previous_chats if c.id != new_chat.id]
+    previous_chats = previous_chats[-10:]
+
     model_result_text = None
 
-    # Si es modo ML y hay imagen → procesar
+    # Si es modo ML y hay imagen => procesar
     if tools_mode == "ml_model" and user_file:
         image_bytes = await user_file.read()
         result = predict_from_bytes(image_bytes)
@@ -84,6 +88,19 @@ async def _create_chat_common(
     messages = [
         {"role": "system", "content": "Eres un asistente experto en hardware y componentes de PC."}
     ]
+
+    for chat in previous_chats:
+        if chat.user_message:
+            messages.append({
+                "role": "user",
+                "content": chat.user_message
+            })
+
+        if chat.bot_message:
+            messages.append({
+                "role": "assistant",
+                "content": chat.bot_message
+            })
 
     if model_result_text:
         messages.append({
@@ -104,7 +121,7 @@ async def _create_chat_common(
     ai_response = ask_groq(messages)
 
     # Guardar respuesta en BD
-    new_chat.bot_files = result.model_dump() if tools_mode == "ml_model" else None
+    new_chat.bot_files = result.model_dump() if tools_mode == "ml_model" and user_file and not result.error else None
     chat_repo.update_chat_ai_response(new_chat.id, ai_response, bot_files=new_chat.bot_files)
     new_chat.bot_message = ai_response
 
