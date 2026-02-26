@@ -15,7 +15,7 @@ class Chat(Base):
     bot_message = Column(String(4000), nullable=True)
     create_at = Column(TIMESTAMP, server_default=func.now())
     tools_mode = Column(
-        Enum("llm", "ml_model", "search", "other", name="tools_mode_enum"),
+        Enum("llm", "ml_model", name="tools_mode_enum"),
         default="llm"
     )
     bot_files = Column(JSON, nullable=True)
