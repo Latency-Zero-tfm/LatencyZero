@@ -22,9 +22,10 @@ class ChatRepository(BaseRepository[Chat]):
   def get_chats_for_session(self, session_id: int):
     return self.db.query(Chat).filter(Chat.session_id == session_id).all()
   
-  def update_chat_ai_response(self, chat_id: int, ai_response: str):
+  def update_chat_ai_response(self, chat_id: int, ai_response: str, bot_files: dict = None):
     chat = self.get_chat_by_id(chat_id)
     chat.bot_message = ai_response
+    chat.bot_files = bot_files
     self.db.commit()
     self.db.refresh(chat)
     return chat

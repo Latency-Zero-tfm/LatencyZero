@@ -104,7 +104,8 @@ async def _create_chat_common(
     ai_response = ask_groq(messages)
 
     # Guardar respuesta en BD
-    chat_repo.update_chat_ai_response(new_chat.id, ai_response)
+    new_chat.bot_files = result.model_dump() if tools_mode == "ml_model" else None
+    chat_repo.update_chat_ai_response(new_chat.id, ai_response, bot_files=new_chat.bot_files)
     new_chat.bot_message = ai_response
 
     return new_chat
