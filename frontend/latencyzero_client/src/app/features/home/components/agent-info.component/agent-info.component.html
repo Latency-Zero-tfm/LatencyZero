@@ -1,0 +1,147 @@
+<section class="relative">
+
+  <!-- Encabezado -->
+  <div class="mb-12">
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+        Todo lo que el Agente
+        <span class="text-yellow-500">puede hacer por ti</span>
+      </h2>
+    </div>
+  </div>
+
+  <!-- Grid de capacidades -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <!-- Card grande: Montar PC desde cero -->
+    <div class="group relative bg-slate-900 rounded-2xl border border-slate-700 hover:border-yellow-500/40 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden md:row-span-2 flex flex-col">
+      <!-- Glow de fondo -->
+      <div class="absolute top-0 right-0 w-48 h-48 bg-yellow-500/5 blur-3xl rounded-full group-hover:bg-yellow-500/10 transition-all duration-500"></div>
+
+      <!-- Icono -->
+      <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center mb-5 text-yellow-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+        </svg>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mb-3">Monta tu PC desde cero</h3>
+      <p class="text-slate-400 text-sm leading-relaxed mb-6">
+        Dile tu presupuesto y para qué lo quieres usar. El agente te selecciona los componentes más compatibles entre sí, con la mejor relación calidad-precio del mercado.
+      </p>
+
+      <!-- Ejemplo de conversación simulada -->
+      <div class="mt-auto bg-slate-800/60 border border-slate-700 rounded-xl p-4 space-y-3">
+        <div class="flex gap-2.5 items-start">
+          <span class="w-6 h-6 rounded-full bg-slate-700 flex-shrink-0 flex items-center justify-center text-[10px] text-slate-300 font-bold">Tú</span>
+          <p class="text-slate-300 text-xs leading-relaxed bg-slate-700/50 rounded-lg px-3 py-2">
+            "Quiero montar un PC para editar vídeo con un presupuesto de 1200€"
+          </p>
+        </div>
+        <div class="flex gap-2.5 items-start">
+          <span class="w-6 h-6 rounded-full bg-yellow-500/20 border border-yellow-500/30 flex-shrink-0 flex items-center justify-center">
+            <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 010 2h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 010-2h1a7 7 0 017-7h1V5.73A2 2 0 0110 4a2 2 0 012-2z"/>
+            </svg>
+          </span>
+          <p class="text-slate-300 text-xs leading-relaxed bg-slate-800 border border-slate-700 rounded-lg px-3 py-2">
+            "Perfecto. Para edición de vídeo te recomiendo un <span class="text-yellow-400 font-semibold">Ryzen 7 7700X</span> con <span class="text-yellow-400 font-semibold">32GB DDR5</span> y una <span class="text-yellow-400 font-semibold">RTX 4060</span>…"
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Analiza tus componentes -->
+    <div class="group relative bg-slate-900 rounded-2xl border border-slate-700 hover:border-yellow-500/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden flex flex-col gap-4">
+      <div class="absolute bottom-0 left-0 w-32 h-32 bg-indigo-500/5 blur-2xl rounded-full group-hover:bg-indigo-500/10 transition-all duration-500"></div>
+
+      <div class="flex items-start gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-1">Analiza tu PC actual</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Cuéntale qué componentes tienes y te dirá en qué punto está tu equipo, qué cuellos de botella tiene y qué actualizarías primero para notar más diferencia.
+          </p>
+        </div>
+      </div>
+
+      <!-- Chips de componentes -->
+      <div class="flex flex-wrap gap-2 mt-auto">
+        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 font-mono">i5-12400F</span>
+        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 font-mono">RTX 3060</span>
+        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 font-mono">16GB DDR4</span>
+        <span class="px-2.5 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-lg text-xs text-yellow-400 font-semibold">→ Análisis completo</span>
+      </div>
+    </div>
+
+    <!-- Card: Compatibilidad con juegos -->
+    <div class="group relative bg-slate-900 rounded-2xl border border-slate-700 hover:border-yellow-500/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden flex flex-col gap-4">
+      <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 blur-2xl rounded-full group-hover:bg-green-500/8 transition-all duration-500"></div>
+
+      <div class="flex items-start gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-1">¿Tu PC aguanta ese juego?</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Pregúntale por cualquier juego. Te dirá a qué resolución y calidad puedes jugarlo, cuántos FPS esperar y si merece la pena alguna mejora puntual.
+          </p>
+        </div>
+      </div>
+
+      <!-- Indicador FPS simulado -->
+      <div class="flex items-center gap-3 mt-auto bg-slate-800/60 border border-slate-700 rounded-xl px-4 py-2.5">
+        <span class="text-slate-400 text-xs">Cyberpunk 2077 · Ultra 1080p</span>
+        <div class="ml-auto flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+          <span class="text-yellow-400 text-xs font-bold">~68 FPS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Fila inferior: 2 cards horizontales -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+
+    <!-- Card: Presupuestos -->
+    <div class="group relative bg-slate-900 rounded-2xl border border-slate-700 hover:border-yellow-500/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden flex items-start gap-4">
+      <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-white font-bold mb-1">Presupuestos a medida</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Dile cuánto quieres gastar y para qué. El agente te genera varias opciones de build ajustadas a tu bolsillo, priorizando siempre el mejor rendimiento posible.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card: Actualizaciones -->
+    <div class="group relative bg-slate-900 rounded-2xl border border-slate-700 hover:border-yellow-500/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden flex items-start gap-4">
+      <div class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-white font-bold mb-1">Guía de actualización</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          ¿No sabes si cambiar la GPU o la RAM primero? El agente identifica el componente que más te frena y te recomienda qué actualizar para obtener el mayor salto de rendimiento.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
