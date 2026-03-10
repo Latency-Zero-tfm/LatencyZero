@@ -7,6 +7,10 @@ Nuestra plataforma integra un potente **agente inteligente** alimentado por Inte
 
 👉 Más información en la **[Wiki del proyecto](https://github.com/Latency-Zero-tfm/LatencyZero/wiki)**.
 
+> [!IMPORTANT]
+> 🚧 **Disponibilidad del servidor**
+> El backend está desplegado en la **capa gratuita de AWS (Free Tier)** y **únicamente se mantiene activo durante las presentaciones**. Si accedes fuera de esos momentos, la API estará caída. Ante cualquier duda, contáctame para coordinar.
+
 🌐 Puedes acceder a la aplicación web en: https://latencyzero.vercel.app/
 
 **TFM del Máster de FP en Inteligencia Artificial y Big Data - CPIFP Alan Turing**
