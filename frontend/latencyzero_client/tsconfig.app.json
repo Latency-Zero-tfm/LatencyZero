@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6697afd26960e0e592a15cdb61f0eae9901e5b1d06f240159f8a8b8ee6100236
-size 466
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts"
+, "tailwind.config.ts"  ],
+  "exclude": [
+    "src/**/*.spec.ts"
+  ]
+}

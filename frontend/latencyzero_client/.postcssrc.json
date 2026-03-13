@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8375fdece681011d66a47f060225490301c3aa75569c19ef782d6fb3dd918d91
-size 59
+{
+  "plugins": {
+    "@tailwindcss/postcss": {}
+  }
+}
