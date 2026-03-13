@@ -32,7 +32,7 @@ export class AboutUsComponent {
     {
       name: 'Andrei Munteanu Popa',
       github: 'https://github.com/andu8705',
-      linkedin: 'https://github.com/andu8705',
+      linkedin: 'https://www.linkedin.com/in/andrei-munteanu-popa/',
       image: 'https://github.com/andu8705.png',
     },
   ];
